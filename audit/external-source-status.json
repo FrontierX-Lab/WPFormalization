@@ -1,0 +1,293 @@
+{
+  "ext:dvv": {
+    "sourceLevel": "V2",
+    "sourceNote": "Delecroix–Goujard–Zograf–Zorich, SIGMA 16 (2020),086, §1 Eqs.(1),(2), dilaton p.3; bases/uniqueness pp.2–3",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.PsiTheory"
+    ],
+    "remaining": "Construct an actual instance of DM psi intersection numbers, or derive these classical fields from an existing foundational library. No global instance of this interface is asserted.",
+    "identifier": "INT-PSI"
+  },
+  "ext:mixed-transform": {
+    "sourceLevel": "V2",
+    "sourceNote": "Original normalized KMZ mixed transform plus reviewed generic higher logarithmic kappa Schur transform and classical mixed-nef fiber-power corollary; see INT-KMZ/INT-HIGHER-KAPPA licenses and independent review.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.IntersectionRealization",
+      "WP.External.HigherKappaRealization"
+    ],
+    "remaining": "Actual DM/log-kappa classes, generic pushforward transform, nef fiber-power/base-change projection and stack-cover transfer; no concrete instance.",
+    "identifiers": [
+      "INT-KMZ",
+      "INT-HIGHER-KAPPA"
+    ]
+  },
+  "ext:one-point": {
+    "sourceLevel": "V2",
+    "sourceNote": "DGZZ SIGMA16(2020),086, §1 Eq.(4)；Liu–Xu arXiv:1103.5136v2 p.3 one-point generating function",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.one_point"
+    ],
+    "remaining": "An independent external sorry in External/IntersectionEstimates.lean. Derive it from the classical laws of PsiTheory and construct a geometric instance.",
+    "identifier": "INT-ONE"
+  },
+  "ext:two-point": {
+    "sourceLevel": "V2",
+    "sourceNote": "DGZZ SIGMA16(2020),086, §1 Eq.(6); the C normalization differs only by a positive factor depending on (g,n).",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.two_point"
+    ],
+    "remaining": "An independent external sorry in External/IntersectionEstimates.lean. Port the original proof, supply the normalization factors, and construct the actual intersection-number instance.",
+    "identifier": "INT-TWO"
+  },
+  "ext:kdv": {
+    "sourceLevel": "V2",
+    "sourceNote": "LMX Recursions and asymptotics PDF p.3 Eq.(6); IZ Theorem2 Eq.(4.12) for DVV uniqueness",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.integrated_first_kdv",
+      "WP.External.first_kdv_descendants"
+    ],
+    "identifier": "INT-KDV",
+    "scopeLimitedTo": "Exactly the integrated first KdV identity, for genus g≥1 as used in Eq.6.6; no higher hierarchy or separate genus-zero identity is asserted by this restricted interface.",
+    "remaining": "In stage two, formalize the classical KdV coefficient identity and the DVV uniqueness transfer. The paper's finite-background transform is proved separately."
+  },
+  "ext:iz": {
+    "sourceLevel": "V2",
+    "sourceNote": "Itzykson–Zuber hep-th/9201001 p.39 Eqs.(6.7)–(6.10), phi_g=−2^g u_g; the classical DVV/formal-coefficient uniqueness transfer is also a deferred obligation.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.itzykson_zuber"
+    ],
+    "remaining": "Prove the classical IZ identity, uniqueness of PsiTheory, and the normalization transfer for the fixed formal recursion. The paper's endpoint remainder is not assumed."
+  },
+  "ext:painleve-leading": {
+    "sourceLevel": "V2",
+    "sourceNote": "GIKM arXiv:1002.3634v3 p.2 Eqs.(1.1)–(1.5) and p.12 Eq.(2.39), with normalization A=8sqrt3/5,S1=−i3^(1/4)/(2sqrtpi) and the ordinary leading term with O(1/g) error. The full error and coefficient identification at fixed m1 are in PDF p.13 Eqs.(2.41)–(2.45); the u11 normalization comes from Eq.(1.7).",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.painleve_leading_error",
+      "WP.External.painleve_leading",
+      "WP.External.painleve_first_correction_error"
+    ],
+    "remaining": "Formalize the classical PI large-order theorem. The paper still proves the growing-order Gevrey and parameter-uniform conclusions."
+  },
+  "ext:painleve-contour": {
+    "sourceLevel": "V2",
+    "sourceNote": "GIKM arXiv:1002.3634v3 printed pp.2,7-13 Eqs.(1.3),(1.7),(2.3)-(2.9),(2.14),(2.25),(2.29)-(2.33),(2.40)-(2.45)",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.PainleveAnalytic.GIKMData",
+      "WP.External.PainleveAnalytic.exists_gikm_data"
+    ],
+    "remaining": "Construct the normalized tritronquee meromorphic functions and prove the classical sector/fixed-order/contour statements, including their exact source normalizations. All new WP/Gevrey/actual normalization and growing-order bounds remain local proof obligations."
+  },
+  "ext:painleve-borel": {
+    "sourceLevel": "V2",
+    "sourceNote": "Costin-Costin-Huang arXiv:1310.5330v2 Theorem2, Proposition3(i),(ii), Lemma17(c),(f), printed pp.3,4,12; slit branch and fixed-ray positive-real continuation are standard monodromy/identity-principle consequences",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.PainleveAnalytic.CCHData",
+      "WP.External.PainleveAnalytic.exists_cch_data"
+    ],
+    "remaining": "Formalize classical PI Borel continuation, local singularity and generalized transseries resummation, including ordinary fixed-ray continuation and parameter limits. All new WP/Gevrey/actual normalization and growing-order bounds remain local proof obligations."
+  },
+  "ext:fixed-cusps": {
+    "sourceLevel": "V2",
+    "sourceNote": "Mirzakhani--Zograf GAFA25(2015) Thm1.2/Rem1.3, arXiv1112.1151 PDFpp1--2; kappa/WP normalization PDFp4. Only the unknown-universal-constant leading consequence is licensed. The n=0 first correction is separately checked against Theorem1.2/Remark1.3, PDFpp1–2, retaining the unknown normalization constant; this is not an input uniform in n.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": false,
+    "leanPartial": [
+      "WP.External.fixed_cusps_universal_leading",
+      "WP.External.fixed_zero_cusps_first_correction"
+    ],
+    "identifier": "WP-MZ-FIXED",
+    "scopeLimitedTo": "For each fixed cusp count, an O_n(1/g) leading estimate around one unknown positive constant common to all fixed n. The value of that constant is not admitted; no uniform n/K, all-order coefficient family, or absolute bracket-difference result is supplied by this restricted interface.",
+    "remaining": "In stage two, formalize the classical MZ theorem and the numerical transfer via DVV uniqueness, KMZ, and Wolpert. The full fixed-order polynomial corrections and absolute bracket differences in the original summary node do not yet have complete interfaces, so it remains BLOCKED. The paper's constant identification and uniform asymptotics are still proved locally."
+  },
+  "ext:fixed-genus": {
+    "sourceLevel": "V2",
+    "sourceNote": "Manin–Zograf, Ann. Inst. Fourier 50 (2000), Section6 Theorem6.1 Eq.(17)–(20), printed pp528–529/PDFpp11–12. Parent independently checked source PDF and the raw/physical normalization.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.fixed_genus_normalized_volume_logarithm"
+    ],
+    "remaining": "Formalize fixed-genus classical asymptotic, the Bessel singularity normalization, DVV uniqueness/KMZ/Wolpert transfer and the elementary logarithmic corollary.",
+    "identifier": "WP-MZ-FIXED-GENUS"
+  },
+  "ext:nef-teissier": {
+    "sourceLevel": "V2",
+    "sourceNote": "AC Section1 Eq1.5–1.7 log kappa_1 ample; Keel0.4 nef psi; BFJ2.15 projective nef Teissier. Finite-cover/resolution/orbifold and DVV/KMZ transfers are explicitly deferred in INT-NEF; independent review in docs/CLASSICAL_RESULTS.md#nef.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.classical_onepoint_nef_realization"
+    ],
+    "remaining": "Construct the actual projective DM/cohomology realization. Prove the classical nef/Teissier results and the transfer through finite covers and resolutions with a common degree. Currently only an explicit external existence input is available; the local C7 application is not unconditional geometric verification.",
+    "identifier": "INT-NEF"
+  },
+  "ext:mir-integration": {
+    "sourceLevel": "V2",
+    "sourceNote": "Shen–Wu arXiv2203.15681v4 Section2.2 Theorem6 and Remark, PDFp7; classical change-of-coordinates classification and gluing of labeled surfaces. Hide–Thomas arXiv2209.15568v3 Remark3.2 and following cut classification illustrate the genus-zero case. Exact full interface review: docs/CLASSICAL_RESULTS.md#mirzakhani. Parent independently checked the integration coefficient and strengthened graph binding.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.MulticurveTopology",
+      "WP.External.MirzakhaniIntegration"
+    ],
+    "remaining": "Construct mapping-class orbits and actual cut surfaces for G/H, prove change-of-coordinates classification/realization and planar-side binding, derive the exact orientation coefficient and Mirzakhani integration via Fenchel–Nielsen coordinates with orbifold stabilizers.",
+    "identifier": "HYP-MULTICURVE-INTEGRATION"
+  },
+  "ext:shen-wu": {
+    "sourceLevel": "V2",
+    "sourceNote": "Shen–Wu arXiv2203.15681v4 Proposition35 PDFp34, proofpp34–35. Parent independently verified exact inequality and hypotheses, which do not require n=o(g).",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.ShenWuPantsBound"
+    ],
+    "remaining": "Formalize published exact integration and first/second moment lower bound for actual short-pants count, including finite volume and limits; construct actual G/H instance.",
+    "identifier": "WP-SHEN-WU-PANTS"
+  },
+  "ext:shen-wu-volumes": {
+    "sourceLevel": "V2",
+    "sourceNote": "Shen–Wu arXiv2203.15681v4 Lemmas18/19, printedpp12–13. Parent independently verified the source statements and uniform fixed-A consequence of Lemma19 finite-product proof. Lemma18 h>=2 extends to the two stable h=1 types by finite enlargement.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.shenWu_volume_upper",
+      "WP.External.shenWu_volume_critical_lower"
+    ],
+    "remaining": "Prove published volume estimates and fixed-A uniformity, handle h=1 finite types, formalize DVV uniqueness/KMZ/Wolpert transfer and construct the actual geometric instance.",
+    "identifier": "WP-SW-CRITICAL-VOLUME"
+  },
+  "ext:minmax": {
+    "sourceLevel": "V2",
+    "sourceNote": "Hide–Thomas arXiv2209.15568v3 Lemma5.3 PDFp26/proofp27 (all Mg,n deterministic statement); Shen–Wu arXiv2203.15681v4 Theorems7/11 and proofTheorem1 PDFpp35–36 (single-pant Cheeger cut+Buser/minmax). Parent independently verified both primary sources.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.SpectralGeometry"
+    ],
+    "remaining": "Construct Laplacian spectrum with multiplicity and measurable eigenvalue events on G, cusp essential threshold1/4, localized pants trial functions, minmax and Cheeger/Buser bounds.",
+    "identifier": "HYP-SPECTRAL"
+  },
+  "ext:tight-transform": {
+    "sourceLevel": "V2",
+    "sourceNote": "Budd–Zonneveld arXiv2307.04708 (11July2023), Section1.2 Eq.(7)–(8), root Eq.(21), moments Eq.(23), Proposition12 Eq.(69)–(70), descendant series Eq.(65) and times Eq.(68), followed by classical dilaton resummation. Full review docs/CLASSICAL_RESULTS.md#tight-transform.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.ProtectedCycleGeometry",
+      "WP.External.TightRegions",
+      "WP.External.BuddZonneveldTransform"
+    ],
+    "remaining": "Construct actual simple cycles, capping and protected-tight locus on G, prove measurability and the generic classical BZ formal transform with dilaton resummation, including all geometric/psi normalization transfers. No concrete instance currently constructed.",
+    "identifier": "TIGHT-BZ"
+  },
+  "ext:tight-integration": {
+    "sourceLevel": "V2",
+    "sourceNote": "Exact BL Prop3.2, genuine restricted volume kernel with labeled assignments; no paper asymptotics.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.BuddLionsTightIntegration"
+    ],
+    "remaining": "Construct actual simultaneous geometry and prove the precisely registered classical fields in phase two; no actual instance currently constructed.",
+    "identifier": "BL-TIGHT-INTEGRATION"
+  },
+  "ext:tight-geometry": {
+    "sourceLevel": "V2",
+    "sourceNote": "BL Prop3.1/Lemma3.3 and proof-level deterministic extensions eq60/61, with noTies/genus/epsilon guards; no near-critical probability conclusion.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.BuddLionsTightGeometry"
+    ],
+    "remaining": "Construct actual simultaneous geometry and prove the precisely registered classical fields in phase two; no actual instance currently constructed.",
+    "identifier": "BL-TIGHT-GEOMETRY"
+  },
+  "ext:short-filling": {
+    "sourceLevel": "V0",
+    "sourceNote": "Only a citation from the paper or a candidate infrastructure result has been extracted; the applicable original theorem still needs verification.",
+    "exactInterfaceVerified": false,
+    "phase1Ready": false,
+    "leanPartial": [],
+    "remaining": "Verify the original theorem's full statement, every applicability condition, and the constant, branch, and normalization transfers. Search existing Lean theorems first. Register the exact type and downstream uses before introducing any temporary assumption."
+  },
+  "ext:collar": {
+    "sourceLevel": "V2(partial)",
+    "sourceNote": "Buser, Geometry and Spectra of Compact Riemann Surfaces, Theorems4.4.6 (short primitive is simple) and4.1.6 (short distinct simple curves disjoint). Hide–Thomas arXiv2209.15568v3 printedpp1/8 explicitly use these two facts for finite-area cusped surfaces. Parent independently checked both passages and distinct theorem numbers.",
+    "exactInterfaceVerified": false,
+    "phase1Ready": false,
+    "leanPartial": [
+      "WP.External.CollarGeometry"
+    ],
+    "remaining": "The precise interfaces for simplicity of short primitive geodesics and disjointness of short simple geodesics have been checked. The original summary's Margulis, packing, and representative-uniqueness claims still need separate interfaces and sources. Construct the actual collars and prove their disjointness, the short primitive simplicity theorem including finite-area cusps, and identify the same H/T geometric objects.",
+    "identifier": "HYP-COLLAR"
+  },
+  "ext:complex-analysis": {
+    "sourceLevel": "V2",
+    "sourceNote": "Guillemin–Campbell MIT18.117 pp.15–16 generic analytic IFT consequence; Flajolet–Sedgewick Analytic Combinatorics TheoremIV.6 p.240 generic Pringsheim reciprocal corollary; MIT18.112 Lecture14 Cor1, printed pp4–5, generic Rouche counting corollary; McMullen Harvard Math213a Thm3.7 printed43 and proof through47, generic genus0 factorization",
+    "exactInterfaceVerified": true,
+    "phase1Ready": false,
+    "leanPartial": [
+      "WP.External.convergent_formal_implicit_solution",
+      "WP.External.zero_free_disk_of_nonnegative_inverseCoefficients",
+      "WP.External.rouche_exhausts_prescribed_zeros",
+      "WP.External.hadamard_genus_zero_of_sqrt_growth"
+    ],
+    "remaining": "Four precise classical consequences have been registered. The remaining tools, including Lagrange inversion and slit-domain harmonic measure, still need separate interfaces, so the summary remains BLOCKED. The paper's local proofs establish the actual growth of K, the zero catalog, and all parameter-uniform estimates.",
+    "identifier": "GEN-ANALYTIC-IFT,GEN-PRINGSHEIM,GEN-ROUCHE,GEN-HADAMARD",
+    "scopeLimitedTo": "Generic formal implicit-solution convergence, generic reciprocal Pringsheim disk, generic Rouche finite prescribed-zero count, and generic Hadamard genus0 factorization under explicit square-root growth and a complete simple-zero catalog only; other bundled tools remain unlicensed."
+  },
+  "ext:optional-stopping": {
+    "sourceLevel": "V0",
+    "sourceNote": "Only a citation from the paper or a candidate infrastructure result has been extracted; the applicable original theorem still needs verification.",
+    "exactInterfaceVerified": false,
+    "phase1Ready": false,
+    "leanPartial": [
+      "L1: MeasureTheory.Submartingale.expected_stoppedValue_mono has passed #check; the supermartingale conversion still needs review."
+    ],
+    "remaining": "Verify the original theorem's full statement, every applicability condition, and the constant, branch, and normalization transfers. Search existing Lean theorems first. Register the exact type and downstream uses before introducing any temporary assumption."
+  },
+  "ext:fourier": {
+    "sourceLevel": "V0",
+    "sourceNote": "Only a citation from the paper or a candidate infrastructure result has been extracted; the applicable original theorem still needs verification.",
+    "exactInterfaceVerified": false,
+    "phase1Ready": false,
+    "leanPartial": [
+      "Importing Poisson.Basic has succeeded; this does not prove lattice inversion or a local limit theorem."
+    ],
+    "remaining": "Verify the original theorem's full statement, every applicability condition, and the constant, branch, and normalization transfers. Search existing Lean theorems first. Register the exact type and downstream uses before introducing any temporary assumption."
+  },
+  "ext:stirling": {
+    "sourceLevel": "V2",
+    "sourceNote": "DLMF5.11.3–4, 5.11.13, and 5.11(ii) give the precise positive-real Bernoulli remainder. Finite Gamma products and Gaussian integrals reuse Mathlib. G1 and O(x^-2) for the fixed first-order Gamma ratio are in 5.11.13/15. The exact positive-real shifted log-Gamma Laplace representation is a classical consequence of DLMF5.9.12 plus Frullani, the fundamental theorem of calculus, and Fubini, rather than a verbatim formula.",
+    "exactInterfaceVerified": true,
+    "phase1Ready": true,
+    "leanPartial": [
+      "WP.External.gamma_ratio_error",
+      "WP.External.gamma_stirling_error",
+      "WP.External.log_gamma_stirling_remainder",
+      "WP.External.gamma_finite_product",
+      "WP.External.gaussian_integral",
+      "WP.External.gamma_ratio_first_correction_error",
+      "WP.External.log_gamma_ratio_laplace"
+    ],
+    "remaining": "Complete the analytic proof for the real Gamma/Binet results. Re-expansion with finite-complexity shifts and matching at growing order remain new obligations of the paper."
+  }
+}

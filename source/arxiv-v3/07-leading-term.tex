@@ -1,0 +1,303 @@
+\section{The leading term and its normalization}\label{sec:prefactor}
+
+The marked ratios determine a differential equation for the leading
+term, but leave a multiplicative constant. The equation comes from the
+dilaton identity \eqref{eq:TL12}, which expresses the \(Y\)-derivative of
+\(\log\Phi_g^{(p)}\) through the degree profiles \(c_{g,p+1}(d,0^p)\); to
+obtain it with error \(O(h^{-2})\) we need the \(1/h\) term of these
+profiles. We first compute this degree correction, then integrate it and determine the
+constant from pure $\psi$ intersections. The resulting estimate is
+Proposition~\ref{prop:prefactor}; its fixed-cusp specialization proves
+Corollary~\ref{cor:constant}. Matching at a point that approaches the
+critical endpoint polynomially in the genus keeps the integrated error
+uniform on the whole interval.
+
+Write $\bar K=\bar K_Y$ and $\bar H=\bar H_Y$, and introduce the kernel moments
+\begin{equation}
+ \Theta=\sum_{\ell\ge0}w_\ell=-\frac1{\bar K'(1)},\qquad
+ M_1=\sum_{\ell\ge0}\ell w_\ell=\frac{\bar K''(1)}{2\bar K'(1)^2},\qquad
+ \mathcal Z=Aar^{3/2}=\sqrt2 I.
+ \label{eq:PF1}
+\end{equation}
+Primes on $\bar K,\bar H$ mean differentiation in their argument; derivatives of
+parameter functions below are with respect to $Y$. All the moments in
+\eqref{eq:PF1} are uniformly bounded on the closed normalized interval.
+The variance $v_Y=\sigma_Y^2$ of the law in \eqref{eq:P12}, written $\sigma_Y^2$ in Section~\ref{the-positive-compact-family-of-kernels}, satisfies
+\begin{equation}
+ v_Y=\frac{15}{4}-\frac{\bar H''(1)}{\bar H(1)}=\frac1{2A\Theta}.
+ \label{eq:PF2}
+\end{equation}
+Indeed $\bar H'(1)=-3\bar H(1)/2$ and
+$\bar K'(1)=-5\bar H(1)/2+2\bar H''(1)/3$.
+
+For fixed $p\ge1$, put $h=2g-2+p$ and define
+\begin{equation}
+ \mathcal J_{g,p}(Y)=
+ \frac{\Gamma(h)4^{-g}}{\sqrt{\pi h}}
+ \mathcal Z(Y)^{-h}r(Y)^{p/2}\sqrt{A(Y)\Theta(Y)}.
+ \label{eq:PF3}
+\end{equation}
+\begin{proposition}[Absolute marked prefactor]\label{prop:prefactor}
+For each fixed $p\ge1$, uniformly for $0\le Y<y_0$,
+\begin{equation}
+ \Phi_g^{(p)}(X(Y))=
+ \frac{\mathcal J_{g,p}(Y)}{\pi}
+ \left(1+O_p\!\left(\frac{\log(g+1)}g\right)\right).
+ \label{eq:PF4}
+\end{equation}
+\end{proposition}
+
+\subsection{The first degree correction}
+
+We compute the first degree correction directly from the positive
+recursion. The remainder must be uniform in $Y$ and in a growing degree
+range, since an expansion at each fixed degree would not suffice in the
+dilaton sum. Set $D=|\mathbf d|$ and $q=\#\{i:d_i>0\}$.
+
+\begin{lemma}[First degree correction]\label{lem:first-degree}
+For each fixed $p\ge1$, uniformly for $Y\in[0,y_0]$ and for degree tuples
+with $D\le h^{1/4}$,
+\begin{equation}
+ \begin{aligned}
+ c_{g,p}(\mathbf d)&=1-\frac{\delta_p(\mathbf d)}h
+       +O_p\!\left(\frac{(D+1)^4}{h^2}\right),\\
+ \delta_p(\mathbf d)&=A\left\{
+ \Theta\bigl(D^2+(p-4)D\bigr)+2M_1D+
+ \frac{q(q+5-2p)}2\right\}.
+ \end{aligned}
+ \label{eq:PF5}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Subtract the exact recursion \eqref{eq:H9} at pivot degree $t=d_i$ and
+$t+1$, shifting the second kernel index. The difference has coefficients
+$w_\ell$. By \eqref{eq:TL24} and \eqref{eq:TL27}, its merging prefactor is
+$A/h+O_p(h^{-2})$, and its nonseparating prefactor, including the factor
+$1/2$ and the genus normalization, is $2A/h+O_p(h^{-2})$.
+For $p=1$ there is no merging term. All child degrees can be replaced
+by zero with error at most $C_p(D+\ell+1)^2/h$, by \eqref{eq:TL23}.
+The coefficients and pair counts are $O_p(D+\ell+1)$, so the moments
+of $w_\ell$ make the resulting error $O_p((D+1)^3/h^2)$.
+The separating difference is $O_p((D+1)/h^2)$ by \eqref{eq:TL19};
+at $p=1$ use \eqref{eq:TL26}. These bounds also cover dimension-invalid
+children through the zero convention in \eqref{eq:TL23}.
+
+Let $z$ count zeros among the other $p-1$ entries. A merger is admissible
+when $t+d_j+\ell\ge1$; the nonseparating pair count is
+$(t+\ell-1)_+$. Thus the leading adjacent difference is
+\begin{equation}
+ \frac Ah\left\{\Theta(2D+p-3)+2M_1+(2-z)\mathbf1_{t=0}\right\}.
+ \label{eq:PF6}
+\end{equation}
+Here the zero-pivot term records both the missing zero-zero merger and
+the truncated pair count. Since the parent deficit is of order $h$ in
+the indicated degree range, extending the kernel sum to infinity costs
+$O_p(h^{-2})$, using sufficiently high moments of $w_\ell$.
+Summing increments from zero to $\mathbf d$ proves \eqref{eq:PF5}:
+the exceptional increments at the creation of successive positive
+entries are $3-p,4-p,\ldots,q+2-p$. The sum of the remainders is bounded
+by $C_p(D+1)^4/h^2$.
+\end{proof}
+
+For $d>h^{1/4}$ in the dilaton identity, use $0\le c\le1$, the
+quadratic growth of $\delta_p$, and sufficiently high uniform absolute
+moments of $b_d$; moments of order twelve already bound the
+tail of $1+d^2/h$ by $O_p(h^{-2})$. This justifies summing the expansion,
+although it gives no useful pointwise remainder at large degree.
+
+\subsection{The differential equation for the leading term}
+
+The three signed dilaton moments are exact:
+\[
+ \sum b_d=A,\qquad \sum d b_d=-A/2,\qquad
+ \sum d^2 b_d=\bar H''(1)/3-7A/2.
+\]
+Apply \eqref{eq:PF5} to $(d,0^p)$ in \eqref{eq:TL12}. Changing the child
+complexity $h+1$ to $h$ costs $O_p(h^{-2})$. We obtain
+\begin{equation}
+ h\frac{W_{g,p}}{W_{g,p+1}}
+ =A\left(1-\frac{\beta_p}h+O_p(h^{-2})\right),\qquad
+ \beta_p=A\left\{\frac{7-2p}{4}\Theta-M_1+2-p\right\}-\frac12.
+ \label{eq:PF7}
+\end{equation}
+This holds for each fixed $p\ge0$: at $p=0$ its only profile input
+has one marking. Inverting and undoing the normalization gives
+\begin{equation}
+ \frac{\mathrm{d}}{\mathrm{d}Y}\log\Phi_g^{(p)}(X(Y))
+ =\frac{h+\beta_p+O_p(h^{-1})}{A r}.
+ \label{eq:PF8}
+\end{equation}
+
+The correction in \eqref{eq:PF8} has an explicit primitive. Differentiate
+$K_Y(r)=0$, using $\partial_YK=2\partial_zK+(K-a)/z$, to get
+\begin{equation}
+ r'=-(\Theta+2),\qquad
+ (\log\mathcal Z)'=-\frac1{Ar}.
+ \label{eq:PF9}
+\end{equation}
+The second identity also follows from $I'=-a\sqrt\Delta$.
+Differentiating the root derivative and the corresponding equation
+for $H$ gives
+\begin{equation}
+ \begin{split}
+ (\log\Theta)'&=\frac{a'}a+
+                  \frac{2\Theta+1-2M_1}{r},\\
+ (\log A)'&=\frac{3\Theta/2+3-1/A}{r}-\frac{a'}a.
+ \end{split}
+ \label{eq:PF10}
+\end{equation}
+For the first formula use $\Theta=-a/(r\,\partial_zK_Y(r))$ and
+$\partial_Y\partial_zK_Y=2\partial_z^2K_Y+\partial_zK_Y/r+a/r^2$ at the root $z=r$.
+Equations \eqref{eq:PF7} and \eqref{eq:PF10} yield
+\begin{equation}
+ \frac{\beta_p}{Ar}
+ =\frac12(\log(A\Theta))'+\frac p2(\log r)',\qquad
+ \left|\frac{\mathrm{d}}{\mathrm{d}Y}\log
+ \frac{\Phi_g^{(p)}(X(Y))}{\mathcal J_{g,p}(Y)}\right|
+ \le\frac{C_p}{h A r}.
+ \label{eq:PF11}
+\end{equation}
+Only exact identities have been differentiated here; the error term in
+\eqref{eq:PF8} will be integrated, never differentiated.
+
+\subsection{Fixing the constant at the critical endpoint}\label{sec:prefactor-endpoint}
+
+Here we need the value at one pure-$\psi$ tuple, not only two-sided
+bounds. In the normalization \eqref{eq:H4},
+\begin{equation}
+ C_g(2^{3g-3})=\frac1\pi+O(g^{-1}).
+ \label{eq:PF12a}
+\end{equation}
+Indeed, the identity of Itzykson and Zuber~\cite[equation~(6.10)]{IZ}
+expresses $C_g(2^{3g-3})$ through the coefficients of the formal
+power-series solution of Painlev\'e~I.
+Their large-order asymptotics follow from the Stokes data of Joshi--Kitaev
+and Kapaev~\cite{JK,Kap}; see~\cite[Section~2.3]{GIKM}.
+Subsection~\ref{sec:endpoint-expansion} proves a quantitative version,
+\eqref{eq:FE10}, without using the present section. Estimate
+\eqref{eq:PF12a} is also the case $\mathbf e=(2^{3g-3})$ of the uniform
+theorem of Guo, Yang and Zagier~\cite[Theorem~1]{GYZ}; no other case of
+that theorem is used.
+For $m=3g-3+p$, string followed by dilaton gives the exact reduction
+\begin{equation}
+ C_g(0^p,2^m)=
+ \prod_{i=0}^{p-1}
+ \frac{5(m-i)}{3(2g-3+p+m-2i)}\ C_g(2^{3g-3})
+ =\frac1\pi+O_p(g^{-1}).
+ \label{eq:PF12}
+\end{equation}
+Each string step chooses a degree-two marking with normalized
+coefficient $5/[3(2g-3+p+m)]$; the resulting degree-one marking is
+removed by normalized dilaton with coefficient one. Since $p$ is fixed,
+the displayed finite product is $1+O_p(g^{-1})$, and \eqref{eq:PF12a}
+gives the final equality.
+
+At the endpoint, \eqref{eq:H24} gives exactly
+\begin{equation}
+ \frac{\overline U_{g,p}(0^p;y_0)}
+      {\mathcal M_{g,p}(0^p;y_0)}=C_g(0^p,2^m).
+ \label{eq:PF13}
+\end{equation}
+Indeed the numerator is $3^m\langle\tau_0^p\tau_2^m\rangle_g/m!$
+and the denominator is
+$3^{h+m}\Gamma(h+m)/(4^g5^m m!)$.
+
+We now show that the endpoint value persists on a short interval
+$0\le y_0-Y\le h^{-2}$. The reason is that the amplitudes are polynomials
+with nonnegative coefficients in the kernel coefficients, and these are
+within a factor $1+O(y_0-Y)$ of their endpoint value one.
+Here $\theta_\ell=[z^\ell]\bar K_Y(z)^{-1}$ are the rescaled kernel coefficients. Put $\delta=y_0-Y$. The normalized kernels are analytic in $\delta$
+near zero on a common disk of radius greater than one. To see the
+removable parameter singularity, apply the implicit-function theorem
+to $K_{y_0-\delta}(\delta\rho)/\delta$ at $(\delta,\rho)=(0,3)$;
+its $\rho$ derivative is nonzero. Division by the persistent root
+$1-z$ then gives $\bar K_Y(z)/(1-z)=1+O(\delta)$ on a smaller common disk.
+Together with coefficient positivity this proves
+\begin{equation}
+ 1\le\theta_\ell(Y)\le1+C\delta\quad\hbox{for all }\ell\ge0.
+ \label{eq:PF14}
+\end{equation}
+By the positive recursion, $\overline U$ is a polynomial with nonnegative
+coefficients in the variables $\theta_\ell$, homogeneous of degree $h$. At complexity one the bases have degree one, with $\theta_0=1$;
+each recursion adds one factor, while child complexities sum to $h-1$.
+Thus
+\begin{equation}
+ 1\le\frac{\overline U_{g,p}(0^p;Y)}
+                {\overline U_{g,p}(0^p;y_0)}
+ \le(1+C\delta)^h.
+ \label{eq:PF15}
+\end{equation}
+
+Next we compare $\mathcal J_{g,p}$ with the harmonic model at all
+degrees zero, for every $Y$. Here $m=3g-3+p=3h/2-p/2$. Since
+$\mathcal Z=Aar^{3/2}$, the powers of $r$ in $a^hr^m\mathcal J_{g,p}$ cancel
+exactly. On the other hand, \eqref{eq:H12} and \eqref{eq:H21} give
+$\mathcal M_{g,p}(0^p;Y)=3^h\Gamma(h)4^{-g}(3A)^{-h}\Pr(S_h=m)$, and the
+central estimate \eqref{eq:H18} at displacement $-p/2$, with variance
+$v_Y=1/(2A\Theta)$ from \eqref{eq:PF2}, gives
+$\Pr(S_h=m)=\sqrt{A\Theta/(\pi h)}\,(1+O_p(h^{-1}))$. Hence
+\begin{equation}
+ a^h r^m\mathcal J_{g,p}(Y)
+ =\Gamma(h)4^{-g}A^{-h}\sqrt{\frac{A\Theta}{\pi h}}
+ =\mathcal M_{g,p}(0^p;Y)(1+O_p(h^{-1})),
+ \label{eq:PF16}
+\end{equation}
+where the first equality is exact.
+Its ratio to its endpoint value is $1+O_p(h\delta)$ when
+$0\le\delta\le h^{-2}$, by analyticity and uniform positivity of
+$A,\Theta$. Hence \eqref{eq:PF12}--\eqref{eq:PF16} prove
+$\Phi_g^{(p)}(X(Y))/\mathcal J_{g,p}(Y)=1/\pi+O_p(h^{-1})$
+throughout that interval.
+
+\begin{proof}[Proof of Proposition~\ref{prop:prefactor}]
+Take $Y_*=y_0-h^{-2}$. For $Y\le Y_*$ integrate \eqref{eq:PF11}:
+by \eqref{eq:PF9}, its error is at most
+\[
+ \frac{C_p}{h}\log\frac{\mathcal Z(Y)}{\mathcal Z(Y_*)}
+ \le C_p\frac{\log h}{h},
+\]
+since $\mathcal Z(0)>0$ and
+$\mathcal Z(Y_*)\asymp h^{-5}$. The value at $Y_*$ was fixed above.
+Exponentiation gives \eqref{eq:PF4} for $Y\le Y_*$; the direct endpoint
+comparison gives the stronger $O_p(h^{-1})$ error for $Y\ge Y_*$.
+\end{proof}
+
+At $Y=0$, $r=\pi^2/2$, $A=1/\pi^2$, $\Theta=2$, and
+$\mathcal Z=\pi/(2\sqrt2)$. Taking $p=1$ in \eqref{eq:PF4} gives
+\begin{equation}
+ V_{g,1}=\frac{\Gamma(2g-1)(4\pi^2)^{2g-2}}{\sqrt{\pi g}}
+ \left(1+O\!\left(\frac{\log(g+1)}g\right)\right).
+ \label{eq:PF17}
+\end{equation}
+\begin{proof}[Proof of Corollary~\ref{cor:constant}]
+Comparing \eqref{eq:PF17} with the expansion of
+Mirzakhani--Zograf~\cite[Theorem~1.2 and Remark~1.3]{MZ} at $n=1$
+identifies their universal constant as $1/\sqrt\pi$. Since the constant
+does not depend on $n$, their expansion then gives the asserted formula,
+with relative error $O_n(g^{-1})$, for every fixed $n\ge0$.
+\end{proof}
+
+For completeness, we derive the boundary-length consequence stated in the
+introduction. Fix $n\ge1$, put $x_i=L_i/2$, and set $S(x)=\sinh(x)/x$,
+with $S(0)=1$. At $Y=0$, the normalization \eqref{eq:TL9} gives
+$c_{g,n}(\mathbf d)=[\tau_{d_1}\cdots\tau_{d_n}]_{g,n}/V_{g,n}$.
+Thus the volume polynomial, extended by zero outside its degree range, is
+\[
+ \frac{V_{g,n}(\mathbf L)}{V_{g,n}}
+ =\sum_{\mathbf d\ge0}c_{g,n}(\mathbf d)
+   \prod_{i=1}^n\frac{x_i^{2d_i}}{(2d_i+1)!}.
+\]
+Divide by $\prod_i S(x_i)$ and regard the product weights as the law of
+independent nonnegative integers $d_i$. The identity
+$\sum_{d\ge0}(2d)(2d+1)x^{2d}/(2d+1)!=x^2S(x)$ gives
+$\mathbb E[d_i(d_i+1)]\le x_i^2/2$. Since
+$D(D+1)\le n\sum_i d_i(d_i+1)$, where $D=\sum_i d_i$,
+\eqref{eq:TL23}, including its one-marking case, yields
+\begin{equation}
+ 0\le 1-\frac{V_{g,n}(\mathbf L)}{V_{g,n}\prod_i S(L_i/2)}
+ \le \frac{C_n}{g}\sum_{i=1}^n L_i^2.
+ \label{eq:boundary-factor}
+\end{equation}
+For $L_i=o(\sqrt g)$ the right side tends to zero. Corollary~\ref{cor:constant}
+and Stirling's formula then give the asserted asymptotic formula.

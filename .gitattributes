@@ -1,0 +1,2 @@
+# Frozen declaration headers preserve original whitespace.
+audit/*-frozen-type.txt -whitespace

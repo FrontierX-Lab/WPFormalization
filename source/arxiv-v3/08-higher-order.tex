@@ -1,0 +1,107 @@
+\section{Higher-order corrections for marked generating functions}\label{sec:higher-order}
+
+The estimate of Proposition~\ref{prop:prefactor} has relative error
+$O_p(\log g/g)$. The logarithm comes from integrating the error
+$O_p(1/(hAr))$ in~\eqref{eq:PF11} towards the critical endpoint, where
+$Ar$ has a simple zero. This section states two refinements, still for a
+fixed number $p$ of distinguished markings: an explicit first correction,
+which also gives the leading term with relative error $O_p(g^{-1})$, and a
+complete expansion whose truncation order may grow like $\sqrt g$. Both
+results are proved in Appendix~\ref{app:marked}; the passage to a
+prescribed cusp count is made in
+Sections~\ref{extracting-fixed-cusp-counts} and~\ref{sec:sharp-extraction}.
+
+\subsection{The first correction}\label{subsec:first-correction}
+The mechanism is that of Section~\ref{sec:prefactor}, carried one order
+further. Lemma~\ref{lem:second-profile} extends the degree expansion
+\eqref{eq:PF5} of the normalized profiles by a term $e_p(\mathbf d)/h^2$,
+uniformly for $|\mathbf d|\le h^{1/8}$. Inserted into the dilaton identity,
+it adds a term $\gamma_p/h$ to the numerator of the differential
+equation~\eqref{eq:PF8}; see~\eqref{eq:ST8}. The coefficient $\gamma_p$,
+defined in~\eqref{eq:ST7}, is a finite expression in kernel moments
+(see~\eqref{eq:ST11}), and it vanishes at the pure-$\psi$ endpoint
+(see~\eqref{eq:ST12}). Its primitive against $1/(Ar)$ is therefore bounded,
+although $Ar$ vanishes there. The integration constant is fixed at the
+endpoint by the first correction to $C_g(2^{3g-3})$, which we derive from
+Painlev\'e~I in Subsection~\ref{sec:endpoint-expansion}, together with
+the first correction to an explicit negative-binomial coefficient.
+Accordingly, define
+\begin{equation}
+ t_p=\frac{-2p^2+12p-11}{20},\qquad
+ \mathcal L_p(Y)=t_p-\int_Y^{y_0}\frac{\gamma_p(v)}{A(v)r(v)}\,\mathrm{d}v.
+ \label{eq:ST13}
+\end{equation}
+
+\begin{theorem}[Uniform marked first correction]\label{thm:first-correction}
+For every fixed $p\ge1$, uniformly for $0\le Y<y_0$,
+\begin{equation}
+ \Phi_g^{(p)}(X(Y))=\frac{\mathcal J_{g,p}(Y)}\pi
+ \left\{1+\frac{\mathcal L_p(Y)}h+
+            O_p\!\left(\frac{\log(g+1)}{g^2}\right)\right\}.
+ \label{eq:ST14}
+\end{equation}
+In particular the leading relative error is $O_p(g^{-1})$.
+\end{theorem}
+
+At $Y=0$ the coefficients of this expansion reduce to the first-order
+formulas of Mirzakhani and Zograf~\cite[Theorems~1.4 and~3.2(i)]{MZ};
+this check is recorded at the end of Subsection~\ref{app:second-degree}.
+
+\subsection{All orders}\label{subsec:all-orders}
+The same scheme continues to every order. The recursion is triangular:
+each new degree coefficient of the profiles uses earlier cusp and genus
+coefficients, and the dilaton and KdV equations then give the new cusp and
+genus coefficients. The difficulty is to keep the constants under control
+as the order grows.
+
+\emph{Where the squared factorial comes from.} The first two profile coefficients are polynomials in the degrees of degrees two and four: $\delta_p$ in~\eqref{eq:PF5} is quadratic in $D=|\mathbf d|$, and $e_p$ in~\eqref{eq:ST3} is quartic. This pattern persists. Each new order is obtained by summing an adjacent difference along a coordinate path of length $D$, and each difference involves pair counts of size $D$ and one factor $1/h$. So the order-$j$ coefficient behaves like a polynomial of degree $2j$ in the degrees, of size about $(D+j)^{2j}$ up to a factor $B^j$. In the dilaton sum the degree $d$ is weighted by the geometrically decaying coefficients $b_d$, so the effective size of $D$ is of order $j$, and $(Mj)^{2j}$ is $(j!)^2$ up to a geometric factor. The bound $B^{K+1}((K+1)!)^2h^{-K-1}$ for the first omitted term is smallest at an order proportional to $\sqrt h$, and a sufficiently small fixed multiple of $\sqrt h$ gives an exponentially small remainder. This explains both the Gevrey-2 bounds and the truncation order in Theorem~\ref{thm:full-expansion}.
+
+Appendix~\ref{app:marked} constructs, by the finite triangular rules
+\eqref{eq:FE1}--\eqref{eq:FE6}, the formal coefficients of the profiles
+and of the cusp and genus ratios, and from them functions $a_{p,j}(Y)$ and
+\[
+ \mathcal L_{p,j}(Y)=[t^j]\exp\!\Bigl(\sum_{i=1}^j a_{p,i}(Y)t^i\Bigr),
+ \qquad \mathcal L_{p,1}=\mathcal L_p;
+\]
+see~\eqref{eq:FE11}. On one complex neighborhood of $[0,y_0]$ they are
+holomorphic and satisfy
+$\|a_{p,j}\|+\|\mathcal L_{p,j}\|\le C_p\mathfrak B_p^j(j!)^2$.
+
+\begin{theorem}[Complete uniform marked expansion]\label{thm:full-expansion}
+For each fixed $p\ge1$ there are $C_p,\mathfrak B_p,c_p,h_p>0$ such that,
+for $h=2g-2+p\ge h_p$ and $0\le K\le c_p\sqrt h$,
+\begin{equation}
+ \sup_{0\le Y<y_0}\left|
+ \frac{\pi\Phi_g^{(p)}(X(Y))}{\mathcal J_{g,p}(Y)}
+       -\sum_{j=0}^K\frac{\mathcal L_{p,j}(Y)}{h^j}\right|
+ \le\frac{C_p\mathfrak B_p^{K+1}((K+1)!)^2}{h^{K+1}},
+ \qquad \mathcal L_{p,0}=1.
+ \label{eq:FE12}
+\end{equation}
+The coefficients are specified by the finite rules and integrals of
+Appendix~\ref{app:marked}, and have the Gevrey-2 norms stated above on
+one complex neighborhood of $[0,y_0]$. The same real error holds for the
+logarithm with coefficients $a_{p,j}$. A sufficiently small square-root
+truncation has error $O_p(\mathrm{e}^{-a_p\sqrt h})$; no convergence of
+the infinite series is required.
+\end{theorem}
+
+The proof has three steps. Proposition~\ref{prop:hierarchy} divides each
+order-$j$ coefficient by $(D+p+Mj)^{2j}$. After this division the
+coefficient rules become coefficientwise inequalities between power
+series with nonnegative coefficients, and a system of analytic majorants
+(Lemma~\ref{lem:majorant}) bounds the normalized coefficients and the
+actual remainders, uniformly in the order. Next, at the pure-$\psi$
+endpoint, the integration constants are computed from the
+Itzykson--Zuber identity and the large-order behavior of Painlev\'e~I;
+the Borel representation of Costin, Costin and Huang~\cite{CCH} gives
+these constants with a Gevrey-1 remainder. Finally the logarithmic
+derivative is integrated from a matching point at distance $h^{-K-2}$
+from the endpoint, where the positive homogeneous structure of the
+amplitudes controls the change from the endpoint value.
+
+At $Y=0$ this is the established fixed-cusp expansion mechanism;
+effective order-dependent versions appear in
+Hide--Macera--Thomas~\cite[Theorem~4.2]{HMT}. The estimates here remain
+uniform up to the pure-$\psi$ endpoint. Their dependence on the order is
+what permits the growing-order truncation in the absolute-volume theorem.

@@ -1,0 +1,116 @@
+import WPFormalization.Analysis.TransportGammaComplexification
+
+/-! The actual canonical first correction has a continuous primitive, its true derivative, a uniform bound, and a linear endpoint bound. The removable quotient value is used only through an extension, and interval integrals ignore its totalized endpoint value. -/
+
+noncomputable section
+open Set Filter MeasureTheory
+open scoped Topology
+
+noncomputable section
+open Set Filter MeasureTheory
+open scoped Topology
+namespace WP.HigherOrder
+lemma firstMarkedCorrection_regular_of_extension (p : ℕ) (q : ℝ→ℝ)
+    (hq : ContinuousOn q (Icc (0:ℝ) y₀))
+    (heq : ∀ Y∈Ico (0:ℝ) y₀,q Y=transportGamma p Y/(A Y*r Y)) :
+    ContinuousOn (firstMarkedCorrection p) (Icc (0:ℝ) y₀) ∧
+    (∀ Y∈Ioo (0:ℝ) y₀,HasDerivAt (firstMarkedCorrection p)
+      (transportGamma p Y/(A Y*r Y)) Y) ∧
+    ∃ B : ℝ,0<B ∧ ∀ Y∈Icc (0:ℝ) y₀,|firstMarkedCorrection p Y| ≤ B := by
+  let qc (x : ℝ) : ℝ := q (max 0 (min x y₀))
+  have hclamp (x : ℝ) : max 0 (min x y₀)∈Icc (0:ℝ) y₀ :=
+    ⟨le_max_left _ _,max_le y₀_pos.le (min_le_right _ _)⟩
+  have hqcOn : ContinuousOn qc univ := hq.comp
+    ((continuous_const.max (continuous_id.min continuous_const)).continuousOn)
+    (fun x _ => hclamp x)
+  have hqc : Continuous qc := continuousOn_univ.mp hqcOn
+  have hagree (x : ℝ) (hx : x∈Icc (0:ℝ) y₀) : qc x=q x := by
+    dsimp [qc]
+    rw [min_eq_left hx.2,max_eq_right hx.1]
+  have hLeq (Y : ℝ) (hY : Y∈Icc (0:ℝ) y₀) :
+      firstMarkedCorrection p Y=firstEndpointConstant p-∫ x in Y..y₀,qc x := by
+    unfold firstMarkedCorrection
+    congr 1
+    apply intervalIntegral.integral_congr_Ioo_of_le hY.2
+    intro x hx
+    have hxi : x∈Ico (0:ℝ) y₀ := ⟨hY.1.trans hx.1.le,hx.2⟩
+    exact (heq x hxi).symm.trans (hagree x ⟨hxi.1,hxi.2.le⟩).symm
+  have hint : IntegrableOn qc (uIcc (0:ℝ) y₀) := by
+    rw [uIcc_of_le y₀_pos.le]
+    exact hqc.continuousOn.integrableOn_Icc
+  have hprim := intervalIntegral.continuousOn_primitive_interval_left hint
+  rw [uIcc_of_le y₀_pos.le] at hprim
+  have hLcont : ContinuousOn (firstMarkedCorrection p) (Icc (0:ℝ) y₀) :=
+    (continuousOn_const.sub hprim).congr hLeq
+  refine ⟨hLcont,?_,?_⟩
+  · intro Y hY
+    have hI := intervalIntegral.integral_hasDerivAt_left (hqc.intervalIntegrable Y y₀)
+      (hqc.stronglyMeasurableAtFilter volume (𝓝 Y)) hqc.continuousAt
+    have hd : HasDerivAt (fun x => firstEndpointConstant p-∫ v in x..y₀,qc v) (qc Y) Y := by
+      convert (hasDerivAt_const Y (firstEndpointConstant p)).sub hI using 1 <;> ring
+    have hE : firstMarkedCorrection p =ᶠ[𝓝 Y] (fun x => firstEndpointConstant p-∫ v in x..y₀,qc v) := by
+      filter_upwards [isOpen_Ioo.mem_nhds hY] with x hx
+      exact hLeq x ⟨hx.1.le,hx.2.le⟩
+    have hval : qc Y=transportGamma p Y/(A Y*r Y) :=
+      (hagree Y ⟨hY.1.le,hY.2.le⟩).trans (heq Y ⟨hY.1.le,hY.2⟩)
+    rw [hval] at hd
+    exact hd.congr_of_eventuallyEq hE
+  · obtain ⟨B,hB⟩ := isCompact_Icc.exists_bound_of_continuousOn hLcont
+    refine ⟨max 1 B,lt_of_lt_of_le zero_lt_one (le_max_left _ _),?_⟩
+    intro Y hY
+    have hb : |firstMarkedCorrection p Y| ≤ B := by simpa only [Real.norm_eq_abs] using hB Y hY
+    exact hb.trans (le_max_right _ _)
+end WP.HigherOrder
+
+namespace WP.HigherOrder
+lemma firstMarkedCorrection_endpoint_lipschitz_of_extension (p : ℕ) (q : ℝ→ℝ)
+    (hq : ContinuousOn q (Icc (0:ℝ) y₀))
+    (heq : ∀ Y∈Ico (0:ℝ) y₀,q Y=transportGamma p Y/(A Y*r Y)) :
+    ∃ C : ℝ,0<C ∧ ∀ Y∈Icc (0:ℝ) y₀,
+      |firstMarkedCorrection p Y-firstEndpointConstant p| ≤ C*(y₀-Y) := by
+  obtain ⟨M,hM⟩ := isCompact_Icc.exists_bound_of_continuousOn hq
+  let C : ℝ := max 1 M
+  have hC : 0<C := lt_of_lt_of_le zero_lt_one (le_max_left _ _)
+  refine ⟨C,hC,?_⟩
+  intro Y hY
+  have hIEq : (∫ x in Y..y₀,transportGamma p x/(A x*r x))=∫ x in Y..y₀,q x := by
+    apply intervalIntegral.integral_congr_Ioo_of_le hY.2
+    intro x hx
+    exact (heq x ⟨hY.1.trans hx.1.le,hx.2⟩).symm
+  have hbound : ‖∫ x in Y..y₀,q x‖ ≤ C*|y₀-Y| :=
+    intervalIntegral.norm_integral_le_of_norm_le_const (by
+      intro x hx
+      rw [uIoc_of_le hY.2] at hx
+      exact (hM x ⟨hY.1.trans hx.1.le,hx.2⟩).trans (le_max_right _ _))
+  have halg : firstMarkedCorrection p Y-firstEndpointConstant p=
+      -(∫ x in Y..y₀,transportGamma p x/(A x*r x)) := by unfold firstMarkedCorrection;ring
+  rw [halg,abs_neg,hIEq]
+  simpa only [Real.norm_eq_abs,abs_of_nonneg (sub_nonneg.mpr hY.2)] using hbound
+end WP.HigherOrder
+
+namespace WP.HigherOrder
+lemma firstMarkedCorrection_regularity (p : ℕ) :
+    ContinuousOn (firstMarkedCorrection p) (Icc (0:ℝ) y₀) ∧
+    (∀ Y∈Ioo (0:ℝ) y₀,HasDerivAt (firstMarkedCorrection p)
+      (transportGamma p Y/(A Y*r Y)) Y) ∧
+    ∃ B : ℝ,0<B ∧ ∀ Y∈Icc (0:ℝ) y₀,|firstMarkedCorrection p Y| ≤ B := by
+  obtain ⟨q,hq,heq⟩ := Analysis.transportGamma_quotient_continuous_extension p
+  exact firstMarkedCorrection_regular_of_extension p q hq heq
+
+lemma firstMarkedCorrection_continuousOn (p : ℕ) :
+    ContinuousOn (firstMarkedCorrection p) (Icc (0:ℝ) y₀) := (firstMarkedCorrection_regularity p).1
+
+lemma firstMarkedCorrection_hasDerivAt (p : ℕ) (Y : ℝ) (hY : Y∈Ioo (0:ℝ) y₀) :
+    HasDerivAt (firstMarkedCorrection p) (transportGamma p Y/(A Y*r Y)) Y :=
+  (firstMarkedCorrection_regularity p).2.1 Y hY
+
+lemma firstMarkedCorrection_abs_uniform (p : ℕ) :
+    ∃ B : ℝ,0<B ∧ ∀ Y∈Icc (0:ℝ) y₀,|firstMarkedCorrection p Y| ≤ B :=
+  (firstMarkedCorrection_regularity p).2.2
+
+lemma firstMarkedCorrection_endpoint_lipschitz (p : ℕ) :
+    ∃ C : ℝ,0<C ∧ ∀ Y∈Icc (0:ℝ) y₀,
+      |firstMarkedCorrection p Y-firstEndpointConstant p| ≤ C*(y₀-Y) := by
+  obtain ⟨q,hq,heq⟩ := Analysis.transportGamma_quotient_continuous_extension p
+  exact firstMarkedCorrection_endpoint_lipschitz_of_extension p q hq heq
+end WP.HigherOrder

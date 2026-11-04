@@ -1,0 +1,349 @@
+\section{Extracting a prescribed cusp count}\label{extracting-fixed-cusp-counts}
+
+The preceding estimates control generating functions, which sum over cusp counts. We now recover a single coefficient, and hence a volume with a prescribed number of cusps. A positive convolution factor supplies Fourier bounds that turn the real-axis estimates into a local limit theorem. Small cusp weight, the interior, and the critical endpoint require separate estimates, with uniform constants across the three ranges.
+
+Subsection~\ref{canonical-coefficient-ratios-and-all-cusp-count-uniformity} proves the qualitative volume-ratio limits using the leading estimates from Sections~\ref{ratios-with-a-fixed-number-of-distinguished-markings}--\ref{sec:prefactor}. The final subsection extends the argument to bounded geodesic boundaries. The higher-order expansions are needed only for the sharper extraction estimates that follow.
+
+\subsection{A positive convolution factor}\label{a-positive-convolution-factor}
+
+\begin{lemma}[Positive convolution factor]\label{lem:convolution}
+For each stable marked pair \((g,p)\) with \(p\ge1\), the marked generating
+function has the exact factorization
+\begin{equation}
+\Phi_g^{(p)}(x)=V(x)^h R_{g,p}(x),\qquad
+ V(x)=Y'(x)=1/a(Y(x)),\qquad h=2g-2+p,
+ \label{eq:TL33}
+\end{equation} where \(R_{g,p}\) has nonnegative Taylor coefficients and
+converges for \(0\le x<x_c\).
+\end{lemma}
+
+The point of \eqref{eq:TL33} is the following. An approximation of \(\Phi_g^{(p)}\) on
+the real axis alone says nothing about its individual coefficients. The
+factorization shows that, under the cusp weight \(x\), the number of
+additional cusps is distributed as the sum of \(h\) independent variables
+with generating function \(V(xz)/V(x)\) and one further independent
+nonnegative integer variable; this gives the Fourier bound \eqref{eq:TL35} below, which is what
+a local limit theorem needs.
+
+\begin{proof}
+The proof uses positivity in the parameter: by
+Lemma~\ref{lem:kernel-positivity}, the functions
+\(\widehat\vartheta_\ell(Y)=a(Y)[z^\ell]K_Y(z)^{-1}\) and \(1/a(Y)\) have
+nonnegative Taylor coefficients in \(Y\). Since this positivity in \(Y\) is
+available for the unrescaled coefficients, we do not use the rescaling by
+\(r(Y)\) of \eqref{eq:H7} here.
+
+Undo the normalization in \eqref{eq:H9} and regard the unrescaled coefficients \(\vartheta_\ell=[z^\ell]K_Y(z)^{-1}\) as independent variables. In this convention the bases are \(U_{0,3}=\vartheta_0\), \(U_{1,1}(1)=\vartheta_0/8\), and \(U_{1,1}(0)=\vartheta_1/8\). Induction from these bases shows that every amplitude is a finite polynomial with nonnegative
+coefficients in the variables \(\vartheta_\ell\); each monomial has total degree \(h\),
+and weighted degree \(m\) when \(\vartheta_\ell\) is given weight \(\ell\). A
+linear recursion term adds one factor \(\vartheta_\ell\) to a child of complexity \(h-1\); a
+separating term adds one to children whose complexities sum to \(h-1\).
+Thus factoring \(a^{-1}\) from each of the \(h\) factors \(\vartheta_\ell=a^{-1}\widehat\vartheta_\ell\) leaves a
+positive polynomial in the \(\widehat\vartheta_\ell\).
+
+Finally \(Y(x)\) has nonnegative coefficients and \(Y(0)=0\). To justify
+the product used here, a nonzero zero \(y\) of \(X\) gives
+\(u(s)=J_1(2\sqrt y\,s)\), with \(u(1)=0\) and regular behavior at zero.
+Integration of \((s u')'+(4ys-1/s)u=0\) against its conjugate gives
+\(4y\int_0^1s|u|^2\,\mathrm{d}s=\int_0^1(s|u'|^2+|u|^2/s)\,\mathrm{d}s>0\). Thus all
+nonzero zeros are positive real. Since \(X\) has order one half and a
+simple zero at zero with derivative one, its Hadamard product is
+\(X(Y)=Y\prod_k(1-Y/\beta_k)\), \(\beta_k>0\). Lagrange inversion now
+gives \[
+ [x^k]Y(x)=\frac1k[Y^{k-1}](Y/X(Y))^k>0.
+\] The inverse series has radius exactly \(x_c\): a smaller radius
+would, by positivity and Pringsheim's theorem, give a positive real
+singularity before \(x_c\), contradicting the analytic real inverse
+there; the quadratic critical point at \(x_c\) supplies the opposite
+inequality. Composition therefore preserves coefficient positivity and
+converges for \(0\le x<x_c\), since \(Y(x)<y_0\). Finally, by
+\eqref{eq:H8}, \(\Phi_g^{(p)}(x)=U^{Y}_{g,p}(0^p)\) with \(Y=Y(x)\), and the
+factor \(a(Y)^{-h}\) removed above equals \(V(x)^h\). This proves
+\eqref{eq:TL33}.
+\end{proof}
+
+For the coefficient probability law with generating function
+\(\Phi_g^{(p)}(xz)/\Phi_g^{(p)}(x)\), positivity in \eqref{eq:TL33} gives \begin{equation}
+\left|\frac{\Phi_g^{(p)}(x\mathrm{e}^{i\theta})}{\Phi_g^{(p)}(x)}\right|
+ \le\left|\frac{V(x\mathrm{e}^{i\theta})}{V(x)}\right|^h.
+ \label{eq:TL35}
+\end{equation} This is the Fourier estimate that prevents a generating-function
+ratio from concealing different local coefficient behavior.
+
+\subsection{Mean, variance and a central limit theorem}\label{mean-variance-and-a-real-central-limit-theorem}
+
+We first compute the mean and variance of the cusp count under the cusp
+weight \(x\), and show that it is asymptotically Gaussian; the next
+subsection upgrades this to a local limit theorem. Recall
+\(\mathscr D=x\,\mathrm{d}/\mathrm{d}x\) and the function \(\Psi\) of
+Lemma~\ref{lem:parameter}. For convenience we repeat its endpoint expansions
+\eqref{eq:SP16}, together with that of \(V=1/a(Y(x))\), which follows from
+\(a(Y)=1-Y+O(Y^2)\) and \(Y(x)=x+O(x^2)\): \begin{equation}
+\begin{aligned}
+ x\downarrow0:\quad& V(x)=1+x+O(x^2),\quad \Psi(x)=2x+O(x^2),\\
+ &\mathscr D\Psi(x)=2x+O(x^2),\quad \mathscr D^2\Psi(x)=2x+O(x^2);\\[1mm]
+ x\uparrow x_c:\quad&\Psi(x)=\frac5{4\varepsilon}(1+O(\sqrt\varepsilon)),\\
+ &\mathscr D\Psi(x)=\frac5{4\varepsilon^2}(1+O(\sqrt\varepsilon)),\quad
+ \mathscr D^2\Psi(x)=O(\varepsilon^{-3}),
+ \qquad\varepsilon=1-x/x_c.
+ \end{aligned}
+ \label{eq:TL36}
+\end{equation} On compact subintervals of \((0,x_c)\), all needed
+derivatives are bounded and \(\mathscr D\Psi\) is bounded away from
+zero.
+
+For \(F=\Phi_g^{(p)}\) at a positive cusp weight \(x\), let \begin{equation}
+\mathbb P_x(N=k)=\frac{[z^k]F(z)x^k}{F(x)},\qquad
+ \mu=h\Psi(x),\qquad \sigma^2=h\mathscr D\Psi(x).
+ \label{eq:TL37}
+\end{equation} The last two quantities are model center and variance, not claims
+about their exact finite-genus values. Suppose \(h\to\infty\) and
+\(\mu\to\infty\). For every fixed real \(u\), integrating \eqref{eq:TL30} gives
+\begin{equation}
+\log\mathbb E_x \mathrm{e}^{u(N-\mu)/\sigma}
+ =\int_0^{u/\sigma}
+ \{h\Psi(x\mathrm{e}^s)-h\Psi(x)+O_p(\Psi(x\mathrm{e}^s))\}\,\mathrm{d}s.
+ \label{eq:TL38}
+\end{equation} The interval of integration stays inside \((0,x_c)\). Expanding
+\(h\Psi(x\mathrm e^s)-h\Psi(x)=sh\mathscr D\Psi(x)+O(s^2h\mathscr D^2\Psi)\),
+the first part of the integral is \(u^2/2\) plus a Taylor remainder, and the
+second part is an integrated error; both are \(o(1)\).
+More precisely, in the critical regime its Taylor remainder and
+integrated error are \(O_u(h^{-1/2})\); on an interior compact interval
+they are also \(O_u(h^{-1/2})\). At \(x\to0\), \(\sigma^2\sim\mu\), the
+Taylor remainder is \(O_u(\mu^{-1/2})\) and the integrated error is
+\(O_u(x/\sqrt\mu)=O_u(\sqrt\mu/h)=o(1)\). These assertions follow
+directly from \eqref{eq:TL36}; no estimate for the derivative of the
+error in \eqref{eq:TL30} is required.
+
+Thus the real moment generating functions converge to \(\exp(u^2/2)\)
+along every such sequence. Exponential Markov bounds give tightness;
+bounds at slightly larger real arguments give uniform integrability
+along weakly convergent subsequences. Their limiting moment generating
+functions identify the standard Gaussian. Therefore \begin{equation}
+(N-\mu)/\sigma\Longrightarrow\mathcal N(0,1).
+ \label{eq:TL39}
+\end{equation}
+
+\subsection{Fourier bounds and the local limit theorem}\label{uniform-fourier-bounds-and-the-lattice-local-limit}
+
+A central limit theorem alone does not determine ratios of individual
+coefficients. We now prove the corresponding local limit theorem.
+
+\begin{proposition}[Uniform local limit theorem]\label{prop:local-limit}
+Fix \(p\ge1\) and use the notation \eqref{eq:TL37}. Along every sequence
+with \(h\to\infty\), \(\mu\to\infty\) and \(x\in(0,x_c)\),
+\begin{equation}
+\mathbb P_x(N=k)=\frac{1+o(1)}{\sqrt{2\pi}\sigma}
+ \mathrm{e}^{-u^2/2}\qquad\text{whenever }(k-\mu)/\sigma\longrightarrow u.
+ \label{eq:TL47}
+\end{equation}
+No relation between \(h\) and the distance from \(x\) to \(x_c\) is required.
+\end{proposition}
+
+\begin{proof}
+Passing to a subsequence, we may assume that \(x\) tends to zero, to an
+interior point, or to \(x_c\). In each case we bound the characteristic
+function of \((N-\mu)/\sigma\) by an integrable function, uniformly along
+the sequence; Fourier inversion and the pointwise convergence implied by
+\eqref{eq:TL39} then give \eqref{eq:TL47}.
+
+On a compact subinterval of \((0,x_c)\), the coefficient probabilities
+at zero and one of \(V(xz)/V(x)\) have positive uniform lower bounds. If
+these probabilities are \(p_0,p_1\), then \begin{equation}
+\left|\sum_jp_j\mathrm{e}^{ij\theta}\right|^2
+ \le1-2p_0p_1(1-\cos\theta).
+ \label{eq:TL40}
+\end{equation} Equations \eqref{eq:TL35} and \eqref{eq:TL40} give an upper bound
+\(\exp(-c h\theta^2)\) on \([-\pi,\pi]\). Since \(\sigma\) is comparable
+to \(\sqrt h\), this is integrable Gaussian domination on the rescaled
+Fourier axis.
+
+At \(x\to0\), one has \(p_0\asymp1\), \(p_1\asymp x\). The same argument
+gives \(\exp(-c h x\theta^2)\). Since \(hx\asymp\mu\) and
+\(\sigma^2\sim\mu\to\infty\), it again gives integrable domination after
+rescaling.
+
+Near the critical point a different bound is needed, because the law
+with generating function \(V(xz)/V(x)\) then has variance of order
+\(\varepsilon^{-2}\) and its probabilities at zero and one tend to zero. Quadratic
+analytic inversion at \(x_c\) gives \begin{equation}
+V(z)=A_0(1-z/x_c)^{-1/2}
+ \Xi\bigl(\sqrt{1-z/x_c}\bigr),\qquad
+ A_0>0,\quad \Xi(0)=1,
+ \label{eq:TL41}
+\end{equation} where \(\Xi\) is analytic and nonzero near zero and has real
+coefficients. Put \(\Lambda(w)=\log \Xi(\sqrt w)\) and
+\(w(\theta)=1-(1-\varepsilon)\mathrm{e}^{i\theta}\). Then \begin{equation}
+\log\left|\frac{V(x\mathrm{e}^{i\theta})}{V(x)}\right|
+ =-\frac14\log\left(1+
+ \frac{2(1-\varepsilon)(1-\cos\theta)}{\varepsilon^2}\right)
+ +\Re \Lambda(w(\theta))-\Lambda(\varepsilon).
+ \label{eq:TL42}
+\end{equation} There are fixed \(\delta,\varepsilon_0>0\) such that \begin{equation}
+\left|\frac{V(x\mathrm{e}^{i\theta})}{V(x)}\right|
+ \le(1+\theta^2/(4\varepsilon^2))^{-1/8}
+ \quad(|\theta|\le\delta,\ 0<\varepsilon\le\varepsilon_0).
+ \label{eq:TL43}
+\end{equation} Indeed, for \(|\theta|\le\varepsilon\), the first derivative at zero
+of the real part of \(\Lambda(w(\theta))\) vanishes, while its second
+derivative is \(O(\varepsilon^{-3/2})\). Its change is therefore
+\(O(\theta^2\varepsilon^{-3/2})\), absorbed by half of the leading
+logarithm in \eqref{eq:TL42} when \(\varepsilon\) is small. For
+\(\varepsilon\le|\theta|\le\delta\), its change is bounded by
+\(C\sqrt\delta\), while the logarithm is at least \(\log(5/4)\). Choose
+\(\delta\) small enough for the same absorption. We used the elementary
+bound \(2(1-\varepsilon)(1-\cos\theta)\ge\theta^2/4\) on the small arc.
+
+On the outer arc \(\delta\le|\theta|\le\pi\), \begin{equation}
+|V(x\mathrm{e}^{i\theta})/V(x)|\le C_\delta\sqrt\varepsilon.
+ \label{eq:TL44}
+\end{equation} To see that \(V\) is analytic there, note that nonnegative coefficients and
+\(Y(x)\to y_0\) give absolute convergence of \(Y\) on \(|x|\le x_c\).
+Its first two coefficients are positive, so strict triangle inequality
+gives \(|Y(x_c \mathrm{e}^{i\theta})|<y_0\) away from \(\theta=0\). By Lemma~\ref{lem:kernel-zeros}, \(X'\) has no zero in \(|Y|<y_0\). The inverse-function theorem
+extends \(Y,V\) across the outer arc, where \(V\) is uniformly bounded.
+Since \eqref{eq:TL41} gives \(V(x)\asymp\varepsilon^{-1/2}\), \eqref{eq:TL44} follows.
+
+On the critical Fourier scale \(\theta=\varepsilon t/\sqrt h\), \eqref{eq:TL35}
+and \eqref{eq:TL43} are bounded by \begin{equation}
+(1+t^2/(4h))^{-h/8}\le(1+t^2/64)^{-2},\qquad h\ge16.
+ \label{eq:TL45}
+\end{equation} The inequality follows because \((1+a/h)^h\) increases with \(h\).
+The right side is integrable. The outer contribution after
+multiplication by \(\sqrt h/\varepsilon\) is at most \begin{equation}
+2\pi\sqrt h\,C_\delta^h\varepsilon^{h/2-1}\longrightarrow0.
+ \label{eq:TL46}
+\end{equation} This convergence is uniform for arbitrarily small \(\varepsilon\):
+fix sufficiently small \(\varepsilon_0\) with
+\(C_\delta\sqrt{\varepsilon_0}<1\), and bound \eqref{eq:TL46} by
+\(2\pi\varepsilon_0^{-1}\sqrt h(C_\delta\sqrt{\varepsilon_0})^h\) for
+\(h\ge2\).
+
+These integrable bounds, in the three regimes, complete the proof.
+\end{proof}
+
+The same Fourier bounds give an upper bound for every point mass, not
+only near the center. We record it for later use in
+Section~\ref{sec:geometry} and Appendix~\ref{app:tight}.
+
+\begin{lemma}[Uniform point-mass bound]\label{lem:point-mass}
+For every $c_0>0$ there is a constant $C$ with the following property.
+Let $x\in(0,x_c)$, let $h,h'$ be positive integers with $h'\ge\max(16,c_0h)$,
+and let $G(z)=V(z)^{h'}R(z)$, where $R$ has nonnegative Taylor
+coefficients, converges for $|z|<x_c$ and satisfies $R(x)>0$. Then,
+with $\sigma^2=h\mathscr D\Psi(x)$,
+\[
+ \sup_{j\ge0}\frac{[z^j]G(z)\,x^j}{G(x)}\le\frac C\sigma.
+\]
+\end{lemma}
+
+\begin{proof}
+By Fourier inversion and positivity of the coefficients of $R$,
+\[
+ \frac{[z^j]G(z)\,x^j}{G(x)}
+ \le\frac1{2\pi}\int_{-\pi}^{\pi}
+       \left|\frac{V(x\mathrm e^{i\theta})}{V(x)}\right|^{h'}\mathrm d\theta.
+\]
+On a compact subinterval of $(0,x_c)$, \eqref{eq:TL40} bounds the
+integrand by $\mathrm e^{-ch'\theta^2}$, so the integral is
+$O(h^{-1/2})$, while $\sigma\asymp\sqrt h$. Near zero the same argument
+with $p_1\asymp x$ gives $\mathrm e^{-ch'x\theta^2}$ and the bound
+$O((hx)^{-1/2})$, while $\sigma^2\asymp hx$. Near $x_c$, put
+$\theta=\varepsilon t/\sqrt{h'}$ on $|\theta|\le\delta$; \eqref{eq:TL43}
+and the argument of \eqref{eq:TL45} bound this part by
+$(\varepsilon/\sqrt{h'})\int(1+t^2/64)^{-2}\,\mathrm dt$. On the outer arc
+\eqref{eq:TL44} gives at most
+$2\pi(C_\delta\sqrt\varepsilon)^{h'}\le C\varepsilon h^{-1/2}$ once
+$C_\delta\sqrt{\varepsilon_0}<1$. Since $\sigma\asymp\sqrt h/\varepsilon$
+there, all three regimes give $O(1/\sigma)$.
+\end{proof}
+
+\subsection{Ratios at a prescribed number of cusps}\label{canonical-coefficient-ratios-and-all-cusp-count-uniformity}
+
+We now prove the limits in Theorem~\ref{thm:volume}. Each volume ratio is
+a ratio of coefficients, at the same index, of two marked generating
+functions. We evaluate both at the same cusp weight, chosen so that the
+index is, up to a negligible shift, the model center of both. The local limit theorem \eqref{eq:TL47} shows
+that the two local probabilities are asymptotically equal, so the
+coefficient ratio is asymptotic to the ratio of the generating functions
+themselves, which Section~\ref{ratios-with-a-fixed-number-of-distinguished-markings}
+determines.
+
+\begin{proof}[Uniform convergence in Theorem~\ref{thm:volume}]
+First suppose \(g,n\to\infty\). Put \begin{equation}
+k=n-1,\qquad h=2g-1,
+ \qquad h\Psi(x)=k.
+ \label{eq:TL48}
+\end{equation} The last equation has a unique solution in \((0,x_c)\) by \eqref{eq:TL32} and
+the parameter bijection. The two families \(\Phi_g'\) and
+\(\Phi_{g-1}'''\) have exactly the same complexity \(h\), model center,
+and model variance. Thus their two local probabilities in \eqref{eq:TL47}, at the
+common coefficient index \(k\), have ratio tending to one. Equations
+\eqref{eq:TL31} and \eqref{eq:TL47} give \begin{equation}
+\frac{[x^k]\Phi_{g-1}'''(x)}{[x^k]\Phi_g'(x)}
+ =4r(Y)(1+o(1)).
+ \label{eq:TL49}
+\end{equation} By the definition \eqref{eq:intro-Phi}, the coefficients are \begin{equation}
+[x^k]\Phi_g'(x)=
+ \frac{V_{g,n}}{(2\pi^2)^{3g-3+n}k!},\qquad
+ [x^k]\Phi_{g-1}'''(x)=
+ \frac{V_{g-1,n+2}}{(2\pi^2)^{3g-4+n}k!}.
+ \label{eq:TL50}
+\end{equation} Consequently \begin{equation}
+B_{g,n}=\frac{\pi^2}{2r(Y)}(1+o(1))
+ =\mathcal B\left(\frac{2(n-1)}{2g-1}\right)(1+o(1)).
+ \label{eq:TL51}
+\end{equation} The factorial \(k!\) cancels, and the powers of \(2\pi^2\) differ by
+exactly one; this explains the factor in \eqref{eq:TL51}.
+
+For the cusp ratio, compare \(\Phi_g''\) with \(\Phi_g'\) at the same
+index \(k\) and the same cusp weight \eqref{eq:TL48}. Their complexities are \(h+1\)
+and \(h\). Their centers differ by \(\Psi(x)\), and their variances have
+ratio \((h+1)/h\). Moreover \begin{equation}
+\frac{\Psi(x)}{\sqrt{h\mathscr D\Psi(x)}}=O(h^{-1/2})
+ \label{eq:TL52}
+\end{equation} uniformly in \(x\), because \(\Psi^2/(\mathscr D\Psi)\) is continuous
+in the interior and has finite endpoint limits zero and \(5/4\),
+respectively. Thus the local probability ratio again tends to one.
+Undoing \eqref{eq:TL24}, \begin{equation}
+C_{g,n}=\frac{\pi^2}{g}
+ \frac{[x^k]\Phi_g''}{[x^k]\Phi_g'}
+ =\frac{\pi^2}{g}\frac{h}{Aar}(1+o(1))
+ =\frac{\pi^2(n-1)}{gx}(1+o(1)).
+ \label{eq:TL53}
+\end{equation} Here, as in \eqref{eq:TL50}, the coefficients \([x^k]\Phi_g''\) and
+\([x^k]\Phi_g'\) carry the normalizing powers \((2\pi^2)^{3g-2+n}\) and
+\((2\pi^2)^{3g-3+n}\); division by \(2g\) gives the factor \(\pi^2/g\). With
+\(\lambda_{\mathrm{eff}}=2(n-1)/(2g-1)\), the last expression equals \begin{equation}
+\left(1-\frac1{2g}\right)\mathcal C(\lambda_{\rm eff})(1+o(1)).
+ \label{eq:TL54}
+\end{equation}
+
+One may replace \(\lambda_{\mathrm{eff}}\) by \(n/g\) in both \eqref{eq:TL51} and
+\eqref{eq:TL54}. At a zero limiting slope, use the continuous values
+\(\mathcal B(0)=1\) and \(\mathcal C(0)=4\pi^2\) of \eqref{eq:SP3}; at a
+finite positive slope use continuity; and at an infinite slope use the
+endpoint equivalents \eqref{eq:SP15} of Lemma~\ref{lem:parameter}.
+Since \(\lambda_{\mathrm{eff}}/(n/g)\to1\) whenever \(n\to\infty\),
+these give the desired relative replacement in all cases.
+
+Finally the exact identity \begin{equation}
+D_{g,n}=C_{g,n-1}/C_{g,n}
+ \label{eq:TL56}
+\end{equation} and the adjacent continuity of the profile \(\mathcal C\) give
+\(D_{g,n}\to1\) for every growing-cusp sequence. For bounded cusp
+counts, the classical fixed-cusp theorems give \(B_{g,n}\to1\),
+\(C_{g,n}\to4\pi^2\), and hence \(D_{g,n}\to1\); these are the only
+bounded-cusp inputs used here.
+
+If any supremum in Theorem~\ref{thm:volume} did not tend to zero, select a violating
+sequence of cusp counts. A subsequence either has a fixed bounded cusp
+count or tends to infinity. The preceding conclusions contradict a fixed
+violation in both cases. This proves the uniform convergence assertions.
+Section~\ref{subsec:quantitative-volume-ratios} supplies the stated
+inverse-genus rate using the sharper extraction theorem.
+
+\end{proof}
+
+\input{09b-boundaries}

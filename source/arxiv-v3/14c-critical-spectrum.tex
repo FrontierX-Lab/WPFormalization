@@ -1,0 +1,95 @@
+\subsection{The full length spectrum at the critical cusp scale}
+\label{sec:critical-cluster}
+
+The tight spectrum omits curves that become contractible when the cusps
+are filled. At $n\asymp\sqrt g$, these curves contribute on the same
+length scale as the nonseparating curves. Their contribution is not
+Poisson: a two-cusp pair of pants contributes its whole length spectrum,
+not only its boundary.
+
+For $s>0$, let $P_s$ be the hyperbolic pair of pants with two cusps and
+one geodesic boundary of length $s$. Write $K_s$ for its primitive
+unoriented length counting measure, including the boundary once and
+excluding parabolic classes. Equal lengths are counted with their
+geometric multiplicities. Let
+\begin{equation}
+ \mu_c(\mathrm ds)=\frac{c^2}{8\pi^2}\sinh(s/2)\,\mathrm ds,
+ \qquad \nu(\mathrm dt)=\frac{\cosh t-1}{t}\,\mathrm dt.
+ \label{eq:cluster-intensities}
+\end{equation}
+
+\begin{theorem}[Critical primitive length spectrum]
+\label{thm:critical-cluster}
+Suppose $g\to\infty$ and $n/\sqrt g\to c\in(0,\infty)$, and let
+$X$ have law $\mathbb P^{\mathrm{WP}}_{g,n}$. Then
+\begin{equation}
+ \sum_{\substack{\gamma\text{ primitive}\\\text{unoriented on }X}}
+       \delta_{\ell_X(\gamma)}
+ \ \Longrightarrow\ \Xi_c:=\mathcal N+\sum_{s\in\mathcal Q_c}K_s,
+ \label{eq:critical-cluster}
+\end{equation}
+as locally finite counting measures on $[0,\infty)$ with the vague
+topology. Here $\mathcal N$ and $\mathcal Q_c$ are independent Poisson
+point processes of intensities $\nu$ and $\mu_c$. In particular, for
+every nonnegative continuous compactly supported function $f$,
+\begin{equation}
+ \mathbb E\mathrm e^{-\langle f,\Xi_c\rangle}
+ =\exp\left\{-\int(1-\mathrm e^{-f(t)})\,\nu(\mathrm dt)
+ -\int(1-\mathrm e^{-\langle f,K_s\rangle})\,\mu_c(\mathrm ds)\right\}.
+ \label{eq:cluster-laplace}
+\end{equation}
+\end{theorem}
+
+Shen and Wu obtained the factorial-moment asymptotics for short
+two-cusp pants and the limiting probability that such a curve occurs
+at this cusp scale~\cite[Lemmas~28 and~33]{SW}. The corresponding Poisson mean is
+$\mu_c([0,L])=c^2(\cosh(L/2)-1)/(4\pi^2)$ on their stated short
+window. Theorem~\ref{thm:critical-cluster} concerns the full primitive
+process on every fixed length window, including the correlated lengths
+inside each pair of pants. The background intensity and the geometric
+moment method come from Mirzakhani and Petri~\cite{MP}. The critical
+regime needs the volume bounds of Mirzakhani--Zograf and
+Shen--Wu~\cite{MZ,SW} together with the zero-density case of
+Theorem~\ref{thm:volume} and Proposition~\ref{prop:bounded-boundaries}:
+at $n\asymp\sqrt g$ the earlier estimates bound the genus ratio
+$V_{g-1,n+2}/V_{g,n}$ only from above. The full uniform expansion is not
+used.
+
+The nonsimple part distinguishes this regime from closed surfaces.
+He, Shen, Wu and Xue proved that the nonsimple systole of a
+Weil--Petersson random closed surface is asymptotic to $\log g$,
+with a more precise concentration about $\log g-\log\log g$~\cite[Theorem~1.1]{HSWX}.
+Thus nonsimple curves leave every
+fixed length window in that model. At the critical cusp scale here,
+two-cusp pants instead retain nonsimple curves of bounded length.
+
+\emph{Outline of the proof.} Short multicurves are organized by their cut
+graphs. Using only the volume bounds of~\cite{MZ,SW},
+Lemma~\ref{lem:critical-cuts} shows that in the limit a cut graph
+contributes only if it has one component carrying the genus, possibly
+with nonseparating loops, and two-cusp pairs of pants attached to it as
+leaves. A bounded-multiplicity argument (Lemmas~\ref{lem:primitive-count}
+and~\ref{lem:critical-complex}) reduces intersecting simple curves and
+nonsimple curves to such cut graphs; hence, with probability tending to
+one, every short nonsimple curve lies in a two-cusp pair of pants. The mixed
+factorial moments of nonseparating lengths and pants waists converge to those
+of independent Poisson processes (Lemma~\ref{lem:critical-skeleton}, where the
+zero-density volume ratios enter), and attaching to each waist the full
+spectrum of its pair of pants gives $\Xi_c$. The details are given in
+Appendix~\ref{app:critical}.
+
+The limit is not Poisson. If $m_L(s)=K_s([0,L])$, then
+Lemma~\ref{lem:primitive-count} and the support restriction $s\le2L$
+give finite moments and
+\begin{equation}
+ \operatorname{Var}\Xi_c([0,L])-\mathbb E\Xi_c([0,L])
+ =\int m_L(s)(m_L(s)-1)\,\mu_c(\mathrm ds).
+ \label{eq:cluster-overdispersion}
+\end{equation}
+Besides its waist, $P_s$ contains the primitive figure-eight around
+its two cusps, of length $2\operatorname{arccosh}(2+\cosh(s/2))$
+by \cite[Theorem~1.3]{Rivin}. For $L>2\operatorname{arccosh}3$,
+both lengths lie below $L$ on an interval of positive $\mu_c$-measure.
+The right side of \eqref{eq:cluster-overdispersion} is therefore
+strictly positive. The theorem identifies these correlations in the
+limit; no convergence of the full-spectrum second moments is asserted.

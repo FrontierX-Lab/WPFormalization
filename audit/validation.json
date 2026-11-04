@@ -1,0 +1,62 @@
+{
+  "dateUTC": "2026-11-04T01:50:55.998683+00:00",
+  "sourceHash": "ae8216d53b3bcf01aaa223cf17be80df9c7d2b995574ba5edaa853487742c702",
+  "commands": [
+    {
+      "command": [
+        "./scripts/ci-blueprint.sh"
+      ],
+      "exit": 0,
+      "seconds": 231.43,
+      "jobs": 11705
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_paper.py"
+      ],
+      "exit": 0,
+      "seconds": 1.42,
+      "jobs": null
+    }
+  ],
+  "build": {
+    "exit": 0,
+    "jobs": 11705,
+    "threads": 8,
+    "mode": "incremental build with independently copied pinned dependency cache"
+  },
+  "blueprint": {
+    "apiStability": "unstable",
+    "errors": [],
+    "htmlCacheEntries": 555,
+    "manifestEntries": 555,
+    "ok": true
+  },
+  "leanChecks": {
+    "count": 7,
+    "allPassed": true,
+    "directory": "audit/checks/"
+  },
+  "retainedDataMatchesFreshExports": {
+    "proof-status.json": true,
+    "parameters.json": true,
+    "reachable.json": true
+  },
+  "snapshot": {
+    "ok": true,
+    "frozenFiles": 1860,
+    "mathematicalFiles": 1827,
+    "targets": 153,
+    "licenseGroups": 77,
+    "externalSorryRoots": 38,
+    "localLinksChecked": 542,
+    "cleanDeliveryCheck": true,
+    "errors": []
+  },
+  "limitations": [
+    "Classical external assumptions remain unproved.",
+    "No actual geometric instance or joint interface inhabitation was constructed.",
+    "Network cold build, browser interaction and remote GitHub Actions were not tested."
+  ]
+}

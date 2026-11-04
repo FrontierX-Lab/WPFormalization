@@ -1,0 +1,37 @@
+name = "WPFormalization"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["WPFormalization", "WPBlueprint"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+experimental.module = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.34.1"
+
+[[lean_lib]]
+name = "WPFormalization"
+
+[[require]]
+name = "VersoBlueprint"
+git = "https://github.com/leanprover/verso-blueprint"
+rev = "a1cf70667112dcffe15faea9f8783e63dd9644e8"
+
+[[lean_lib]]
+name = "WPBlueprint"
+
+[[require]]
+name = "plausible"
+git = "https://github.com/leanprover-community/plausible"
+rev = "118aa17ee84656b8bd727fef7c458ee8c833385c"
+
+[[require]]
+name = "proofwidgets"
+git = "https://github.com/leanprover-community/ProofWidgets4"
+rev = "106ff4fafc74ef4ac99d81dbf3ab399118f497a5"

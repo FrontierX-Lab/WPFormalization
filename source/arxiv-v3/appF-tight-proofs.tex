@@ -1,0 +1,326 @@
+\section{Proofs for the tight length spectrum}\label{app:tight}
+
+This appendix proves Theorem~\ref{thm:tight-spectrum} and
+Corollary~\ref{cor:tight-boltzmann}, following the outline in
+Subsection~\ref{subsec:tight-spectrum}. The scale $\alpha$ and the
+intensity $\nu$ are those of \eqref{eq:tight-scale}.
+
+\subsection{Tight volume generating functions}\label{subsec:tight-gf}
+
+Put $P=2\pi^2$. Let $T_{g,p,k}(\mathbf L)$ be the tight volume with
+$p$ protected geodesic boundaries and $k$ cusps that may be filled,
+in the conventions of~\cite{Budd,BZ,BL}. For stable $(g,p)$ define
+\[
+ \mathscr T_{g,p}(x;\mathbf L)
+ =\sum_{k\ge0}\frac{T_{g,p,k}(\mathbf L)}{P^{3g-3+p+k}}
+                 \frac{x^k}{k!},\qquad F_{g,p}=\Phi_g^{(p)}.
+\]
+Unmarked functions are used only for $g\ge2$. Set
+$\varrho(Y)=\sqrt{r(Y)/P}$ and $S(t)=\sinh(t)/t$, with $S(0)=1$.
+
+\begin{lemma}[Tight generating functions]\label{lem:tight-gf}
+Let $(g,p)$ be stable and $0\le Y<y_0$. The tight generating function is
+expressed through the shifted amplitudes by the exact identity
+\begin{equation}
+ \mathscr T_{g,p}(X(Y);\mathbf L)
+ =\sum_{\mathbf d}U^Y_{g,p}(\mathbf d)
+       \prod_{i=1}^p\frac{L_i^{2d_i}}{P^{d_i}(2d_i+1)!},
+ \label{eq:tight-insertion}
+\end{equation}
+which fixes both the normalization and the meaning of the protected
+boundaries. Its ratio to the ordinary marked generating function satisfies
+\begin{equation}
+ \begin{split}
+ 1\le\frac{\mathscr T_{g,p}(X(Y);\mathbf L)}{F_{g,p}(X(Y))}
+   &\le\prod_{i=1}^p S(\varrho(Y)L_i),\\
+ \frac{\mathscr T_{g,p}(X(Y);\mathbf L)}{F_{g,p}(X(Y))}
+   &=\prod_{i=1}^p S(\varrho(Y)L_i)
+        \bigl(1+O_{p,B}(g^{-1})\bigr)
+       \quad\text{if }\max_i\varrho(Y)L_i\le B,
+ \end{split}
+ \label{eq:tight-real}
+\end{equation}
+where the inequality holds at every stable genus. Finally, for each fixed
+physical length vector,
+\begin{equation}
+ \mathscr T_{g,p}(x;\mathbf L)=V(x)^{2g-2+p}R_{g,p,\mathbf L}(x),
+ \qquad [x^j]R_{g,p,\mathbf L}(x)\ge0,
+ \label{eq:tight-positive}
+\end{equation}
+and the series converge for $0\le x<x_c$.
+\end{lemma}
+
+\begin{proof}
+The identity \eqref{eq:tight-insertion} follows from~\cite[Proposition~12]{BZ}. Indeed, their root and
+moments are $R=Y/P$ and $M_j=P^jX^{(j+1)}(Y)$. With $q=P/2$,
+their shifted times are $q^{k-1}t'_k$, where the $t'_k$ are the
+times in \eqref{eq:H8}. The dimension constraint gives the factor
+$q^{3g-3+p-|\mathbf d|}$. Combining their external insertion
+$2L^{2d}/(4^d d!)$ with the free-energy factor $2^{3g-3}$ and
+the double factorial in \eqref{eq:H6} gives
+\eqref{eq:tight-insertion}. This also covers genus zero with $p\ge3$.
+
+Equations~\eqref{eq:TL15} and~\eqref{eq:TL23} give \eqref{eq:tight-real}. For
+the asymptotic estimate,
+the factorial series with the extra weight
+$|\mathbf d|(|\mathbf d|+1)$ is uniformly summable on the indicated
+box. Thus the lengths may grow as $r(Y)^{-1/2}$.
+
+For each fixed physical length vector, the proof of
+\eqref{eq:TL33} applies to every amplitude in
+\eqref{eq:tight-insertion}, which gives \eqref{eq:tight-positive}. The
+finite sum in \eqref{eq:tight-insertion} and \eqref{eq:tight-real} justify
+convergence throughout $0\le x<x_c$.
+\end{proof}
+
+\subsection{Prescribing the cusp count}\label{subsec:tight-count}
+
+We record the coefficient argument for the cut surfaces that occur in
+the tight integration formula. Fix a number $k$ of cuts and put
+$h_0=2g-2$. When $n\to\infty$, choose $x$ by
+\[
+ (h_0+1)\Psi(x)=n-1,\qquad
+ \sigma^2=(h_0+1)\mathscr D\Psi(x),\qquad x=X(Y),
+\]
+and write $\alpha_x=2\varrho(Y)$. If $n$ stays bounded, we pass to a
+subsequence on which $n$ is fixed and take instead $x=c/h_0$ with $c>0$.
+
+\begin{lemma}[Connected cut configurations]\label{lem:tight-connected}
+Fix $k$ and a compact box of scaled lengths $\mathbf t\in[0,\infty)^{2k}$.
+With $x$ chosen as above, uniformly for $\mathbf t$ in the box,
+\begin{equation}
+ \frac{[z^n]\mathscr T_{g-k,2k}(z;\mathbf t/\alpha_x)}
+      {[z^n]\Phi_g(z)}
+ =(4r(Y))^k\prod_{i=1}^{2k}S(t_i/2)(1+o(1)).
+ \label{eq:tight-connected}
+\end{equation}
+Moreover $\alpha_x/\alpha(n/g)\to1$.
+\end{lemma}
+
+\begin{proof}
+Suppose first that $n\to\infty$. The denominator
+$F_{g,1}=\Phi_g'$ has its local limit at $n-1$.
+For the connected-complement numerator
+$G(x)=\mathscr T_{g-k,2k}(x;\mathbf t/\alpha_x)$, the physical
+lengths are held fixed when its argument is varied. Its model center
+is $h_0\Psi(x)$, and
+\[
+ \frac{n-h_0\Psi(x)}\sigma
+ =\frac{1+\Psi(x)}\sigma\longrightarrow0.
+\]
+The endpoint expansions give
+\[
+ \sup_{0<x<x_c}
+ \frac{|\mathscr D\log r(Y(x))|}{\sqrt{\mathscr D\Psi(x)}}<\infty.
+\]
+Consequently a real tilt $x\mathrm e^{u/\sigma}$ changes $r$ by a
+relative $O_u(g^{-1/2})$, uniformly up to either endpoint.
+Equation~\eqref{eq:tight-real} therefore transfers the real Gaussian
+limit from $F_{g-k,2k}$ to $G$. The positive factor
+\eqref{eq:tight-positive} transfers the Fourier estimates
+\eqref{eq:TL40}--\eqref{eq:TL46}. The two local probabilities at
+$n$ and $n-1$ are asymptotic to $(\sqrt{2\pi}\sigma)^{-1}$.
+
+We use the derivative only in the denominator: adding a protected cusp
+to a tight surface would change which homotopies are allowed.
+For a generating function $J$ with nonnegative coefficients write
+$\mathbb P_x^J(N=m)=[z^m]J(z)x^m/J(x)$. The exact identity is
+\begin{equation}
+ \frac{[z^n]G(z)}{[z^n]\Phi_g(z)}
+ =\frac n x\frac{G(x)}{\Phi_g'(x)}
+       \frac{\mathbb P_x^G(N=n)}
+            {\mathbb P_x^{\Phi_g'}(N=n-1)}.
+ \label{eq:tight-coefficient}
+\end{equation}
+Equation~\eqref{eq:TL24} at $p=0$ shows that
+$n\Phi_g(x)/(x\Phi_g'(x))\to1$. Iterating
+\eqref{eq:TL31} now yields \eqref{eq:tight-connected}.
+
+For bounded $n$, with $x=c/h_0$, equation~\eqref{eq:TL24} gives
+\eqref{eq:TL30} also at $p=0$. Integrating that estimate between
+$x$ and $xz$, and using $\Psi(x)=2x+O(x^2)$, proves convergence of
+the probability generating functions to $\exp(2c(z-1))$.
+The same holds for $G$ by \eqref{eq:tight-real}. The probabilities at
+the fixed index $n$ thus converge to the same positive Poisson
+probability. This proves \eqref{eq:tight-connected} in this case too.
+
+Finally $\alpha_x/\alpha(n/g)\to1$. At finite density this follows
+by continuity; at infinite density use $r(Y_\lambda)\sim
+(3\sqrt5j_{0,1}/2)\lambda^{-1/2}$. This relative comparison is
+needed because both scales tend to zero at infinite density.
+\end{proof}
+
+\subsection{Separating configurations}\label{subsec:tight-sep}
+
+\begin{lemma}[Separating configurations]\label{lem:tight-separating}
+Fix $k$ and $L$. Uniformly in $n$, with lengths scaled by $\alpha_x$,
+\begin{equation}
+ \mathbb E^{\mathrm{WP}}_{g,n}
+ \bigl[\text{ordered separating tight $k$-tuples with scaled
+ lengths at most $L$}\bigr]=o(1),
+ \label{eq:tight-separating-count}
+\end{equation}
+where only simple, pairwise disjoint tuples are counted, and separating
+means that their union disconnects the filled surface.
+\end{lemma}
+
+\begin{proof}
+For a stable connected cut graph with $k$ edges and $Q$ vertices, let
+$(g_i,p_i)$ be the component types after filling the cusps. Then
+\[
+ p_i\ge1,\quad h_i=2g_i-2+p_i\ge1,\quad
+ \sum_i h_i=h_0,\quad \sum_i p_i=2k,\quad
+ \sum_i g_i=g-k+Q-1.
+\]
+For fixed positive $p$, Proposition~\ref{prop:prefactor} implies the
+two-sided bound
+\begin{equation}
+ F_{g,p}(X(Y))\asymp_p
+ 4^{-g}\mathcal Z(Y)^{-h}r(Y)^{p/2}f(h),
+ \qquad f(h)=\frac{\Gamma(h)}{\sqrt h},\quad h=2g-2+p.
+ \label{eq:tight-gamma}
+\end{equation}
+The constants are uniform in $Y$. Bounded stable genera are included
+by positivity and continuity of the normalized finite amplitudes on
+$[0,y_0]$. For $p=0$, $g\ge2$, the same bound follows from $p=1$
+and \eqref{eq:TL24}.
+
+The identities for the component types cancel all powers of
+$\mathcal Z$ in the product-to-parent ratio. They leave
+\[
+ r(Y)^{-k}\frac{\prod_i F_{g_i,p_i}(X(Y))}{\Phi_g(X(Y))}
+ \le C_k\frac{\prod_i f(h_i)}{f(h_0)}.
+\]
+To sum over genera, observe that
+$\sum_{a=1}^{\ell-1}f(a)f(\ell-a)\le C f(\ell-1)$.
+Indeed,
+\[
+ \frac{\Gamma(a)\Gamma(\ell-a)}{\Gamma(\ell)}
+ =\frac{1}{(\ell-1)\binom{\ell-2}{a-1}},
+\]
+the reciprocal binomial coefficients have uniformly bounded sum,
+and $\sqrt{\ell}/\sqrt{a(\ell-a)}$ is bounded. Iteration gives
+$f^{*Q}(\ell)\le C_Q f(\ell-Q+1)$. Since the marking allocations and
+gluings have bounded multiplicity for fixed $k$, it follows that
+\begin{equation}
+ r(Y)^{-k}\sum_{\substack{\text{stable cut types}\\Q\text{ components}}}
+ \frac{\prod_i F_{g_i,p_i}(X(Y))}{\Phi_g(X(Y))}
+ \le C_k g^{-(Q-1)},\qquad 2\le Q\le k+1.
+ \label{eq:tight-separating-real}
+\end{equation}
+
+For scaled lengths in a fixed compact box,
+\eqref{eq:tight-real} bounds each boundary factor uniformly, including
+on small-genus components. Every product in this positive sum has
+the factor $V^{h_0}$ by \eqref{eq:tight-positive}. Its largest tilted
+point probability is at most $C/\sigma$, by Lemma~\ref{lem:point-mass}. Applying \eqref{eq:tight-coefficient}, against the
+denominator probability at least $c/\sigma$, therefore transfers
+\eqref{eq:tight-separating-real} to coefficients. For bounded $n$,
+use $x=c/h_0$ and the positive limiting denominator probability;
+the numerator probability is at most one.
+
+In the tight integration formula~\cite[Proposition~3.2]{BL}, the
+physical normalization costs $P^{-k}$ and the length Jacobian is
+$\alpha_x^{-2k}=(P/(4r))^k$. These cancel the remaining $r^k$.
+The symmetry factors are at most one. This proves
+\eqref{eq:tight-separating-count}.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{thm:tight-spectrum}}\label{subsec:tight-proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:tight-spectrum}]
+For fixed disjoint intervals in $(0,\infty)$, count ordered tuples
+of simple, pairwise disjoint tight curves in those intervals.
+The connected-complement symmetry is $2^{-k}$ in the tight integration
+formula. Lemma~\ref{lem:tight-connected}, with each cut length
+appearing on two boundary components, gives the limiting integrand
+\[
+ \prod_{i=1}^k\frac12 t_i S(t_i/2)^2\,\mathrm dt_i
+ =\prod_{i=1}^k\frac{\cosh t_i-1}{t_i}\,\mathrm dt_i.
+\]
+Lemma~\ref{lem:tight-separating} removes all other cut types.
+Thus the disjoint-tuple moments have the Poisson limits of every
+fixed order.
+
+Here the disjoint-tuple moments must be related to the actual count
+moments: a small probability of intersections alone would not suffice.
+Choose $L$ above all interval endpoints, and let $A_L$ be the event that
+scaled lengths at most $L$ include a
+self-intersecting tight curve or two intersecting tight curves. Write
+$\widehat N_{\mathbf r}$ for the disjoint-tuple count in the prescribed
+intervals, with multiplicities $\mathbf r=(r_1,\ldots,r_j)$.
+We use the deterministic constructions in the proofs of
+\cite[Propositions~5.2--5.3]{BL}, rather than their probabilistic
+conclusions in the near-critical model. These constructions apply after
+rescaling by any positive length scale.
+
+Fix $\varepsilon>0$ below the interval endpoints. On $A_L$, outside
+the event of a tight systole shorter than $\varepsilon$, the construction
+extends a counted tuple to a separating tight multicurve. Its number of
+components and scaled lengths are bounded in terms of
+$\varepsilon,L,\mathbf r$, independently of $g,n$. If there is a shorter
+tight systole, either it adds a disjoint curve in $[0,\varepsilon]$, or
+the tuple again extends to a separating multicurve. The original ordered
+tuple is retained in these extensions. Thus the separating terms vanish
+by \eqref{eq:tight-separating-count}, and the mixed disjoint-tuple limit gives
+\[
+ \limsup_{g\to\infty}\mathbb E[
+   \widehat N_{\mathbf r}\mathbf1_{A_L}]
+ \le \nu([0,\varepsilon])\prod_{i=1}^j\nu(I_i)^{r_i},
+\]
+where $I_i$ are the prescribed intervals. Letting $\varepsilon\downarrow0$
+removes the right side. The same construction without a marked tuple
+gives $\mathbb P(A_L)\to0$. Conditional on $A_L^c$, factorial counts
+are exactly disjoint-tuple counts. Their limiting moments therefore
+remain unchanged, and the moment-determinate Poisson law gives joint
+count convergence.
+
+The first-moment bound for simple tight curves in $[0,\varepsilon]$
+tends to $\nu([0,\varepsilon])\to0$. A shortest tight curve is
+simple, so the same bound controls the event of any tight curve in
+this window. This extends the convergence to $[0,\infty)$ and gives
+tightness on compact intervals. Finally the disjoint-tuple moments
+bound the number of curves in a fixed window in probability.
+For any fixed upper bound on that number,
+\eqref{eq:tight-separating-count} rules out every disconnected
+complement. Letting the upper bound increase proves the last claim.
+\end{proof}
+
+\subsection{Proof of Corollary~\ref{cor:tight-boltzmann}}\label{subsec:tight-boltzmann-proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:tight-boltzmann}]
+Write $x=P\mu_g$ and $h=2g-2$. The case $x=0$ has $N=0$.
+Otherwise \eqref{eq:TL24} at $p=0$ gives
+\[
+ \mathbb E N=h\Psi(x)+O(\Psi(x)).
+\]
+If $h\Psi(x)$ stays bounded, $N$ is tight and both $N/g$ and
+$2\Psi(x)$ tend to zero. If $h\Psi(x)\to\infty$, integrating
+\eqref{eq:TL30} at $p=0$ gives the same real central limit theorem
+as \eqref{eq:TL39}, hence
+\[
+ N=h\Psi(x)+O_{\mathbb P}\!\left(\sqrt{h\mathscr D\Psi(x)}\right).
+\]
+The endpoint estimates \eqref{eq:TL36} imply
+$\mathscr D\Psi/\Psi^2\le C(1+1/\Psi)$. It follows that
+$N/(h\Psi(x))\to1$ in probability in this second case.
+Continuity of $\alpha$ at finite density and its
+$\lambda^{-1/4}$ asymptotic at infinity therefore give, in both cases,
+\[
+ \frac{\alpha(N/g)}{\alpha(2\Psi(x))}
+ =\frac{\alpha(N/g)}{a_g}\longrightarrow1
+ \quad\text{in probability}.
+\]
+Subsequences cover arbitrary choices of $x$.
+
+For each fixed nonnegative compactly supported continuous test function,
+the conditional Laplace-functional convergence in
+Theorem~\ref{thm:tight-spectrum} is uniform in $n$: a sequence violating
+uniformity would contradict that theorem. Averaging over $N$ gives the
+Poisson limit with random normalization $\alpha(N/g)$.
+The displayed scale comparison and continuity of dilation of point
+measures replace this by $a_g$. For $\mu_g\to\mu<\mu_{\rm cr}$, a change of
+scale gives the stated unscaled intensity. At the critical endpoint,
+$r\sim3(y_0-Y)$ and $x_c-x\sim(-X''(y_0))(y_0-Y)^2/2$ show that
+$a_g$ is asymptotic to the scale in~\cite[Theorem~1.2]{BL}.
+\end{proof}

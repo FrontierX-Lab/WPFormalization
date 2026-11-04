@@ -1,0 +1,168 @@
+\subsection{Bounded geodesic boundaries}\label{subsec:bounded-boundaries}
+
+The positive factor also permits a fixed number of cusps to be replaced
+by geodesic boundaries. The resulting factor depends on the cusp density
+and joins the familiar large-genus and large-cusp boundary profiles.
+For $0\le Y\le y_0$ and $L\ge0$, put
+\begin{equation}
+ \mathfrak b_Y(L)=\int_0^1
+ I_0\!\left(\frac L\pi\sqrt{T(Y)-\Delta(Y)s^2}\right)\,\mathrm ds,
+ \label{eq:boundary-profile}
+\end{equation}
+where $I_0$ is the modified Bessel function of order zero, $T=Y+\Delta$
+and $r=2\Delta$. At $Y=y_0$ use $T=y_0$ and $\Delta=0$.
+Writing $Y_\lambda$ for the inverse of $\lambda(Y)$, we have
+$Y_0=0$ and $Y_\infty=y_0$.
+
+\begin{proposition}[Boundary lengths at arbitrary cusp density]
+\label{prop:bounded-boundaries}
+Fix an integer $p\ge1$ and $L_0<\infty$. As $g\to\infty$,
+\begin{equation}
+ \sup_{\substack{n\ge p\\\mathbf L\in[0,L_0]^p}}
+ \left|
+ \frac{V_{g,n}(L_1,\ldots,L_p,0^{n-p})}
+ {V_{g,n}\prod_{i=1}^p\mathfrak b_{Y_{n/g}}(L_i)}-1
+ \right|\longrightarrow0.
+ \label{eq:boundary-uniform}
+\end{equation}
+The endpoint factors are
+\begin{equation}
+ \mathfrak b_0(L)=\frac{\sinh(L/2)}{L/2},\qquad
+ \mathfrak b_{y_0}(L)=I_0\!\left(\frac{j_{0,1}L}{2\pi}\right),
+ \label{eq:boundary-endpoints}
+\end{equation}
+with value one at $L=0$.
+\end{proposition}
+
+The first factor occurs in the fixed-cusp estimate of Mirzakhani and
+Petri~\cite[Proposition~3.1]{MP}; the second is the fixed-genus,
+large-cusp factor of Hide and Thomas~\cite[Theorem~1.5]{HTLargeN}.
+Here the genus tends to infinity and the cusp count is unrestricted.
+The number and lengths of the nonzero boundaries remain bounded.
+For comparison, Budd and Lions obtain a boundary factor for tight volumes
+with a random cusp count in a near-critical regime
+\cite[Proposition~4.2]{BL}. Exact transformations between ordinary and
+tight boundary generating functions were established in~\cite{BZ}.
+
+\begin{proof}
+Put $h=2g-2+p$, $F(x)=\Phi_g^{(p)}(x)$ and
+\[
+ G(x;\mathbf L)=\sum_{k\ge0}
+ \frac{V_{g,p+k}(\mathbf L,0^k)}{(2\pi^2)^{3g-3+p+k}}
+ \frac{x^k}{k!}.
+\]
+We first compare $G$ with $F$ on the real axis, and then show that the
+same comparison holds for their coefficients at the saddle.
+
+\emph{The boundary insertion.}
+Use the string flow of \eqref{eq:H8}, holding its parameter $Y$ fixed
+while differentiating the KW times. Its linear part gives
+\[
+ \partial_{t_d}=\sum_{b=0}^d\frac{Y^{d-b}}{(d-b)!}\partial_{t_b'}.
+\]
+For $g\ge2$ the free energy is invariant under the flow. Apply the
+displayed identity to each external insertion before setting $x=X(Y)$.
+In the volume normalization of \eqref{eq:H5}, an external degree $d$
+has coefficient $(L^2/(4\pi^2))^d/d!$ times the unweighted derivative.
+Consequently, with $t_i=L_i^2/(4\pi^2)$, the exact identity is
+\begin{equation}
+ \frac{G(X(Y);\mathbf L)}{F(X(Y))}
+ =\sum_{\mathbf a,\mathbf b\ge0}c_{g,p}(\mathbf b;Y)
+ \prod_{i=1}^p
+ \frac{t_i^{a_i+b_i}Y^{a_i}r^{b_i}}
+ {a_i!(a_i+b_i)!(2b_i+1)!!}.
+ \label{eq:boundary-insertion}
+\end{equation}
+Indeed, \eqref{eq:TL9} gives
+$U^Y_{g,p}(\mathbf b)/U^Y_{g,p}(\mathbf0)=r^{|\mathbf b|}c_{g,p}(\mathbf b;Y)$.
+Terms with invalid $\mathbf b$ are zero; there is no bound on $\mathbf a$.
+
+The identity
+\[
+ \int_0^1(1-s^2)^b\,\mathrm ds=\frac{2^b b!}{(2b+1)!!}
+\]
+and the series for $I_0$ show that replacing $c_{g,p}$ by one in
+\eqref{eq:boundary-insertion} gives
+$\prod_i\mathfrak b_Y(L_i)$. The same double series with an extra
+factor $|\mathbf b|(|\mathbf b|+1)$ is bounded uniformly for
+$Y\in[0,y_0]$ and $\mathbf L\in[0,L_0]^p$: the inequality
+$(a+b)!\ge a!b!$ supplies a summable factorial majorant for every fixed
+polynomial moment. Thus \eqref{eq:TL23}, including its one-marking case,
+gives
+\begin{equation}
+ \frac{G(X(Y);\mathbf L)}{F(X(Y))}
+ =\prod_i\mathfrak b_Y(L_i)\bigl(1+O_{p,L_0}(g^{-1})\bigr).
+ \label{eq:boundary-real}
+\end{equation}
+All terms in \eqref{eq:boundary-insertion} are nonnegative. The
+majorant also justifies convergence of the formal string-flow identity
+for $0\le x<x_c$. The factors $\mathfrak b_Y(L)$ are at least one;
+they and their first $Y$ derivatives are uniformly bounded on the
+compact set under consideration.
+
+\emph{Extraction at a prescribed cusp count.}
+The proof of \eqref{eq:TL33} applies to every external degree tuple:
+$a(Y)^hU^Y_{g,p}(\mathbf b)$ has nonnegative Taylor coefficients in $Y$.
+Before division by $F$, the insertion identity is a sum of these
+amplitudes with nonnegative powers of $Y$ and nonnegative constants.
+Since $Y(x)$ also has nonnegative coefficients, it follows that
+\[
+ G(x;\mathbf L)=V(x)^h R_{g,p,\mathbf L}(x),\qquad
+ [x^j]R_{g,p,\mathbf L}(x)\ge0.
+\]
+Convergence follows from \eqref{eq:boundary-real}. Hence
+\begin{equation}
+ \left|\frac{G(x\mathrm e^{i\theta};\mathbf L)}{G(x;\mathbf L)}\right|
+ \le\left|\frac{V(x\mathrm e^{i\theta})}{V(x)}\right|^h.
+ \label{eq:boundary-fourier}
+\end{equation}
+
+Suppose first that $k=n-p\to\infty$, and choose $x$ by
+$h\Psi(x)=k$. Put $\sigma^2=h\mathscr D\Psi(x)$. For fixed real $u$,
+the ratio of the centered moment generating functions associated with
+$G$ and $F$ is
+\[
+ \frac{(G/F)(x\mathrm e^{u/\sigma};\mathbf L)}
+ {(G/F)(x;\mathbf L)}.
+\]
+It tends to one, uniformly in $\mathbf L$. To see this, the endpoint
+expansions \eqref{eq:TL36} and the quadratic inverse at $x_c$ show that
+\[
+ \sup_{0<x<x_c}\frac{xY'(x)}{\sqrt{\mathscr D\Psi(x)}}<\infty.
+\]
+On the tilted interval $x\mathrm e^{u/\sigma}$ the model variance is
+comparable to its value at $x$, and the interval remains subcritical.
+Therefore $Y(x\mathrm e^{u/\sigma})-Y(x)=O_u(h^{-1/2})$.
+Now use \eqref{eq:boundary-real} and the bounded derivative of
+$\mathfrak b_Y$.
+
+The real Gaussian limit \eqref{eq:TL39} thus holds for $G$ with the same
+center $k$ and scale $\sigma$. Its Fourier bound
+\eqref{eq:boundary-fourier} is identical to the one used in
+\eqref{eq:TL40}--\eqref{eq:TL46}. Fourier inversion consequently gives
+the local limit \eqref{eq:TL47} for $G$ as well. At the common index
+$k$, both local probabilities are asymptotic to
+$(\sqrt{2\pi}\sigma)^{-1}$. Their ratio tends to one, and hence
+\[
+ \frac{[x^k]G(x;\mathbf L)}{[x^k]F(x)}
+ =\prod_i\mathfrak b_{Y}(L_i)(1+o(1)),\qquad
+ \lambda(Y)=\frac{2(n-p)}{2g-2+p}.
+\]
+All errors are uniform on the fixed length box, including along
+sequences tending to either endpoint of the parameter interval.
+
+For bounded $k$, pass to a subsequence on which $k$ is fixed.
+Equation~\eqref{eq:TL23} at $Y=0$, with $p+k$ markings, gives the
+fixed-cusp boundary estimate \eqref{eq:boundary-factor}. This yields the
+same conclusion since the saddle then tends to zero.
+
+Finally, replacing $2(n-p)/(2g-2+p)$ by $n/g$ changes the corresponding
+$Y$ by $o(1)$ uniformly in $n\ge p$. Indeed, along a subsequence on
+which $n/g$ tends to zero, a positive finite limit, or infinity, both
+parameters have the same limit in $[0,y_0]$. Continuity of
+$\mathfrak b_Y(L)$, uniformly on the length box, proves
+\eqref{eq:boundary-uniform}. At $Y=0$, $T=\Delta=\pi^2/4$;
+expanding $I_0$ and integrating gives the first formula in
+\eqref{eq:boundary-endpoints}. At $Y=y_0$, the integrand is constant,
+which gives the second.
+\end{proof}

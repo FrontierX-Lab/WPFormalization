@@ -1,0 +1,16 @@
+{
+  "nodes": 153,
+  "numberedPaperResults": 57,
+  "statementEdges": 159,
+  "proofEdges": 214,
+  "cycles": 0,
+  "danglingReferences": 0,
+  "duplicateLabels": 0,
+  "classification": {
+    "paper-new": 92,
+    "paper-definition": 36,
+    "external-known": 20,
+    "external-candidate": 5
+  },
+  "scope": "Structural and PDF-start-page checks only; no mathematical completeness claim."
+}

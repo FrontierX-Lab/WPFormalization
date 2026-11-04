@@ -1,0 +1,235 @@
+\section{Positive kernels}\label{the-positive-compact-family-of-kernels}
+
+Two entire functions of a variable $z$, depending on the parameter $Y$,
+control everything that follows. The first, $K_Y$, arises in
+Section~\ref{exact-amplitudes-and-the-harmonic-model} when the marking
+singled out by the Dijkgraaf--Verlinde--Verlinde equation is merged with
+the $\kappa_1$ insertions: these mergers act on the amplitudes as
+$K_Y(E)$, where $E$ raises a degree by one, so the Taylor coefficients of
+$1/K_Y$ become the coefficients of the recursion. The second, $H_Y$,
+plays the same role for the dilaton equation and for the explicit
+comparison model. The later arguments need three properties: all zeros
+of $K_Y$ are positive and simple (Lemma~\ref{lem:kernel-zeros});
+$1/K_Y$ and $1/H_Y$ have nonnegative Taylor coefficients, even as
+functions of $Y$ (Lemma~\ref{lem:kernel-positivity}); and after
+rescaling by the first zero of $K_Y$ both kernels form a compact family,
+including the endpoint $Y=y_0$
+(Subsection~\ref{compact-normalization-and-uniform-lattice-estimates}).
+The last property is what makes all later constants uniform in $Y$.
+The first two are special-function statements; their proofs are given
+in Appendix~\ref{app:kernels}.
+
+Recall from Subsection~\ref{subsec:parameter} that \[
+ X(y)=\sum_{j\ge0}\frac{(-1)^j y^{j+1}}{j!(j+1)!}
+      =\sqrt yJ_1(2\sqrt y),\qquad
+ a(y)=X'(y)=J_0(2\sqrt y),
+\] that \(y_0=j_{0,1}^2/4\) is the first positive zero of \(a\), and that
+\(x_c=X(y_0)\). Thus \(a>0\) on \([0,y_0)\), and the inverse branch
+\(Y(x)\), with \(Y(0)=0\), maps \([0,x_c)\) onto \([0,y_0)\).
+
+We shall use \begin{equation}
+\begin{split}
+ K_Y(z)&=\int_0^1X'\bigl(Y+\tfrac z2(1-s^2)\bigr)\,\mathrm{d}s
+       =\sum_{\ell\ge0}\frac{X^{(\ell+1)}(Y)}{(2\ell+1)!!}z^\ell,\\
+ H_Y(z)&=3\int_0^1s^2X'\bigl(Y+\tfrac z2(1-s^2)\bigr)\,\mathrm{d}s
+       =\sum_{\ell\ge0}\frac{3X^{(\ell+1)}(Y)}{(2\ell+3)!!}z^\ell.
+ \end{split}                                                   \label{eq:P1}
+\end{equation} Beta integration gives the series and hence \begin{equation}
+K_Y=H_Y+\tfrac23z\partial_zH_Y.                    \label{eq:P2}
+\end{equation} We write \(r(Y)\) for the first positive zero of \(K_Y\); it equals \(2\Delta(Y)\).
+
+\subsection{Real zeros and coefficient positivity}\label{real-zeros-of-the-kernel}
+
+\begin{lemma}[Real zeros]\label{lem:kernel-zeros}
+On \([0,\pi^2/4]\), \(X(y)>0\) for \(y>0\), \(X''<0\), and \(X'''>0\).
+Moreover \(y_0<3/2\); in particular \(X(Y)\le Y<3/2\) for
+\(0\le Y\le y_0\). All zeros of \(a(y)\) are positive real; in particular
+\(a\) has no zeros in \(|y|<y_0\). For \(0\le Y<y_0\), every zero of
+\(K_Y\) is positive and simple, and \begin{equation}
+K_Y(z)=a(Y)\prod_{j\ge1}(1-z/r_j(Y)),
+ \qquad 0<r_1(Y)<r_2(Y)<\cdots.                     \label{eq:P5}
+\end{equation}
+\end{lemma}
+
+At \(Y=0\) one has \(K_0(z)=\sin\sqrt{2z}/\sqrt{2z}\), and the lemma is
+the classical description of the zeros of the sine function. For
+\(Y>0\), integration along the characteristics of a first-order
+equation for \(K_Y\) writes \(K_Y\) as \(\sin t\) minus a small positive
+correction; concavity then locates the real zeros, and Rouch\'e's
+theorem shows that there are no others.
+
+Reality of the zeros of \(K_Y\) does not imply it for \(H_Y\); indeed
+some higher zeros of \(H_Y\) can be nonreal. The required substitute is
+the following stronger coefficient assertion.
+
+\begin{lemma}[Coefficient positivity]\label{lem:kernel-positivity}
+For \(0\le Y<y_0\), \begin{equation}
+\log\frac{a(Y)}{H_Y(z)}=\sum_{m\ge1}t_m(Y)z^m,
+ \qquad t_m^{(q)}(0)\ge0\quad(m\ge1,q\ge0),\quad t_m(0)>0, \label{eq:P6}
+\end{equation} where each \(t_m\) is analytic on \(|Y|<y_0\) and its Taylor
+series at zero converges to \(t_m(Y)\) there. Consequently \(H_Y^{-h}\)
+has strictly positive Taylor coefficients for every real \(h>0\), and
+\(-H_Y'/H_Y\) has nonnegative coefficients. Moreover every Taylor
+coefficient in \(Y\) of \[
+ \widehat\vartheta_\ell(Y):=a(Y)[z^\ell]K_Y(z)^{-1}
+\] is nonnegative, and the same holds for \(a^{-1}\) and for
+\(\vartheta_\ell=[z^\ell]K_Y^{-1}\).
+\end{lemma}
+
+The coefficients \(t_m\) satisfy a system of ordinary differential
+equations in \(Y\) whose right-hand sides are polynomials with
+nonnegative coefficients, and they are positive at \(Y=0\), where \(H_0\)
+has only positive real zeros; induction on the order of differentiation
+gives the lemma. Note that these are statements about Taylor coefficients
+in the parameter \(Y\), which is stronger than positivity at each real
+\(Y\); they supply the positive convolution factor of
+Section~\ref{a-positive-convolution-factor}.
+
+\subsection{Rescaled kernels and a local limit theorem}\label{compact-normalization-and-uniform-lattice-estimates}
+
+Set \(r=r_1(Y)\), \begin{equation}
+\bar K_Y(w)=K_Y(rw)/a(Y),\qquad
+ \bar H_Y(w)=H_Y(rw)/a(Y),\qquad
+ A(Y)=\bar H_Y(1)/3.                               \label{eq:P9}
+\end{equation} The first zero \(r\) is simple and varies analytically. Integration
+of \eqref{eq:P2} gives \[
+ H_Y(z)=\frac3{2z^{3/2}}\int_0^zv^{1/2}K_Y(v)\,\mathrm{d}v,
+\] so \(H_Y(z)>0\) on \([0,r]\). Since \(H_Y^{-1}\) has nonnegative
+Taylor coefficients, its radius of convergence exceeds \(r\). Indeed, by
+Pringsheim's theorem a power series with nonnegative coefficients is
+singular at the positive point of its circle of convergence; if the
+radius were at most \(r\), that point would be a zero of \(H_Y\) in
+\((0,r]\). In particular \(H_Y\) has no complex zero of modulus at most
+\(r\).
+
+At the critical endpoint put \(b=-X''(y_0)>0\). The equation
+\(K_Y(r)=0\) and Taylor expansion at \(Y=y_0,r=0\) give \begin{equation}
+r(Y)\sim3a(Y)/b,\qquad
+ \bar K_Y(w)\longrightarrow1-w,\qquad
+ \bar H_Y(w)\longrightarrow1-3w/5.                 \label{eq:P10}
+\end{equation} These convergences are locally uniform in complex \(w\). The family
+therefore extends continuously to \(Y=y_0\). Compactness and
+nonvanishing on the closed unit disk give one \(\eta>0\) such that all
+\(\bar H_Y^{-1}\) are analytic and uniformly bounded on
+\(|w|\le1+\eta\), including this endpoint. Likewise \(\bar K_Y/(1-w)\)
+is nonvanishing on a common disk of radius greater than one: its zeros
+are the higher positive roots from \eqref{eq:P5}, and \eqref{eq:P10} treats the endpoint.
+Consequently, with \(\theta_{-1}=0\), \begin{equation}
+1=\theta_0\le\theta_1\le\cdots\le C,
+ \quad \theta_\ell=[w^\ell]\bar K_Y(w)^{-1},
+ \quad w_\ell:=\theta_\ell-\theta_{\ell-1}\ge0,
+ \quad\sup_Y\sum_{\ell\ge0}(1+\ell)^q w_\ell<\infty.  \label{eq:P11}
+\end{equation} Indeed \(\sum w_\ell w^\ell=(1-w)/\bar K_Y(w)\) is the inverse
+product over the higher roots. It has nonnegative coefficients and a
+common analytic disk. Also \(A(Y)\) is bounded above and away from zero.
+
+Finally, \begin{equation}
+P_Y(w)=\frac{\bar H_Y(1)}{\bar H_Y(w)}              \label{eq:P12}
+\end{equation} is the probability generating function of a nonnegative integer
+variable. Its probabilities at zero and one have uniform positive lower
+bounds, its exponential moments are uniformly bounded, and \eqref{eq:P2} at the
+first root gives mean \(3/2\). Its variance \(\sigma_Y^2\) is bounded
+above and away from zero. At \(Y=y_0\) the law is geometric, with
+generating function \((2/5)/(1-3w/5)\), so its variance is \(15/4\).
+
+For a sum \(S_h\) of \(h\) independent copies, Fourier inversion now
+gives, uniformly in \(Y\) and in integers \(m\) with
+\(|m-3h/2|\le L\sqrt h\), for each fixed \(L\), \begin{equation}
+\Pr(S_h=m)=\frac1{\sqrt{2\pi h\sigma_Y^2}}
+     \exp\!\left(-\frac{(m-3h/2)^2}{2h\sigma_Y^2}\right)
+       +o(h^{-1/2}).                              \label{eq:P13}
+\end{equation} Indeed, on a fixed neighborhood of zero the centered
+characteristic logarithm is \(-\sigma_Y^2t^2/2+O(|t|^3)\), uniformly by
+the exponential moments. Away from zero its modulus is uniformly less
+than one, because the first two probabilities have uniform positive
+lower bounds. Scaling \(t\) by \(h^{-1/2}\), these facts give an
+integrable Gaussian bound and pointwise convergence; Fourier inversion
+proves \eqref{eq:P13}. At a bounded displacement from the mean the error is
+relative \(O(h^{-1})\), by expansion through fourth order and
+cancellation of the odd cubic integral. Thus \[
+ [w^m]\bar H_Y(w)^{-h}
+   =\bar H_Y(1)^{-h}\Pr(S_h=m)
+\] has a uniform central lower bound \(c_L\bar H_Y(1)^{-h}/\sqrt h\),
+and its logarithm at a bounded displacement is
+\(-h\log\bar H_Y(1)-\tfrac12\log h+O(1)\). These are the coefficient
+estimates used below.
+
+\section{The density parameter}\label{the-stationary-parameter}
+
+This section establishes the properties of the functions $T$,
+$\Delta=T-Y$, $I$ and $\lambda$ defined in \eqref{eq:SP1} and
+\eqref{eq:SP2}. Their meaning is as follows. The first positive zero of
+$K_Y$ is $r(Y)=2\Delta(Y)$; equation \eqref{eq:SP1} is the condition
+$K_Y(2\Delta)=0$ written in the variable $v=T-\Delta s^2$. The integral
+$I(Y)$ is the action that governs the exponential growth
+in~\eqref{eq:intro-heuristic}, and $\lambda(Y)/2$ is the logarithmic
+derivative of $I(Y)^{-1}$ with respect to $\log x$, that is, the leading
+cusp-count scale per unit complexity. Lemma~\ref{lem:parameter} below
+shows that $T$ is well defined and that $\lambda$ is an analytic
+increasing bijection from $[0,y_0)$ onto $[0,\infty)$, so that the
+profiles $\mathcal B,\mathcal C$ of \eqref{eq:SP3} are functions of the
+density $\lambda\ge0$; it also records the behavior of all four
+functions at the two ends of the interval. Its proof, which uses the
+Sonine integral and elementary calculus, is given in
+Appendix~\ref{app:parameter-proof}.
+
+For the local-limit arguments we view $\lambda$ as a function of the cusp
+weight and put \[
+ \Psi(x)=\lambda(Y(x))/2,\qquad x=X(Y),\qquad
+ \mathscr D=x\frac{\mathrm{d}}{\mathrm{d}x}.
+\]
+
+\begin{lemma}[The parameter]\label{lem:parameter}
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item The root \(T(Y)\) of \eqref{eq:SP1} exists, is unique and depends
+analytically on \(Y\in[0,y_0)\). One has \(T(0)=\pi^2/4\),
+\(-1\le T'<0\), \(T''>0\), and \(T\to y_0\) as \(Y\to y_0\). Moreover
+\(I>0\).
+\item Put \begin{equation}
+J(Y)=\int_0^1X(T-\Delta s^2)\,\mathrm{d}s
+     =X(Y)+\frac{I(Y)}{\sqrt\Delta},
+ \qquad
+ \beta(Y)=\frac{X(Y)}{J(Y)}=
+           \frac{\lambda(Y)}{2+\lambda(Y)}.
+ \label{eq:SP11}
+\end{equation} Then \(\beta'>0\), and \(\lambda\) is an analytic strictly
+increasing bijection from \([0,y_0)\) onto \([0,\infty)\). At \(Y=0\),
+\(\Delta=T=\pi^2/4\), \(I(0)=\pi/4\), \(J(0)=1/2\), and
+\(\lambda(Y)=4Y+O(Y^2)\).
+\item Put \(\delta=y_0-Y\) and \(b=-X''(y_0)=x_c/y_0>0\). As
+\(\delta\to0\), \begin{equation}
+\Delta=\frac32\delta+O(\delta^2),\qquad
+ I(Y)=\frac{8b}{45}\Delta^{5/2}(1+O(\Delta)),
+ \label{eq:SP13}
+\end{equation} \begin{equation}
+\lambda\sim\frac{45x_c}{4b}\Delta^{-2}
+       =\frac{45j_{0,1}^2}{16}\Delta^{-2},
+ \label{eq:SP14}
+\end{equation} and consequently \begin{equation}
+\mathcal B(\lambda)\sim
+ \frac{\pi^2}{3\sqrt5\,j_{0,1}}\sqrt\lambda,\qquad
+ \mathcal C(\lambda)\sim\frac{\pi^2}{x_c}\lambda.
+ \label{eq:SP15}
+\end{equation} Also \(\Delta\asymp\sqrt{1-\beta}\).
+\item The function \(\Psi\) is analytic and strictly increasing for
+\(0<x<x_c\). With \(\varepsilon=1-x/x_c\), \begin{equation}
+\begin{array}{ll}
+ x\downarrow0:&
+ \Psi=2x+O(x^2),\quad\mathscr D\Psi=2x+O(x^2),\quad
+ \mathscr D^2\Psi=2x+O(x^2),\\[1mm]
+ x\uparrow x_c:&
+ \displaystyle\Psi=\frac5{4\varepsilon}(1+O(\sqrt\varepsilon)),\quad
+ \mathscr D\Psi=\frac5{4\varepsilon^2}(1+O(\sqrt\varepsilon)),\quad
+ \mathscr D^2\Psi=O(\varepsilon^{-3}).
+ \end{array}
+ \label{eq:SP16}
+\end{equation} These expansions arise from convergent analytic expansions
+in \(x\) or \(\sqrt\varepsilon\). In particular \(\Psi^2/(\mathscr D\Psi)\)
+has finite endpoint limits \(0\) and \(5/4\), and is bounded on the full
+interval.
+\end{enumerate}
+\end{lemma}
+
+The estimate \(\Delta\asymp\sqrt{1-\beta}\) in~(iii) implies the
+integrability at one of the logarithmic chain profile in
+Section~\ref{uniform-logarithmic-volume-rate-and-the-full-diagonal-chain}.

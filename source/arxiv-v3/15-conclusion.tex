@@ -1,0 +1,77 @@
+\section{Concluding remarks and open questions}
+
+The results above show that one real parameter, determined by the cusp
+density, governs the large-genus behavior of $V_{g,n}$ in every regime.
+As $n/g$ runs from zero to infinity, the saddle $X(Y_{n/g})$ moves from
+the fixed-cusp regime of Mirzakhani and Zograf to the Bessel singularity
+$x_c$ of the fixed-genus theory of Manin and Zograf. The volume ratios,
+the boundary factor $\mathfrak b_Y$, the short-curve intensities $w_k$
+and the tight-length scale $\alpha$ interpolate in the same way.
+
+The coefficients of the normalized volume expansion are analytic in
+$Y$ on a neighborhood of the compact interval $[0,y_0]$. This is the
+precise sense in which the two endpoint regimes fit into one expansion.
+It avoids the loss of uniformity of the fixed-$n$ expansion at
+$n\asymp\sqrt g$, while retaining an error bound independent of $n$.
+
+The short geometry nevertheless changes at the scale $\sqrt g$.
+For $n=o(\sqrt g)$, Shen and Wu proved a uniform spectral
+gap~\cite[Theorem~3]{SW}. At $n/\sqrt g\to c\in(0,\infty)$, the
+primitive length spectrum is a Poisson background together with
+independent clusters formed by two-cusp pairs of pants
+(Theorem~\ref{thm:critical-cluster}). Above this scale, short curves
+bounding genus-zero subsurfaces containing cusps have the statistics of
+Theorem~\ref{thm:pants-poisson}, and the spectral gap closes
+(Corollary~\ref{cor:spectral}).
+
+The proof rests on three features that may be useful beyond
+Weil--Petersson volumes. Along the string flow, the alternating
+$\kappa_1$--$\psi$ formula becomes a recursion with nonnegative
+coefficients, so that comparison and monotonicity arguments hold
+uniformly in the deformation parameter. The deformation ends at pure
+$\psi$ intersection numbers, where Painlev\'e~I fixes the integration
+constants without any resurgence assumption. Finally, the positive
+convolution factor of Lemma~\ref{lem:convolution} turns estimates for
+generating functions into a local limit theorem that holds uniformly
+from bounded cusp counts up to the critical cusp weight. The geometric
+consequences combine these volume estimates with the integration
+formulas and short-curve arguments credited in
+Section~\ref{sec:geometry}.
+
+\input{15a-jt-edge}
+
+\subsection{Open questions}
+We conclude with some questions that the present methods leave open.
+
+\emph{Actual Gevrey-1 remainders.} The most direct analytic strengthening would replace the squared factorial in Theorem~\ref{thm:intro-absolute} by a single factorial, with constants uniform in the cusp count and truncation order $K\le cg$. A sufficiently small linear truncation would then give error $O(\mathrm e^{-ag})$. The pure-$\psi$ endpoint already has this order of remainder (Subsection~\ref{sec:endpoint-expansion}), but transporting it across the whole parameter interval requires sharper estimates for the actual recursion. In the present proof the squared factorial comes from the degree paths in the profile recursion (Subsection~\ref{subsec:all-orders}); bounds on the formal coefficients alone would not settle the question, since the actual remainders must be controlled as well.
+
+\emph{Rate for adjacent ratios.} Theorem~\ref{thm:coefficient} has the
+uniform error $O(g^{-1/8})$, and $O_\varepsilon(g^{-1/4})$ for
+$k\ge\varepsilon g$; neither exponent is claimed to be optimal
+(Appendix~\ref{sec:quantitative-coefficients}). What is the optimal
+uniform rate?
+
+\emph{Other backgrounds.} The derivation of the recursion
+\eqref{eq:H9} uses only the string, dilaton and
+Dijkgraaf--Verlinde--Verlinde equations, and applies to other
+backgrounds of Kontsevich--Witten times; the higher Weil--Petersson
+volumes of Kaufmann, Manin and Zagier arise in this way~\cite{KMZ,ManZ}.
+For which backgrounds does the deformed recursion have nonnegative
+coefficients, and does the uniform analysis of this paper then extend?
+
+\emph{Several boundary components.} Can one obtain relative asymptotics
+for mixed intersection numbers when both the number of nonzero degrees
+and their sum grow with the genus, uniformly over their allocation among
+the markings? Proposition~\ref{prop:bounded-boundaries} treats a fixed
+number of bounded nonzero lengths; it does not provide this control of
+individual mixed intersections.
+
+\emph{Geometry and spectrum.} Theorem~\ref{thm:tight-spectrum} determines
+the tight spectrum at every cusp density, while
+Theorem~\ref{thm:critical-cluster} identifies the pants clusters in the
+ordinary spectrum when $n/\sqrt g$ has a positive finite limit.
+What is the joint distribution
+of ordinary geodesics in the same homotopy class after filling the
+cusps, when $n$ is proportional to $g$? Our spectral results are upper bounds
+for small eigenvalues; their limiting distribution would require
+additional geometric input.

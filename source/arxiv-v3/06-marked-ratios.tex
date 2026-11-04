@@ -1,0 +1,314 @@
+\section{Ratios of marked generating functions}\label{ratios-with-a-fixed-number-of-distinguished-markings}
+
+The comparison theorem controls logarithms, whereas the volume-ratio
+problem requires relative errors tending to zero. We obtain that stronger
+control here for generating functions with a fixed number of distinguished
+markings. The two ratios correspond to adding a cusp and to replacing one
+unit of genus by two cusps. Their errors are $O(1/g)$, uniformly in the
+parameter. The passage to volumes with a prescribed cusp count will be
+made in Section~\ref{extracting-fixed-cusp-counts}.
+
+The mechanism is simple. Positivity of the recursion implies that an
+amplitude decreases when one of its degrees is raised~\eqref{eq:TL15}.
+The dilaton equation~\eqref{eq:TL12} writes the cusp ratio as a weighted
+sum, over degrees \(d\ge1\), of the normalized amplitudes
+\(c_{g,p+1}(d,0^p)\). These weights can have either sign; their absolute
+moments are uniformly bounded by~\eqref{eq:TL13}. The KdV equation~\eqref{eq:TL14} writes the
+genus ratio through \(c_{g,p}(1,0^{p-1})\) and separating terms. Both
+ratios are therefore within \(O(1/g)\) of explicit functions of \(Y\) once
+we know that \(c_{g,p}(\mathbf d)=1-O(|\mathbf d|^2/g)\). This last estimate,
+\eqref{eq:TL23}, follows from the difference of the recursion at adjacent
+degrees; the coarse bounds of Section~\ref{uniform-comparison} are used
+only to show that the separating terms are small.
+
+\subsection{Shifted amplitudes and normalization}\label{shifted-amplitudes-and-normalization}
+
+Use \(p\) for the number of distinguished markings, and keep \(n\) for the number of cusps. Retain the kernels and shifted amplitudes of Sections~\ref{the-positive-compact-family-of-kernels} and~\ref{exact-amplitudes-and-the-harmonic-model}; write \(U_{g,p}(\mathbf d;Y)=U^Y_{g,p}(\mathbf d)\), and suppress \(Y\) when convenient. Put \(h=2g-2+p\) and \(m=3g-3+p-|\mathbf d|\). Define \begin{equation}
+\overline U_{g,p}(\mathbf d)=a^h r^m U_{g,p}(\mathbf d),
+ \qquad W_{g,p}=4^g\overline U_{g,p}(\mathbf0),
+ \qquad c_{g,p}(\mathbf d)=
+ \frac{\overline U_{g,p}(\mathbf d)}{\overline U_{g,p}(\mathbf0)}.
+ \label{eq:TL9}
+\end{equation} Thus $\overline U_{g,p}(\mathbf d)$ is the normalized amplitude $\mathcal U_{g,p}(\mathbf d;Y)$ of \eqref{eq:H7}; the bar indicates that the markings are now the distinguished ones. The barred amplitudes obey the exact positive recursion \eqref{eq:H9}.
+
+We use two consequences of
+Sections~\ref{the-positive-compact-family-of-kernels}--\ref{uniform-comparison}.
+
+\begin{itemize}
+\item
+  The kernel bounds \eqref{eq:P11}: for each fixed \(k\), \begin{equation}
+1=\theta_0\le\theta_1\le\cdots,
+   \qquad w_\ell:=\theta_\ell-\theta_{\ell-1}\ge0,
+   \quad\theta_{-1}=0,
+   \quad\sup_Y\sum_{\ell\ge0}(1+\ell)^k w_\ell<\infty
+   \label{eq:TL10}
+\end{equation} Also \(A(Y)\) is bounded above and away from
+  zero; see Subsection~\ref{compact-normalization-and-uniform-lattice-estimates}.
+\item
+  Uniform harmonic comparison: for each fixed positive \(p\), \begin{equation}
+\log W_{g,p}=
+   \log\Gamma(2g-2+p)-(2g-2+p)\log A(Y)+o(g),
+   \label{eq:TL11}
+\end{equation} uniformly for \(0\le Y<y_0\). The corresponding crude bound
+  \(W_{g,p}\le C_p^{g+1}(2g+p)!\) holds uniformly, including bounded
+  stable genera. Proposition~\ref{prop:harmonic}, together with the
+  central local limit \eqref{eq:H17} for the model, proves
+  \eqref{eq:TL11} without any input on volume ratios. Only its \(o(g)\)
+  error is needed below, and only for a positive number of markings.
+\end{itemize}
+
+\subsection{Dilaton and KdV identities}\label{exact-dilaton-and-genus-exchange-identities}
+
+The shifted weighted dilaton identity is \begin{equation}
+h\overline U_{g,p}(\mathbf0)=
+ \sum_{d\ge1}b_d(Y)\overline U_{g,p+1}(d,0^p),
+ \qquad
+ b_d(Y)=\frac{X^{(d)}(Y)r^{d-1}}{a(2d+1)!!}
+ =\frac13[z^{d-1}]\bar H_Y(z).
+ \label{eq:TL12}
+\end{equation} It holds also at \(p=0\), \(g\ge2\). To track the shift, the
+background insertion of degree one contributes \(1-a\); moving it and
+the higher background insertions to the left leaves the coefficients
+\(X^{(d)}/(2d+1)!!\). The factor in \eqref{eq:TL9} then produces exactly
+\(r^{d-1}/a\) in \eqref{eq:TL12}. The compact analytic family gives \begin{equation}
+\sum_{d\ge1}b_d=A(Y),\qquad
+ \sup_Y\sum_{d\ge1}(1+d)^k|b_d(Y)|<\infty
+ \label{eq:TL13}
+\end{equation} for every fixed \(k\).
+
+The genus ratio is governed instead by the KdV equation. Write $F$ for the Kontsevich--Witten free energy, with subscripts indicating differentiation with respect to the corresponding times. The integrated KdV identity \(F_{01}=F_{00}^2/2+F_{0000}/12\),
+differentiated \(p-2\) times in the string variable, gives for \(p\ge2\)
+\begin{equation}
+\overline U_{g,p}(1,0^{p-1})
+ =\frac14\overline U_{g-1,p+2}(\mathbf0)
+ +\frac32\sum_{j=0}^g\sum_{s=0}^{p-2}\binom{p-2}s
+ \overline U_{j,s+2}(\mathbf0)
+ \overline U_{g-j,p-s}(\mathbf0).
+ \label{eq:TL14}
+\end{equation} The split is ordered. The factor three from the weighted degree-one
+insertion turns the original KdV coefficients into \(1/4\) and \(3/2\).
+In \eqref{eq:TL14}, every term has the same total powers of \(a\) and \(r\): the
+two separating complexities sum to \(h\), and their deficits sum to
+\(3g-4+p\). Thus no omitted parameter factor is present.
+
+The key consequence of positivity, used throughout this section, is the
+following monotonicity.
+
+\begin{lemma}[Monotonicity in the degrees]\label{lem:monotone}
+For every stable \((g,p)\), every degree tuple \(\mathbf d\), every \(i\) and
+every \(Y\in[0,y_0]\),
+\begin{equation}
+\overline U_{g,p}(\mathbf d)\ge
+ \overline U_{g,p}(\mathbf d+\mathbf e_i),
+ \qquad 0\le c_{g,p}(\mathbf d)\le1.
+ \label{eq:TL15}
+\end{equation}
+Amplitudes outside the dimension range are zero.
+\end{lemma}
+
+\begin{proof}
+We subtract the recursion at adjacent degrees. With
+$\mathbf d'=(d_2,\ldots,d_p)$ fixed, let
+$\mathcal B_{\mathbf d'}(t)$ denote the merging and contraction sums
+in \eqref{eq:H9}, with the kernel weight removed and $d_1+\ell=t$.
+These sums are nonnegative and vanish for
+$t>3g-3+p-|\mathbf d'|$ by dimension. If
+$m=3g-3+p-|\mathbf d|\ge0$, shifting the kernel index gives
+\[
+ \begin{aligned}
+ \overline U_{g,p}(\mathbf d)
+   &=\sum_{\ell=0}^m\theta_\ell
+                      \mathcal B_{\mathbf d'}(d_1+\ell),\\
+ \overline U_{g,p}(\mathbf d+\mathbf e_1)
+   &=\sum_{\ell=1}^m\theta_{\ell-1}
+                      \mathcal B_{\mathbf d'}(d_1+\ell).
+ \end{aligned}
+\]
+Their difference is therefore
+$\sum_{\ell=0}^m w_\ell\mathcal B_{\mathbf d'}(d_1+\ell)\ge0$, which proves
+\eqref{eq:TL15} for \(i=1\), and by symmetry for every \(i\). This includes
+the dimension boundary by the zero convention. The difference identity is
+used for $h\ge2$; the finite bases satisfy the inequality directly because
+\(\theta_1\ge\theta_0=1\).
+\end{proof}
+
+From \eqref{eq:TL12}, \eqref{eq:TL13}, and \eqref{eq:TL15}, \begin{equation}
+\frac{W_{g,p}}{W_{g,p+1}}\le\frac C{2g-2+p}
+ \label{eq:TL16}
+\end{equation} in all stable cases used below, with a constant independent of \(p\): the absolute sum in \eqref{eq:TL13} is uniform and the ratios in \eqref{eq:TL15} are at most one. Finite stable bases are included in the constant. Multiplication of \eqref{eq:TL14} by \(4^g\) and use of \eqref{eq:TL15} give \begin{equation}
+W_{g-1,p+2}\le W_{g,p},\qquad p\ge2.
+ \label{eq:TL17}
+\end{equation} The factor \(4^g\) in \eqref{eq:TL9} is essential: it converts the coefficient
+\(1/4\) into the comparison constant one.
+
+\subsection{Separating terms}\label{fixed-marking-splitting-estimates}
+
+The separating terms in the KdV identity \eqref{eq:TL14}, and in the
+degree difference above, are controlled by the convolution sums \(S_{g,p}\)
+and \(T_{g,p}\) below. They are small for two reasons. Splitting off a
+component of bounded genus \(j\) removes \(2j+s\) units of complexity,
+and the cusp insertions cost a factor \(O(1/g)\) each, by
+\eqref{eq:TL16}--\eqref{eq:TL17}; and a split
+into two components of comparable genus is exponentially small by the
+binomial entropy in \eqref{eq:TL21}.
+
+For fixed \(p\ge2\), define \[
+ S_{g,p}=\frac1{W_{g,p}}
+ \sum_{j=0}^g\sum_{s=0}^{p-1}\binom{p-1}s
+ W_{j,s+1}W_{g-j,p-s},
+\] \begin{equation}
+T_{g,p}=\frac1{W_{g,p}}
+ \sum_{j=0}^g\sum_{s=0}^{p-2}\binom{p-2}s
+ W_{j,s+2}W_{g-j,p-s}.
+ \label{eq:TL18}
+\end{equation} We claim, uniformly in \(Y\), \begin{equation}
+S_{g,p}=O_p(g^{-2}),\qquad T_{g,p}=O_p(g^{-1}),
+ \label{eq:TL19}
+\end{equation} with the positive-genus portion of \(T\) bounded by \(O_p(g^{-2})\).
+In particular \(T_{g,2}=O(g^{-2})\) because its genus-zero terms are
+unstable.
+
+By symmetry orient the smaller genus as \(j\le g/2\). For
+\(1\le j\le\varepsilon g\), insert \(2j\) cusps into the larger-genus
+component using \eqref{eq:TL16}, apply \eqref{eq:TL17} \(j\) times, and insert the
+remaining \(s\) cusps. This gives \begin{equation}
+\frac{W_{g-j,p-s}}{W_{g,p}}
+ \le (C_p/g)^{2j+s}.
+ \label{eq:TL20}
+\end{equation} If \(p-s=1\), instead insert \(2j+1\) cusps before raising the genus,
+so every genus-comparison step ends with at least two markings;
+afterward insert \(s-1\) cusps. This is possible because \(p\ge2\), and
+the same exponent results. In the \(T\) convolution both relevant
+marking counts are already at least two.
+
+The crude bound following \eqref{eq:TL11} makes the smaller-component
+contribution a fixed polynomial in \(j\) times \[
+ (2j)!(C_p/g^2)^j g^{-s}.
+\] Choose \(\varepsilon>0\) small enough that successive factorial terms
+have a ratio bounded by a fixed number below one. Their positive-genus
+sum is \(O_p(g^{-2})\), also with any fixed polynomial in \(j\). For
+genus zero, stability gives \(s\ge2\) in \(S\) and \(s\ge1\) in \(T\);
+direct use of \eqref{eq:TL16} gives the respective orders.
+
+For \(\varepsilon g\le j\le g/2\), apply \eqref{eq:TL11} to both factors and the
+parent. The marking counts belong to a fixed finite set. The powers of
+\(A(Y)\) cancel up to bounded exponents, and Stirling's formula gives \begin{equation}
+\log\frac{W_{j,s+c}W_{g-j,p-s}}{W_{g,p}}
+ \le-2g\mathsf H(j/g)+o(g),\qquad c\in\{1,2\},
+ \label{eq:TL21}
+\end{equation} where \(\mathsf H(t)=-t\log t-(1-t)\log(1-t)\). Its positive minimum
+on \([\varepsilon,1/2]\) makes the macroscopic sum exponentially small.
+This proves \eqref{eq:TL19}. Every use of \eqref{eq:TL11} here has a positive fixed
+marking count.
+
+\subsection{Cusp and genus ratios}\label{uniform-fixed-marking-ratios}
+
+For \(p\ge2\), the adjacent-degree difference obtained from \eqref{eq:H9} has a
+merging prefactor \(O_p(1/g)\) by \eqref{eq:TL16}. Its nonseparating prefactor is
+bounded by \begin{equation}
+\frac{W_{g-1,p+1}}{W_{g,p}}
+ \le\frac Cg\frac{W_{g-1,p+2}}{W_{g,p}}=O_p(g^{-1})
+ \label{eq:TL22}
+\end{equation} using \eqref{eq:TL16}--\eqref{eq:TL17}. To see all
+three contributions, put $D=|\mathbf d|$,
+$\Omega_0=\sum_{\ell\ge0}w_\ell$ and
+$\Omega_1=\sum_{\ell\ge0}\ell w_\ell$. Bound each child amplitude
+by its zero-degree value in the difference identity above. Since there
+are at most $d_1+\ell+1$ new-degree pairs, it yields
+\[
+ \begin{aligned}
+ c_{g,p}(\mathbf d)-c_{g,p}(\mathbf d+\mathbf e_1)
+ \le{}&\Omega_0(2D+p-1)\frac{W_{g,p-1}}{W_{g,p}}\\
+ &+\bigl((d_1+1)\Omega_0+\Omega_1\bigr)
+   \left(2\frac{W_{g-1,p+1}}{W_{g,p}}+\frac12S_{g,p}\right).
+ \end{aligned}
+\]
+The factor $2$ in the nonseparating term includes the factor $4$
+from the genus normalization of $W$. The two kernel moments are
+uniformly bounded by \eqref{eq:TL10}. Equations~\eqref{eq:TL16},
+\eqref{eq:TL19} and~\eqref{eq:TL22} now give \[
+ 0\le c_{g,p}(\mathbf d)-c_{g,p}(\mathbf d+\mathbf e_i)
+ \le\frac{C_p(|\mathbf d|+1)}g.
+\] Summing degree increments proves \begin{equation}
+0\le1-c_{g,p}(\mathbf d)
+ \le C_p\frac{|\mathbf d|(|\mathbf d|+1)}g,
+ \qquad p\ge2.
+ \label{eq:TL23}
+\end{equation} When the right side exceeds one the bound is trivial. It also
+bounds the terms outside the dimension range when they are set to zero.
+
+Substitute \eqref{eq:TL23} into \eqref{eq:TL12}. The errors sum absolutely by \eqref{eq:TL13},
+giving \begin{equation}
+(2g-2+p)\frac{W_{g,p}}{W_{g,p+1}}
+ =A(Y)+O_p(g^{-1}),\qquad p\ge1.
+ \label{eq:TL24}
+\end{equation} Since \(A\) is uniformly positive, the error is relative
+\(O_p(1/g)\).
+
+To recover the one-marking profile without circularity, first use \eqref{eq:TL16}
+twice, \eqref{eq:TL17} at parent marking count two, and the now two-sided ratio
+\eqref{eq:TL24} at marking count one: \begin{equation}
+\frac{W_{g-1,2}}{W_{g,1}}
+ \le\frac C{g^2}\frac{W_{g-1,4}}{W_{g,2}}
+ \frac{W_{g,2}}{W_{g,1}}=O(g^{-1}).
+ \label{eq:TL25}
+\end{equation} The separating terms at one marking have two positive genera.
+Equation \eqref{eq:TL16}, the inequality \(1/[j(g-j)]\le C/g\), and
+\(T_{g,2}=O(g^{-2})\) give \begin{equation}
+\frac1{W_{g,1}}\sum_{j=1}^{g-1}W_{j,1}W_{g-j,1}
+ \le\frac Cg\frac{W_{g,2}}{W_{g,1}}T_{g,2}=O(g^{-2}).
+ \label{eq:TL26}
+\end{equation} The same degree-difference argument now proves \eqref{eq:TL23} for \(p=1\).
+Thus \eqref{eq:TL24} holds also for \(p=0\).
+
+Finally \eqref{eq:TL14}, \eqref{eq:TL19}, and \eqref{eq:TL23} yield \begin{equation}
+\frac{W_{g-1,p+2}}{W_{g,p}}=1+O_p(g^{-1}),\qquad p\ge2.
+ \label{eq:TL27}
+\end{equation} For \(p=0,1\), add two markings in numerator and denominator and use
+\eqref{eq:TL24}; the two cusp products have the same complexity factors and
+cancel. Hence \eqref{eq:TL27} holds for every fixed \(p\ge0\).
+
+We now return to volumes. Recall the cusp generating function
+\(\Phi_g\) of \eqref{eq:intro-Phi} and the string-shift identity
+\eqref{eq:H8}: \(U_{g,p}(0^p;Y)=\Phi_g^{(p)}(x)\) with \(x=X(Y)\), whenever
+the amplitude is stable. By \eqref{eq:TL9},
+\(W_{g,p}=4^ga^hr^m\Phi_g^{(p)}(x)\) with \(m=3g-3+p\). Adding a marking
+raises both \(h\) and \(m\) by one, so
+\[
+ \frac{x\Phi_g^{(p+1)}(x)}{\Phi_g^{(p)}(x)}
+ =\frac{x}{ar}\,\frac{W_{g,p+1}}{W_{g,p}}
+ =\frac{hx}{A\,a\,r}\bigl(1+O_p(g^{-1})\bigr)
+\]
+by \eqref{eq:TL24}. Replacing \((g,p)\) by \((g-1,p+2)\) leaves \(h\)
+unchanged and lowers \(m\) by one, so
+\(\Phi_{g-1}^{(p+2)}/\Phi_g^{(p)}=4r\,W_{g-1,p+2}/W_{g,p}\), and
+\eqref{eq:TL27} applies. This proves, for every fixed positive \(p\),
+\begin{equation}
+x\frac{(\Phi_g^{(p)})'(x)}{\Phi_g^{(p)}(x)}
+ =h\Psi(x)+O_p(\Psi(x)),\qquad h=2g-2+p,
+ \label{eq:TL30}
+\end{equation} \begin{equation}
+\frac{\Phi_{g-1}^{(p+2)}(x)}{\Phi_g^{(p)}(x)}
+ =4r(Y)(1+O_p(g^{-1})),
+ \qquad
+ \Psi(x)=\frac{x}{A(Y)a(Y)r(Y)}.
+ \label{eq:TL31}
+\end{equation} The same genus ratio holds at \(p=0\). The estimates are uniform
+throughout \(0\le Y<y_0\); at \(x=0\), \eqref{eq:TL30} is interpreted by
+continuity.
+
+The scalar is exactly the stationary parameter: \begin{equation}
+H_Y(r)=\frac{3I(Y)}{2\Delta^{3/2}},\qquad
+ A(Y)a(Y)r(Y)=\frac{I(Y)}{\sqrt\Delta},\qquad
+ \Psi(x)=\lambda(Y)/2.
+ \label{eq:TL32}
+\end{equation} The first equality follows by substituting \(v=T-\Delta s^2\) in
+\(I\), and the other two follow by direct substitution. We summarize the
+output of this section used in the extraction arguments.
+
+\begin{proposition}[Marked cusp and genus ratios]\label{prop:marked-ratios}
+For every fixed \(p\ge1\), uniformly for \(0\le Y<y_0\) and \(x=X(Y)\), the
+cusp ratio of \(\Phi_g^{(p)}\) satisfies \eqref{eq:TL30} and the genus ratio
+satisfies \eqref{eq:TL31}, with \(\Psi(x)=\lambda(Y)/2\). The genus ratio
+holds also at \(p=0\).
+\end{proposition}

@@ -1,0 +1,89 @@
+\subsection{The tight length spectrum}\label{subsec:tight-spectrum}
+
+We now consider curves that remain noncontractible after filling all
+cusps. The corresponding tight Weil--Petersson volumes were introduced
+by Budd~\cite{Budd}. Following Budd and Lions~\cite{BL}, a closed geodesic is
+\emph{tight} if it is the unique shortest representative of its free
+homotopy class on the filled surface. The distinction matters: several
+ordinary geodesics can belong to the same class after the cusps are
+filled. The tight integration formula and the geometric argument used
+in the proof are due to~\cite{BL}; the new input is a volume estimate that
+allows arbitrary prescribed cusp counts.
+
+Let $Y_\lambda$ satisfy $\lambda(Y_\lambda)=\lambda$,
+as in Proposition~\ref{prop:bounded-boundaries}, and set
+\begin{equation}
+ \alpha(\lambda)=\frac{\sqrt{2r(Y_\lambda)}}\pi,
+ \qquad \nu(\mathrm dt)=\frac{\cosh t-1}{t}\,\mathrm dt.
+ \label{eq:tight-scale}
+\end{equation}
+Here $\alpha(0)=1$, and the density of $\nu$ is defined to be zero
+at the origin.
+
+\begin{theorem}[Tight lengths at arbitrary cusp density]
+\label{thm:tight-spectrum}
+Let $n=n(g)\ge0$ be any integer sequence, and let $X$ have law
+$\mathbb P^{\mathrm{WP}}_{g,n}$. As $g\to\infty$, the point process
+\begin{equation}
+ \sum_{\substack{\gamma\text{ primitive, unoriented}\\
+                  \gamma\text{ tight on }X}}
+ \delta_{\alpha(n/g)\ell_X(\gamma)}
+ \ \Longrightarrow\ \operatorname{PPP}(\nu)
+ \label{eq:tight-process}
+\end{equation}
+converges in distribution for the vague topology on $[0,\infty)$.
+For every fixed $L<\infty$, with probability tending to one all the
+curves counted in $[0,L]$ are simple, pairwise disjoint, and have
+connected complement after filling the cusps.
+\end{theorem}
+
+In particular, no limit of $n/g$ is required. At large density,
+the endpoint expansion of $r$ gives
+\[
+ \alpha(\lambda)\sim
+ \frac{\sqrt{3j_{0,1}\sqrt5}}\pi\lambda^{-1/4}.
+\]
+This agrees with the scale in~\cite[Corollary~1.3]{BL}.
+Budd and Lions asked whether their limit persists for other cusp
+weights and under the fixed-count measures
+$\mathbb P^{\mathrm{WP}}_{g,n}$~\cite[Open Question~1.6]{BL}.
+Theorem~\ref{thm:tight-spectrum} treats the fixed-count part of this
+question; Corollary~\ref{cor:tight-boltzmann} below treats the
+remaining cusp-weight regimes. The planar curves in
+Theorem~\ref{thm:pants-poisson} are contractible after filling the
+cusps and therefore do not occur in \eqref{eq:tight-process}.
+
+The proof follows the moment method of Budd and Lions. Their tight
+integration formula~\cite[Proposition~3.2]{BL} expresses factorial moments
+of tight curve counts through tight volumes of the cut surfaces. We first
+write the generating functions of tight volumes through the shifted
+amplitudes of Section~\ref{exact-amplitudes-and-the-harmonic-model}
+(Lemma~\ref{lem:tight-gf}); then extract the coefficient at the
+prescribed cusp count, as in Section~\ref{extracting-fixed-cusp-counts}
+(Lemma~\ref{lem:tight-connected}); then show that configurations with
+disconnected complement are negligible (Lemma~\ref{lem:tight-separating});
+and finally identify the Poisson limit (Subsection~\ref{subsec:tight-proof}).
+These steps are carried out in Appendix~\ref{app:tight}.
+
+\emph{Random cusp counts.}
+For $0\le\mu<\mu_{\rm cr}=x_c/(2\pi^2)$, the Boltzmann measure
+$\mathbb P^{\mathrm{WP}}_{g,\mu}$ first chooses the cusp count $N$
+with probabilities proportional to $\mu^nV_{g,n}/n!$, then samples
+$\mathbb P^{\mathrm{WP}}_{g,n}$ conditionally on $N=n$.
+Its probability generating function is
+$\Phi_g(2\pi^2\mu z)/\Phi_g(2\pi^2\mu)$, as in~\cite{BL}.
+
+\begin{corollary}[Arbitrary subcritical cusp weights]
+\label{cor:tight-boltzmann}
+For any sequence $0\le\mu_g<\mu_{\rm cr}$, put
+\[
+ a_g=\frac{\sqrt{2r(Y(2\pi^2\mu_g))}}\pi.
+\]
+Under $\mathbb P^{\mathrm{WP}}_{g,\mu_g}$, the primitive tight
+lengths multiplied by $a_g$ converge to $\operatorname{PPP}(\nu)$.
+In particular, if $\mu_g\to\mu<\mu_{\rm cr}$, the unscaled lengths have
+limiting intensity $(\cosh(a_\mu t)-1)\,\mathrm dt/t$, where
+$a_\mu=\sqrt{2r(Y(2\pi^2\mu))}/\pi$. If $\mu_g\to\mu_{\rm cr}$, no condition on
+the speed of convergence is required.
+\end{corollary}
+\noindent The proof is given in Subsection~\ref{subsec:tight-boltzmann-proof}.

@@ -1,0 +1,55 @@
+import WPFormalization.HigherOrder.FinitePowerSums
+import WPFormalization.HigherOrder.DiagonalPolynomial
+import WPFormalization.HigherOrder.PolynomialMomentContraction
+import WPFormalization.HigherOrder.FinitePolynomialMomentAlgebra
+import WPFormalization.HigherOrder.PairBoundarySplit
+import WPFormalization.HigherOrder.BoundaryPolynomialHead
+import WPFormalization.HigherOrder.SmallThetaData
+import WPFormalization.HigherOrder.JointBoundaryHead
+import WPFormalization.HigherOrder.PairEventualPolynomial
+import WPFormalization.HigherOrder.JointBoundaryPair
+import WPFormalization.HigherOrder.JointBoundaryCusp
+import WPFormalization.HigherOrder.FiniteUnitInversion
+
+import WPFormalization.HigherOrder.BoundaryAffineStatus
+import WPFormalization.HigherOrder.BoundaryAffineMoment
+import WPFormalization.HigherOrder.MultivariatePowerSums
+import WPFormalization.HigherOrder.BoundarySummation
+import WPFormalization.HigherOrder.JointDiagonalPolynomial
+import WPFormalization.HigherOrder.JointDiagonalBoundary
+import WPFormalization.HigherOrder.JointDiagonalStrata
+import WPFormalization.HigherOrder.AffineShiftMoment
+import WPFormalization.HigherOrder.JointShiftedKernelRecipes
+import WPFormalization.HigherOrder.FiniteKernelConvolution
+import WPFormalization.HigherOrder.JointSmallComponentStrata
+
+import WPFormalization.HigherOrder.FiniteScalarFront
+import WPFormalization.HigherOrder.MergerTuple
+import WPFormalization.HigherOrder.LinearJointRecipes
+
+import WPFormalization.HigherOrder.SeparatingJointKernelRecipes
+
+import WPFormalization.HigherOrder.FiniteRatioRecipe
+import WPFormalization.HigherOrder.SeparatingJointContribution
+
+import WPFormalization.HigherOrder.BoundaryCoarsening
+import WPFormalization.HigherOrder.BoundaryCoordinatePullback
+import WPFormalization.HigherOrder.SelectedTuple
+import WPFormalization.HigherOrder.SeparatingSeriesJointRecipe
+import WPFormalization.HigherOrder.FiniteDataEnvironment
+
+import WPFormalization.HigherOrder.CurrentGenusScalarRecipe
+
+import WPFormalization.HigherOrder.PathPivotProjection
+import WPFormalization.HigherOrder.FirstAdjacentJointRecipe
+import WPFormalization.HigherOrder.ProfileJointStep
+import WPFormalization.HigherOrder.ProfileJointRecipeStep
+import WPFormalization.HigherOrder.FiniteDataStage
+
+import WPFormalization.HigherOrder.FiniteDataTargetBridges
+
+import WPFormalization.HigherOrder.FiniteDataInduction
+
+/-! Proved finite algebra, actual operator recipes, and the common C.3 finite-data induction.
+The final P-only producers in FiniteDataInduction inhabit both frozen finite-data targets.
+Their only deferred input is the previously licensed Rouche theorem in actual kernel moments. -/

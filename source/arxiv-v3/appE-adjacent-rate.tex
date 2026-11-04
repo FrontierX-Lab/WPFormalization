@@ -1,0 +1,222 @@
+\section{The rate for adjacent coefficient ratios}
+\label{sec:quantitative-coefficients}
+
+This appendix proves Theorem~\ref{thm:quantitative-coefficient}, which
+contains the rate in Theorem~\ref{thm:coefficient}. We quantify the three
+degree ranges treated in Section~\ref{uniform-one-boundary-coefficient-ratios}.
+The logarithmic comparison and concavity give the rate away from the
+lowest degrees, including bounded positive codimension at the top.
+Bracket difference estimates supply the remaining range. Balancing the
+bounds gives $O(g^{-1/8})$ uniformly; we do not claim that this exponent
+is optimal. The coefficients and the exact density are those of
+Theorem~\ref{thm:coefficient}.
+
+\begin{theorem}[Quantitative adjacent ratios]\label{thm:quantitative-coefficient}
+There is a constant $C$ such that, for all sufficiently large $g$,
+\begin{equation}
+ \sup_{0\le k<3g-2}
+ \left|\frac{a_{g,k}/a_{g,k+1}}{4\pi^2/t_{g,k}^2}-1\right|
+ \le Cg^{-1/8}.
+ \label{eq:QC1}
+\end{equation}
+For every fixed $\varepsilon\in(0,3)$ there is $C_\varepsilon$ such that
+\begin{equation}
+ \sup_{\varepsilon g\le k<3g-2}
+ \left|\frac{a_{g,k}/a_{g,k+1}}{4\pi^2/t_{g,k}^2}-1\right|
+ \le C_\varepsilon g^{-1/4}.
+ \label{eq:QC2}
+\end{equation}
+In the second supremum $k$ is an integer. Both bounds include bounded
+positive codimension from the top coefficient.
+\end{theorem}
+
+\subsection{The logarithmic model up to its endpoints}
+
+We first make the logarithmic comparison of
+Section~\ref{uniform-one-boundary-coefficient-ratios} quantitative, up to
+both ends of the degree range.
+
+Use $H,\widetilde A_m,\mu$ from \eqref{eq:C4} and \eqref{eq:C10}.
+Let $\zeta(u)$ be the inverse of $\mu(z)$ on $0\le u\le3/2$,
+with $\zeta(0)=0$. Since $\mu(z)=z/5+O(z^2)$ at zero and
+$\mu'(z)>0$ throughout $[0,\pi^2/2]$, the function
+\[
+ \chi(u)=u/\zeta(u),\qquad \chi(0)=1/5,
+\]
+is positive and analytic in a neighborhood of the closed real interval.
+Write $f$ for the function in \eqref{eq:C14}, extended continuously to
+$[0,3]$, and set
+\begin{equation}
+ \mathfrak q(\alpha)=4\alpha\chi((3-\alpha)/2),\qquad
+ f'(\alpha)=-\log\mathfrak q(\alpha),\qquad
+ |f''(\alpha)|\le C(1+\alpha^{-1})\quad(0<\alpha\le3).
+ \label{eq:QC3}
+\end{equation}
+These follow from \eqref{eq:C15}; in particular
+$\mathfrak q(3)=12/5$ and $f(3)=0$.
+
+We need the endpoint-uniform version of the logarithmic saddle estimate
+\eqref{eq:C12}.
+
+\begin{lemma}[Endpoint-uniform saddle estimate]\label{lem:uniform-saddle}
+For integers $0\le m\le3h/2$, let $z=\zeta(m/h)$, interpreting the
+$m=0$ expressions by continuity. Then, uniformly in $m$,
+\begin{equation}
+ \log \widetilde A_m(h)=-h\log H(z)-m\log z+O(\log(h+1)).
+ \label{eq:QC4}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Tilt $H^{-1}$ at $z$ and let
+$S_h$ be the sum of $h$ independent variables with probability
+generating function $H(z)/H(zw)$. Exactly,
+\[
+ \widetilde A_m(h)=H(z)^{-h}z^{-m}\Pr(S_h=m).
+\]
+There is $c>0$ such that $\Pr(S_h=m)\ge c/\sqrt{m+1}$ uniformly.
+We give the details at the degenerate endpoint $m/h\to0$.
+When $m\to\infty$ and $m/h\to0$, one has $z\asymp m/h$,
+$\operatorname{Var}(S_h)\asymp m$, and each fixed cumulant of the
+sum is $O(m)$. The probabilities at zero and one of one summand have
+product comparable to $z$. The Fourier bound \eqref{eq:TL40} therefore
+gives $\exp(-cm\theta^2)$ on $[-\pi,\pi]$, and the centered Taylor
+expansion gives the local Gaussian limit at $m$, with central mass
+asymptotic to $(2\pi\operatorname{Var}(S_h))^{-1/2}$.
+When $m/h$ stays away from zero, the same argument uses a compact
+tilted family with variance comparable to $h$ and positive zero and
+one probabilities. If $m$ stays bounded, pass to a fixed integer $m$;
+then $z=5m/h+O_m(h^{-2})$ and
+$\widetilde A_m(h)=(h/5)^m/m!\,(1+O_m(h^{-1}))$, so the central mass tends to
+$\mathrm{e}^{-m}m^m/m!>0$. At $m=0$ it is one.
+These cases and a subsequence contradiction prove the asserted uniform
+lower bound. The upper bound is one, proving \eqref{eq:QC4}.
+\end{proof}
+
+Put
+\[
+ G_g(k)=\log\frac{J_k}{J_Ng^{2(N-k)}},\qquad N=3g-2.
+\]
+
+\begin{lemma}[Logarithmic comparison up to the endpoints]\label{lem:log-comparison}
+There is a constant $C$ such that
+\begin{equation}
+ \max_{0\le k\le N}|G_g(k)-g f(k/g)|\le C\sqrt g.
+ \label{eq:QC5}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+This follows from the model \eqref{eq:C4}, the comparison \eqref{eq:C5} and
+Lemma~\ref{lem:uniform-saddle}. The passage to $f$ is uniform, even at
+$m=0$. To see this, use the
+exact model for the intersection number,
+$3^h\Gamma(h)4^{-g}m!\widetilde A_m(h)/(2k+1)!!$ from Section~\ref{uniform-one-boundary-coefficient-ratios}
+and apply Stirling's bound with logarithmic error to its factorials,
+using $0\log0=0$. Replacing $h=2g-1$ by $2g$ and
+$m=3g-2-k$ by $3g-k$ changes its saddle action by $O(\log(g+1))$:
+the two partial derivatives of the action are $-\log H(z)$ and
+$-\log z$, the latter having only an integrable logarithmic
+singularity at $m=0$. The powers of $g$ cancel as in
+\eqref{eq:C13}--\eqref{eq:C14}. Subtracting the top model value gives
+$g f(k/g)+O(\log(g+1))$ uniformly. The two logarithmic errors between
+the true and the model values are at most $C\sqrt g$ by \eqref{eq:C5}, including the top
+coefficient, which proves \eqref{eq:QC5}.
+\end{proof}
+
+\subsection{Quantitative secants and the top endpoint}
+
+\begin{proof}[Proof of Theorem~\ref{thm:quantitative-coefficient}]
+The sequence $G_g$ is concave by \eqref{eq:C7}. Write
+$q_k=J_k/J_{k+1}$. For an integer $\ell\ge1$ with
+$\ell\le k/2$ and $k+\ell\le N$, its secants imply
+\[
+ -\frac{G_g(k)-G_g(k-\ell)}\ell
+ \le\log(q_k/g^2)
+ \le-\frac{G_g(k+\ell)-G_g(k)}\ell.
+\]
+Equations \eqref{eq:QC3} and \eqref{eq:QC5} yield
+\begin{equation}
+ \left|\log\frac{q_k}{g^2\mathfrak q(k/g)}\right|
+ \le C\left(\frac{\sqrt g}\ell+\frac\ell k\right).
+ \label{eq:QC6}
+\end{equation}
+If $k+\ell>N$, retain the lower secant and use
+$q_k\le q_{N-1}$ for the upper bound. The exact top anchor
+\eqref{eq:C18} gives $q_{N-1}/g^2=12/5+O(g^{-1})$.
+Since $\log\mathfrak q$ is Lipschitz near three and
+$3-k/g\le(\ell+2)/g$, this gives the same bound
+\eqref{eq:QC6}, with a changed constant.
+
+Take $\ell=\lfloor g^{5/8}\rfloor$. For $k\ge g^{3/4}$ it is
+at most $k/2$ for large $g$, and \eqref{eq:QC6} is $O(g^{-1/8})$.
+For $k\ge\varepsilon g$, instead take
+$\ell=\lfloor g^{3/4}\rfloor$ to obtain $O_\varepsilon(g^{-1/4})$.
+
+These estimates for the intersection numbers translate into the
+statement of the theorem without losing the bounded-codimension range.
+Indeed, put
+$m=N-k$, $h=2g-1$, and $z_{g,k}=t_{g,k}^2/2$. By \eqref{eq:C11},
+$\mu(z_{g,k})=m/h$. Therefore the value of $q_k=J_k/J_{k+1}$ that
+corresponds, through \eqref{eq:C3}, to the proposed equivalent
+$4\pi^2/t_{g,k}^2$ of $a_{g,k}/a_{g,k+1}$ is
+\begin{equation}
+ \frac{(2k+3)m}{z_{g,k}}
+ =(2k+3)h\chi(m/h)
+ =g^2\mathfrak q(k/g)\left(1+O(k^{-1}+g^{-1})\right).
+ \label{eq:QC7}
+\end{equation}
+The last error is uniform for $k\ge1$: the two arguments of $\chi$
+differ by $O(g^{-1})$, while $\chi$ is positive with bounded
+logarithmic derivative on the closed interval. This calculation
+retains $m$ exactly, including $m=1$. By \eqref{eq:C3}, the two
+secant estimates prove \eqref{eq:QC1} for $k\ge g^{3/4}$ and all
+of \eqref{eq:QC2}.
+
+\subsection{The small-degree range}
+
+It remains to consider $k\le g^{3/4}$. Put
+$\rho_k=b_{g,k}/b_{g,k+1}\ge1$ and
+$\omega_k=(2k+3)(N-k)$ as before. Equation~\eqref{eq:C25} gives
+$\rho_k=1+O(g^{-1/2})$ for $k\le\delta_0\sqrt g$ with a fixed
+small $\delta_0>0$. For the remaining indices we claim
+\begin{equation}
+ 0\le\rho_k-1\le C\left(
+       \frac{\log(g+1)}{\sqrt k}+\sqrt{\frac kg}+\frac1k\right)
+ \quad(\delta_0\sqrt g\le k\le g^{3/4}).
+ \label{eq:QC8}
+\end{equation}
+First $\rho_k<2$ uniformly in this range for large $g$. Otherwise
+monotonicity of $q_j$ and $\omega_j/\omega_k\le1+\delta$ propagate a fixed
+ratio gap over a block of length comparable to $k$. Its product
+would force $\log(V_{g,1}/b_{g,j})\ge c k$ at an index $j\asymp k$,
+contradicting \eqref{eq:C23}, whose upper bound is $o(k)$ uniformly
+on this range.
+
+Now put $\eta=\rho_k-1\in[0,1]$ and $\delta=\eta/6$.
+For $k\le j\le\lfloor(1+\delta)k\rfloor$, the same monotonicity
+and the exact factor $\omega_j$ give
+$\rho_j\ge(1+\eta)/(1+\delta)\ge1+\eta/2$.
+If $\eta k\ge12$, this block has at least $\eta k/12$ indices.
+Summing logarithms over the block and using \eqref{eq:C23} at its
+last index plus one gives
+\[
+ c\eta^2 k\le C\log^2(g+1)+Ck^2/g.
+\]
+All these indices lie below the fixed $c_0g$ range of \eqref{eq:C23}
+for large $g$. If $\eta k<12$, then $\eta<12/k$ directly.
+This proves \eqref{eq:QC8}. Its right side is $O(g^{-1/8})$ on
+the displayed range. Thus $\rho_k=1+O(g^{-1/8})$ uniformly for
+$0\le k\le g^{3/4}$.
+
+Finally the saddle equation at $t=\pi$ gives
+$\pi^2/t_{g,k}^2=1+O((k+1)/g)$ uniformly on this small-degree
+range. Since $a_{g,k}/a_{g,k+1}=4\rho_k$, the desired
+relative error is $O(g^{-1/8})$ there as well. Together with the
+secant range this proves both assertions.
+\end{proof}
+
+The argument is a quantitative version of the one used for the leading
+equivalent, based on the same logarithmic comparison and concavity. Liu--Xu's fixed-codimension expansion
+has finer errors at each fixed codimension~\cite{LX}; the bounds here
+hold with a single constant across all valid degrees.

@@ -1,0 +1,14 @@
+.lake/
+_out/
+__pycache__/
+*.pyc
+*.log
+*.log.gz
+*.tar.gz
+*.olean
+*.ilean
+*.c
+*.o
+*.trace
+*.prof
+.DS_Store

@@ -1,0 +1,61 @@
+{
+  "stage1Status": "COMPLETE_CONDITIONAL",
+  "stage1CoreProofStatus": "CLOSED_CONDITIONALLY",
+  "overallProjectStatus": "INCOMPLETE",
+  "unconditionalProjectStatus": "INCOMPLETE_EXTERNAL_DEPENDENCIES",
+  "sourceHash": "ae8216d53b3bcf01aaa223cf17be80df9c7d2b995574ba5edaa853487742c702",
+  "mathFiles": 1827,
+  "authoredDeclarations": 10484,
+  "projectConstants": 24901,
+  "targets": 153,
+  "targetCounts": {
+    "EXTERNAL_DEFERRED": 20,
+    "BLOCKED": 4,
+    "VERIFIED": 29,
+    "CONDITIONAL": 100
+  },
+  "paperNewCounts": {
+    "CONDITIONAL": 85,
+    "VERIFIED": 7
+  },
+  "paperNewClosed": 92,
+  "paperNewTotal": 92,
+  "remainingCoreTargets": [],
+  "externalLicenseGroups": 77,
+  "externalSorryRoots": 38,
+  "actualGeometricInstancesConstructed": false,
+  "jointInterfaceInhabitationProved": false,
+  "physicalJTMatrixModelConstructed": false,
+  "compiledAssociations": {
+    "targets": 153,
+    "associatedTargets": 150,
+    "distinctCompiledDeclarations": 317,
+    "blocked": 3,
+    "queueEntries": 14,
+    "queueProofStatusCounts": {
+      "ready to formalize": 3,
+      "Lean code incomplete": 11
+    },
+    "compiledAssociationErrors": 0,
+    "falseProofCompletions": 0,
+    "associationMechanism": "blueprintAttr",
+    "scope": "Checks compiled associations/proof status; semantic fidelity and explicit interface assumptions remain separately audited."
+  },
+  "dependencyClosure": {
+    "associatedDeclarations": 317,
+    "visitedConstants": 91391,
+    "modules": 4074,
+    "directSorryRoots": 35,
+    "unknownRoots": [],
+    "unknownAxioms": [],
+    "file": "audit/reachable.json"
+  },
+  "explicitBinderAudit": {
+    "associatedDeclarations": 317,
+    "structures": 110,
+    "binders": 1362,
+    "propositionBinders": 390,
+    "file": "audit/parameters.json"
+  },
+  "pdfSHA256": "798c1f564636052b1904206538d5be855f19ea1e5da4f41df88a479c2cc8b4cc"
+}

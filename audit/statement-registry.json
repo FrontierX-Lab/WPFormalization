@@ -1,0 +1,4229 @@
+[
+  {
+    "label": "ext:dvv",
+    "paperNumber": "external",
+    "paperPages": [
+      "19"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.PsiTheory",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:mixed-transform",
+    "paperNumber": "external",
+    "paperPages": [
+      "19"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.IntersectionRealization",
+        "path": "WPFormalization/External/IntersectionTheory.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.HigherKappaRealization",
+        "path": "WPFormalization/External/HigherKappa.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:one-point",
+    "paperNumber": "external",
+    "paperPages": [
+      "53"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.one_point",
+        "path": "WPFormalization/External/IntersectionEstimates.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:two-point",
+    "paperNumber": "external",
+    "paperPages": [
+      "69"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.two_point",
+        "path": "WPFormalization/External/IntersectionEstimates.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:kdv",
+    "paperNumber": "external",
+    "paperPages": [
+      "31"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.integrated_first_kdv",
+        "path": "WPFormalization/External/KdV.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.first_kdv_descendants",
+        "path": "WPFormalization/External/KdV.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:iz",
+    "paperNumber": "external",
+    "paperPages": [
+      "36"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.phiCoefficient",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.itzykson_zuber",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:painleve-leading",
+    "paperNumber": "external",
+    "paperPages": [
+      "37"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.painleveAction",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.stokesAmplitude",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.normalizedZeroInstanton",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.painleve_leading_error",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.painleve_leading",
+        "path": "WPFormalization/External/Painleve.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.painleve_first_correction_error",
+        "path": "WPFormalization/External/AsymptoticFirstOrder.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:painleve-contour",
+    "paperNumber": "external",
+    "paperPages": [
+      "84"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.PainleveAnalytic.GIKMData",
+        "path": "WPFormalization/External/PainleveAnalyticData.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.PainleveAnalytic.exists_gikm_data",
+        "path": "WPFormalization/External/PainleveAnalyticData.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:painleve-borel",
+    "paperNumber": "external",
+    "paperPages": [
+      "84"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.PainleveAnalytic.CCHData",
+        "path": "WPFormalization/External/PainleveAnalyticData.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.PainleveAnalytic.exists_cch_data",
+        "path": "WPFormalization/External/PainleveAnalyticData.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:fixed-cusps",
+    "paperNumber": "external",
+    "paperPages": [
+      "6"
+    ],
+    "status": "BLOCKED",
+    "declarations": [],
+    "associated": false,
+    "associationMechanism": null,
+    "statementComplete": false,
+    "geometricRealizationPending": false,
+    "reason": "The fixed-n leading term with an unknown universal constant and the n=0 first correction are available. The full-order polynomial corrections and absolute bracket differences required by the broader summary are still missing. The paper's constant value has not been made an external assumption."
+  },
+  {
+    "label": "ext:fixed-genus",
+    "paperNumber": "external",
+    "paperPages": [
+      "51"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.fixed_genus_normalized_volume_logarithm",
+        "path": "WPFormalization/External/FixedGenus.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:nef-teissier",
+    "paperNumber": "external",
+    "paperPages": [
+      "53"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.classical_onepoint_nef_realization",
+        "path": "WPFormalization/External/NefIntersection.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:mir-integration",
+    "paperNumber": "external",
+    "paperPages": [
+      "59"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.MirzakhaniIntegration",
+        "path": "WPFormalization/External/MirzakhaniIntegration.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:shen-wu",
+    "paperNumber": "external",
+    "paperPages": [
+      "9"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.ShenWuPantsBound",
+        "path": "WPFormalization/External/ShenWuPants.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:shen-wu-volumes",
+    "paperNumber": "external",
+    "paperPages": [
+      "104"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.shenWu_volume_upper",
+        "path": "WPFormalization/External/CriticalVolumeBounds.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.shenWu_volume_critical_lower",
+        "path": "WPFormalization/External/CriticalVolumeBounds.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:minmax",
+    "paperNumber": "external",
+    "paperPages": [
+      "62"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.SpectralGeometry",
+        "path": "WPFormalization/External/SpectralGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:tight-transform",
+    "paperNumber": "external",
+    "paperPages": [
+      "100"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.BuddZonneveldTransform",
+        "path": "WPFormalization/External/TightMoments.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:tight-integration",
+    "paperNumber": "external",
+    "paperPages": [
+      "63"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.BuddLionsTightIntegration",
+        "path": "WPFormalization/External/BuddLionsTightIntegration.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:tight-geometry",
+    "paperNumber": "external",
+    "paperPages": [
+      "102"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.BuddLionsTightGeometry",
+        "path": "WPFormalization/External/BuddLionsTightGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:short-filling",
+    "paperNumber": "external",
+    "paperPages": [
+      "105"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.ShortFillingGeometry.SingleCurvePieceClassics",
+        "path": "WPFormalization/External/ShortFillingGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.ShortFullFillingGeometry.FullSingleCurveFillingClassics",
+        "path": "WPFormalization/External/ShortFullFillingGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.exists_actual_short_simple_tuple_cut",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingTupleCut.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.activeSupport_negativeEuler_le",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingClusterNetworks.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.supporting_piece_boundaryLength_le",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingSupportBudget.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.actual_cluster_selected_indices",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingMultiSelected.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.exists_actual_intersecting_masked_record",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingTupleRecord.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.masked_tuple_recording_fiber_card_le",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingMaskedTupleCount.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.exists_actual_single_nonpants_masked_record",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingSingleRecord.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.ShortConfiguration.cut_masked_selected_curve_count_le",
+        "path": "WPFormalization/Critical/ShortConfigurationRecordingMaskGeometry.lean",
+        "kind": "lemma",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "ext:collar",
+    "paperNumber": "external",
+    "paperPages": [
+      "59"
+    ],
+    "status": "PARTIAL_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.CollarGeometry",
+        "path": "WPFormalization/External/CollarGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "Precise classical interfaces for simplicity and disjointness of short primitive geodesics, and actual packing, doubling, and axial representations, are available. These fields do not fully supply the pointwise Margulis decomposition or existence and uniqueness of geodesic representatives for every eligible free homotopy class."
+  },
+  {
+    "label": "ext:complex-analysis",
+    "paperNumber": "external",
+    "paperPages": [
+      "17"
+    ],
+    "status": "BLOCKED",
+    "declarations": [],
+    "associated": false,
+    "associationMechanism": null,
+    "statementComplete": false,
+    "geometricRealizationPending": false,
+    "reason": "Precise classical implicit-function, Pringsheim, Rouche, and Hadamard inputs are registered. The local Cauchy and actual slit-domain two-constants estimates are proved. General formal Lagrange inversion in the broader summary remains missing; the distinction in scope is retained."
+  },
+  {
+    "label": "ext:optional-stopping",
+    "paperNumber": "external",
+    "paperPages": [
+      "26"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Probability.bounded_optional_stopping",
+        "path": "WPFormalization/Probability/BoundedOptionalStopping.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "ext:fourier",
+    "paperNumber": "external",
+    "paperPages": [
+      "18"
+    ],
+    "status": "BLOCKED",
+    "declarations": [],
+    "associated": false,
+    "associationMechanism": null,
+    "statementComplete": false,
+    "geometricRealizationPending": false,
+    "reason": "Actual analytic-PGF and nonnegative-lattice Fourier results, iid harmonic inversion, and the uniform local limit theorem are proved locally. The broader version for arbitrary integer-valued laws, including negative support, is not yet covered by a statement of the same scope. A Taylor sublemma that defines negative-index coefficients as zero does not establish full coverage."
+  },
+  {
+    "label": "ext:stirling",
+    "paperNumber": "external",
+    "paperPages": [
+      "23"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.gamma_ratio_error",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.gammaStirlingMain",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.gamma_stirling_error",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.logStirlingPartial",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.log_gamma_stirling_remainder",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.gamma_finite_product",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.gaussian_integral",
+        "path": "WPFormalization/External/SpecialFunctions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.gamma_ratio_first_correction_error",
+        "path": "WPFormalization/External/AsymptoticFirstOrder.lean",
+        "kind": "theorem",
+        "directSorry": true
+      },
+      {
+        "name": "WP.External.gammaLogRatioKernel",
+        "path": "WPFormalization/External/GammaLaplace.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.log_gamma_ratio_laplace",
+        "path": "WPFormalization/External/GammaLaplace.lean",
+        "kind": "theorem",
+        "directSorry": true
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "def:stable",
+    "paperNumber": "unnumbered",
+    "paperPages": [
+      "3"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Stable",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.complexity",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.dimension",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.totalDegree",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.deficit",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "def:wp-volume",
+    "paperNumber": "unnumbered",
+    "paperPages": [
+      "3"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.WeilPeterssonGeometry",
+        "path": "WPFormalization/External/WeilPeterssonGeometry.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.wpVolume",
+        "path": "WPFormalization/External/WeilPeterssonGeometry.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "def:intersections",
+    "paperNumber": "unnumbered",
+    "paperPages": [
+      "19"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.External.DMClasses",
+        "path": "WPFormalization/External/IntersectionTheory.lean",
+        "kind": "structure",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.mixedIntegral",
+        "path": "WPFormalization/External/IntersectionTheory.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.External.geometricBracket",
+        "path": "WPFormalization/External/IntersectionTheory.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "def:bessel",
+    "paperNumber": "unnumbered",
+    "paperPages": [
+      "4"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.X",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.XR",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.a",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.y₀",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.xCritical",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.inverseY",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.bessel_branches",
+        "path": "WPFormalization/Analysis/BesselBranches.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.besselJ₀",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.besselJ₁",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.firstJ₀Zero",
+        "path": "WPFormalization/Statements/Basic.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.bessel_dictionary",
+        "path": "WPFormalization/Analysis/BesselDictionary.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:intro-Phi",
+    "paperNumber": "1.1",
+    "paperPages": [
+      "4"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Phi",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.volumeModel",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:SP1",
+    "paperNumber": "1.2",
+    "paperPages": [
+      "4"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.T",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.stationaryIntegral",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.stationary_root",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:SP2",
+    "paperNumber": "1.3",
+    "paperPages": [
+      "4"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Delta",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.action",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.density",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:intro-leading",
+    "paperNumber": "1.5",
+    "paperPages": [
+      "5"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.leadingVolume",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:intro-varpi",
+    "paperNumber": "1.6",
+    "paperPages": [
+      "5"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.varpi",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Xdiv",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:intro-absolute",
+    "paperNumber": "1.1",
+    "paperPages": [
+      "5"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.intro_absolute",
+        "path": "WPFormalization/HigherOrder/Targets.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.unmarked_first_exact",
+        "path": "WPFormalization/HigherOrder/UnmarkedFirstExact.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "cor:constant",
+    "paperNumber": "1.2",
+    "paperPages": [
+      "6"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.zograf_constant",
+        "path": "WPFormalization/Statements/ZografConstant.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:SP3",
+    "paperNumber": "1.7",
+    "paperPages": [
+      "7"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.profileB",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.profileC",
+        "path": "WPFormalization/Statements/ParameterDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:volume",
+    "paperNumber": "1.3",
+    "paperPages": [
+      "7"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.volume_ratios",
+        "path": "WPFormalization/Statements/VolumeRatios.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:coefficient",
+    "paperNumber": "1.4",
+    "paperPages": [
+      "8"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.adjacent_limit",
+        "path": "WPFormalization/Statements/AdjacentLimit.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.quantitative_adjacent",
+        "path": "WPFormalization/Statements/QuantitativeAdjacent.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.adjacent_endpoint_limits",
+        "path": "WPFormalization/Statements/AdjacentEndpointLimits.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:WC1",
+    "paperNumber": "1.8",
+    "paperPages": [
+      "8"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.chainProfile",
+        "path": "WPFormalization/Statements/ChainDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:chain",
+    "paperNumber": "1.5",
+    "paperPages": [
+      "8"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.diagonal_chain",
+        "path": "WPFormalization/Statements/Boundary.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "cor:spectral",
+    "paperNumber": "1.6",
+    "paperPages": [
+      "9"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Spectral.vanishing_spectral_gap",
+        "path": "WPFormalization/Spectral/VanishingGap.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:P1",
+    "paperNumber": "2.1",
+    "paperPages": [
+      "16"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.K",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.H",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.kernel_series",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P2",
+    "paperNumber": "2.2",
+    "paperPages": [
+      "16"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.kernel_differential",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:kernel-zeros",
+    "paperNumber": "2.1",
+    "paperPages": [
+      "16"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.kernel_zeros",
+        "path": "WPFormalization/Analysis/KernelZeros.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:kernel-positivity",
+    "paperNumber": "2.2",
+    "paperPages": [
+      "17"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.logKernelCoeff",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.kernel_positivity",
+        "path": "WPFormalization/Analysis/KernelPositivity.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.log_kernel_series",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P9",
+    "paperNumber": "2.5",
+    "paperPages": [
+      "17"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.barK",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.barH",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.A",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P10",
+    "paperNumber": "2.6",
+    "paperPages": [
+      "17"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.critical_kernel_limits",
+        "path": "WPFormalization/Analysis/CriticalKernelLimits.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P11",
+    "paperNumber": "2.7",
+    "paperPages": [
+      "17"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.theta",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.weight",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.uniform_kernel_moments",
+        "path": "WPFormalization/Analysis/UniformKernelMoments.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P12",
+    "paperNumber": "2.8",
+    "paperPages": [
+      "17"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.harmonicPGF",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.harmonicMass",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.harmonicVariance",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.harmonic_law",
+        "path": "WPFormalization/Analysis/HarmonicLaw.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:P13",
+    "paperNumber": "2.9",
+    "paperPages": [
+      "18"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.harmonic_local_limit",
+        "path": "WPFormalization/Analysis/HarmonicLocalLimit.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:parameter",
+    "paperNumber": "3.1",
+    "paperPages": [
+      "18"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.parameter_regular",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.parameter_critical",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.parameter_cusp_weight",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.parameter_analytic_expansions",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:H2",
+    "paperNumber": "4.1",
+    "paperPages": [
+      "19"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.normalized_kernel_identity",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.theta",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:H3",
+    "paperNumber": "4.2",
+    "paperPages": [
+      "19"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.critical_kernels",
+        "path": "WPFormalization/Statements/Kernels.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:H4",
+    "paperNumber": "4.3",
+    "paperPages": [
+      "19"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.pureC",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H5",
+    "paperNumber": "4.4",
+    "paperPages": [
+      "20"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.mixed_transform",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H6",
+    "paperNumber": "4.5",
+    "paperPages": [
+      "20"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.shifted",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.backgrounds",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.backgroundDegrees",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H7",
+    "paperNumber": "4.6",
+    "paperPages": [
+      "20"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.normalized",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H8",
+    "paperNumber": "4.7",
+    "paperPages": [
+      "20"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.string_flow",
+        "path": "WPFormalization/Statements/StringFlow.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H9",
+    "paperNumber": "4.8",
+    "paperPages": [
+      "21"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.positive_recursion",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.positiveRHS",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H10",
+    "paperNumber": "4.9",
+    "paperPages": [
+      "22"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.initial_amplitudes",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H12",
+    "paperNumber": "4.11",
+    "paperPages": [
+      "22"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.harmonicCoeff",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.model",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.ratio",
+        "path": "WPFormalization/Statements/IntersectionInterface.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H13",
+    "paperNumber": "4.12",
+    "paperPages": [
+      "22"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.mass_identity",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.linearQ",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:H14",
+    "paperNumber": "4.13",
+    "paperPages": [
+      "23"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.zero_mass_defect",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.zeroLinearMass",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:H22",
+    "paperNumber": "4.21",
+    "paperPages": [
+      "23"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.linear_mass_bounds",
+        "path": "WPFormalization/Analysis/LinearMassBounds.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.linearS₀",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "prop:harmonic",
+    "paperNumber": "5.1",
+    "paperPages": [
+      "24"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.harmonic_comparison",
+        "path": "WPFormalization/Statements/HarmonicComparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:terminal",
+    "paperNumber": "5.2",
+    "paperPages": [
+      "24"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.terminal_bounds",
+        "path": "WPFormalization/Statements/TerminalBounds.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.pureC_zero_bounds",
+        "path": "WPFormalization/Intersection/PureZeroBounds.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.terminal_ratio_lower",
+        "path": "WPFormalization/Intersection/TerminalLower.lean",
+        "kind": "lemma",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:lower",
+    "paperNumber": "5.3",
+    "paperPages": [
+      "25"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.comparison_lower",
+        "path": "WPFormalization/Statements/LowerComparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:H30",
+    "paperNumber": "5.8",
+    "paperPages": [
+      "26"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.clippedWeight",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.zeros",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.inactive",
+        "path": "WPFormalization/Statements/Comparison.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:weighted-linear",
+    "paperNumber": "5.4",
+    "paperPages": [
+      "27"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.weighted_linear_bound",
+        "path": "WPFormalization/Statements/Weighted.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.weightedLinear",
+        "path": "WPFormalization/Weighted/Definitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.PivotChoice",
+        "path": "WPFormalization/Weighted/Definitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:weighted-separating",
+    "paperNumber": "5.5",
+    "paperPages": [
+      "27"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.weighted_separating_bound",
+        "path": "WPFormalization/Statements/Weighted.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.weightedSeparating",
+        "path": "WPFormalization/Weighted/Definitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:upper",
+    "paperNumber": "5.6",
+    "paperPages": [
+      "29"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.comparison_upper",
+        "path": "WPFormalization/Statements/UpperComparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL9",
+    "paperNumber": "6.1",
+    "paperPages": [
+      "31"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.W",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.profile",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL12",
+    "paperNumber": "6.4",
+    "paperPages": [
+      "31"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.shifted_dilaton",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.dilaton_coefficient",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.dilatonCoeff",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL14",
+    "paperNumber": "6.6",
+    "paperPages": [
+      "31"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.shifted_kdv",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:monotone",
+    "paperNumber": "6.1",
+    "paperPages": [
+      "32"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.profile_monotone",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL19",
+    "paperNumber": "6.11",
+    "paperPages": [
+      "32"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.separating_estimates",
+        "path": "WPFormalization/Statements/MarkedSeparating.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.separatingS",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.separatingT",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.separating_S_all_markings",
+        "path": "WPFormalization/Statements/MarkedExtensions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.separating_T_two_markings",
+        "path": "WPFormalization/Statements/MarkedExtensions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL23",
+    "paperNumber": "6.15",
+    "paperPages": [
+      "33"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.quadratic_profile",
+        "path": "WPFormalization/Statements/QuadraticProfile.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.quadratic_profile_all_markings",
+        "path": "WPFormalization/Statements/MarkedExtensions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL24",
+    "paperNumber": "6.16",
+    "paperPages": [
+      "33"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.marked_cusp",
+        "path": "WPFormalization/Statements/MarkedCusp.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.marked_cusp_all",
+        "path": "WPFormalization/Statements/MarkedExtensions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL27",
+    "paperNumber": "6.19",
+    "paperPages": [
+      "34"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.marked_genus",
+        "path": "WPFormalization/Statements/MarkedGenus.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.marked_genus_all",
+        "path": "WPFormalization/Statements/MarkedExtensions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "prop:marked-ratios",
+    "paperNumber": "6.2",
+    "paperPages": [
+      "34"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.marked_ratios",
+        "path": "WPFormalization/Statements/MarkedRatios.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:PF1",
+    "paperNumber": "7.1",
+    "paperPages": [
+      "35"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Theta",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.moment₁",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Z",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.kernel_action_moments",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:PF3",
+    "paperNumber": "7.3",
+    "paperPages": [
+      "35"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.markedModel",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "prop:prefactor",
+    "paperNumber": "7.1",
+    "paperPages": [
+      "35"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.absolute_prefactor",
+        "path": "WPFormalization/Statements/AbsolutePrefactor.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:first-degree",
+    "paperNumber": "7.2",
+    "paperPages": [
+      "35"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.first_degree",
+        "path": "WPFormalization/Statements/FirstDegree.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.degreeCorrection",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.first_degree_all_degrees",
+        "path": "WPFormalization/Statements/FirstDegree.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:PF8",
+    "paperNumber": "7.8",
+    "paperPages": [
+      "36"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.transport_equation",
+        "path": "WPFormalization/Statements/TransportEquation.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.transportBeta",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:PF12",
+    "paperNumber": "7.13",
+    "paperPages": [
+      "37"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.endpoint_string",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.endpoint_pure_limit",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:PF13",
+    "paperNumber": "7.14",
+    "paperPages": [
+      "37"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.endpoint_ratio",
+        "path": "WPFormalization/Statements/Marked.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:boundary-factor",
+    "paperNumber": "7.19",
+    "paperPages": [
+      "38"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.growing_boundary_factor",
+        "path": "WPFormalization/Volumes/GrowingBoundaryTheorem.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:ST13",
+    "paperNumber": "8.1",
+    "paperPages": [
+      "38"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.firstEndpointConstant",
+        "path": "WPFormalization/HigherOrder/SecondProfile.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.firstMarkedCorrection",
+        "path": "WPFormalization/HigherOrder/SecondProfile.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:first-correction",
+    "paperNumber": "8.1",
+    "paperPages": [
+      "38"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.first_correction",
+        "path": "WPFormalization/Statements/FirstCorrection.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:full-expansion",
+    "paperNumber": "8.2",
+    "paperPages": [
+      "39"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.full_expansion",
+        "path": "WPFormalization/HigherOrder/CanonicalExpansionStatement.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:convolution",
+    "paperNumber": "9.1",
+    "paperPages": [
+      "40"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.positive_convolution",
+        "path": "WPFormalization/Statements/Boundary.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.convolutionR",
+        "path": "WPFormalization/Statements/ConvolutionDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.universalV",
+        "path": "WPFormalization/Statements/ConvolutionDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:TL37",
+    "paperNumber": "9.4",
+    "paperPages": [
+      "41"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.cuspMass",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "prop:local-limit",
+    "paperNumber": "9.2",
+    "paperPages": [
+      "41"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.cusp_local_limit",
+        "path": "WPFormalization/Statements/CuspLocalLimit.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:point-mass",
+    "paperNumber": "9.3",
+    "paperPages": [
+      "43"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.point_mass_bound",
+        "path": "WPFormalization/Statements/Boundary.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:boundary-profile",
+    "paperNumber": "9.23",
+    "paperPages": [
+      "7"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.boundaryFactor",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.boundary_factor_endpoints",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "prop:bounded-boundaries",
+    "paperNumber": "9.4",
+    "paperPages": [
+      "44"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.bounded_boundaries",
+        "path": "WPFormalization/Statements/Boundary.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.boundaryVolumeModel",
+        "path": "WPFormalization/Statements/BoundaryDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:CE1",
+    "paperNumber": "10.1",
+    "paperPages": [
+      "46"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.extractionS",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.extractionB",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.extraction_factorization",
+        "path": "WPFormalization/Statements/ExtractionFactorization.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:sharp-extraction",
+    "paperNumber": "10.1",
+    "paperPages": [
+      "47"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.sharp_extraction",
+        "path": "WPFormalization/Statements/SharpExtraction.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:CG1",
+    "paperNumber": "10.3",
+    "paperPages": [
+      "47"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.extractionQ",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.poissonCenter",
+        "path": "WPFormalization/Statements/Volumes.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:CG3",
+    "paperNumber": "10.5",
+    "paperPages": [
+      "48"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.extractionNumerator",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.extractionDenominator",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.rawExtractedCoefficient",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.extractedCoefficient",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.criticalExtractedCoefficient",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:canonical-expansion",
+    "paperNumber": "10.2",
+    "paperPages": [
+      "48"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.canonical_expansion",
+        "path": "WPFormalization/HigherOrder/CanonicalExtractionStatement.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:absolute",
+    "paperNumber": "11.1",
+    "paperPages": [
+      "48"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.absolute_volume",
+        "path": "WPFormalization/Statements/AbsoluteVolume.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:AV6",
+    "paperNumber": "11.6",
+    "paperPages": [
+      "50"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.unmarked_reduction",
+        "path": "WPFormalization/Statements/UnmarkedReduction.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:AV7",
+    "paperNumber": "11.7",
+    "paperPages": [
+      "50"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.canonicalUnmarkedSeries",
+        "path": "WPFormalization/HigherOrder/Endpoint.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.unmarkedCoefficient",
+        "path": "WPFormalization/HigherOrder/Endpoint.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.absoluteCoefficient",
+        "path": "WPFormalization/HigherOrder/Extraction.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:C1",
+    "paperNumber": "13.1",
+    "paperPages": [
+      "52"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.trigSaddle",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.trigDensity",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.trig_saddle_spec",
+        "path": "WPFormalization/Statements/Parameter.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:C7",
+    "paperNumber": "13.7",
+    "paperPages": [
+      "53"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.mixed_log_concavity",
+        "path": "WPFormalization/Statements/MixedLogConcavity.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.mixedJ",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:C8",
+    "paperNumber": "13.8",
+    "paperPages": [
+      "53"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.bracket_differences",
+        "path": "WPFormalization/Statements/BracketDifferences.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:C18",
+    "paperNumber": "13.18",
+    "paperPages": [
+      "55"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.top_anchor",
+        "path": "WPFormalization/Statements/TopAnchor.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.boundaryA",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:C23",
+    "paperNumber": "13.23",
+    "paperPages": [
+      "55"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.bottom_log_bound",
+        "path": "WPFormalization/Statements/BottomLogBound.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.bracketB",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:instanton-correspondence",
+    "paperNumber": "Section 13.7 exact action, residue normalization and stationary equation",
+    "paperPages": [
+      "56",
+      "57"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Coefficients.instanton_correspondence",
+        "path": "WPFormalization/Coefficients/InstantonCorrespondence.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Analysis.instanton_contour_coefficient_dictionary",
+        "path": "WPFormalization/Analysis/WPInstantonContour.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:PS1",
+    "paperNumber": "14.1",
+    "paperPages": [
+      "57"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.pantsScale",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:pants-poisson",
+    "paperNumber": "14.1",
+    "paperPages": [
+      "58"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.RandomGeometry.pants_poisson_theorem",
+        "path": "WPFormalization/RandomGeometry/PantsPoissonTheorem.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:PS3",
+    "paperNumber": "14.6",
+    "paperPages": [
+      "59"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.RandomGeometry.pants_ordered_window_moments",
+        "path": "WPFormalization/RandomGeometry/PantsOrderedMoments.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "prop:pants-concentration",
+    "paperNumber": "14.2",
+    "paperPages": [
+      "62"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.RandomGeometry.short_pants_concentration",
+        "path": "WPFormalization/Spectral/PantsConsequences.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "cor:many-spectrum",
+    "paperNumber": "14.3",
+    "paperPages": [
+      "62"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Spectral.many_small_eigenvalues",
+        "path": "WPFormalization/Spectral/ManyEigenvalues.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:tight-scale",
+    "paperNumber": "14.17",
+    "paperPages": [
+      "63"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.tightScale",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightIntensityDensity",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightIntensity",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:tight-spectrum",
+    "paperNumber": "14.4",
+    "paperPages": [
+      "63"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Tight.tight_length_spectrum",
+        "path": "WPFormalization/Tight/TightSpectrum.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "cor:tight-boltzmann",
+    "paperNumber": "14.5",
+    "paperPages": [
+      "63"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.BoltzmannWp.tight_boltzmann",
+        "path": "WPFormalization/RandomGeometry/BoltzmannWpMixtureConsequences.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:cluster-intensities",
+    "paperNumber": "14.19",
+    "paperPages": [
+      "64"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.criticalIntensityDensity",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.criticalIntensity",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightIntensity",
+        "path": "WPFormalization/Statements/Intensities.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "thm:critical-cluster",
+    "paperNumber": "14.6",
+    "paperPages": [
+      "64"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.PantsCluster.critical_primitive_length_spectrum",
+        "path": "WPFormalization/Critical/CriticalPrimitiveLengthSpectrum.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:cluster-overdispersion",
+    "paperNumber": "14.22",
+    "paperPages": [
+      "64",
+      "65"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.PantsCluster.critical_cluster_overdispersion",
+        "path": "WPFormalization/Critical/ClusterOverdispersion.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:jt-string-normalization",
+    "paperNumber": "Section 15.1 string substitution and defect generating-function normalization",
+    "paperPages": [
+      "65"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.JT.string_normalization",
+        "path": "WPFormalization/JT/StringStatement.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:jt-abel-critical-edge",
+    "paperNumber": "Section 15.1 Abel-to-kernel equality and cubic critical density",
+    "paperPages": [
+      "65",
+      "66"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.JT.jt_abel_critical_edge",
+        "path": "WPFormalization/JT/Abel.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:jt-critical-action",
+    "paperNumber": "Section 15.1 critical action in delta and spectral-gap coordinates",
+    "paperPages": [
+      "66"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.Analysis.jt_critical_action",
+        "path": "WPFormalization/Analysis/JTCriticalReplacement.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:primitive-bounds",
+    "paperNumber": "B.1",
+    "paperPages": [
+      "69"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.primitive_bounds",
+        "path": "WPFormalization/Statements/PrimitiveBounds.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:second-profile",
+    "paperNumber": "C.1",
+    "paperPages": [
+      "72"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.secondIncrement",
+        "path": "WPFormalization/HigherOrder/SecondProfile.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.secondProfile",
+        "path": "WPFormalization/HigherOrder/SecondProfile.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.second_profile",
+        "path": "WPFormalization/Statements/SecondProfile.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.second_profile_all_degrees",
+        "path": "WPFormalization/Statements/SecondProfile.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.second_profile_adjacent",
+        "path": "WPFormalization/Statements/SecondProfile.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.second_profile_path_independent",
+        "path": "WPFormalization/Statements/SecondProfile.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:FE1",
+    "paperNumber": "C.13",
+    "paperPages": [
+      "76"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.formalProfile",
+        "path": "WPFormalization/HigherOrder/Triangular.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.formalCusp",
+        "path": "WPFormalization/HigherOrder/Triangular.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.formalGenus",
+        "path": "WPFormalization/HigherOrder/Triangular.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.cuspCorrection",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.genusCorrection",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:majorant",
+    "paperNumber": "C.2",
+    "paperPages": [
+      "77"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.analytic_majorant",
+        "path": "WPFormalization/Statements/Majorant.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.formalFixedPoint",
+        "path": "WPFormalization/HigherOrder/MajorantDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.substitutionCoeff",
+        "path": "WPFormalization/HigherOrder/MajorantDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.positiveLift",
+        "path": "WPFormalization/HigherOrder/MajorantDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "prop:hierarchy",
+    "paperNumber": "C.3",
+    "paperPages": [
+      "77"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.uniform_recursive_expansions",
+        "path": "WPFormalization/Statements/RecursiveExpansions.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:coefficient-bounds",
+    "paperNumber": "C.4",
+    "paperPages": [
+      "79"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.coefficient_bounds",
+        "path": "WPFormalization/Statements/CoefficientBounds.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:tails",
+    "paperNumber": "C.5",
+    "paperPages": [
+      "81"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.separatingSTail",
+        "path": "WPFormalization/Statements/TopologyTails.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.separatingTTail",
+        "path": "WPFormalization/Statements/TopologyTails.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.topology_tails",
+        "path": "WPFormalization/Statements/TopologyTails.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:first-order",
+    "paperNumber": "C.6",
+    "paperPages": [
+      "81"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.growing_marking_first_order",
+        "path": "WPFormalization/Statements/GrowingMarkingFirstOrder.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.cuspCorrection",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.genusCorrection",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:FE14",
+    "paperNumber": "C.37",
+    "paperPages": [
+      "86"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.exactEndpoint",
+        "path": "WPFormalization/HigherOrder/PureEndpoint.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.endpointInsertionFactor",
+        "path": "WPFormalization/HigherOrder/PureEndpoint.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.HigherOrder.exactEndpoint_formula",
+        "path": "WPFormalization/HigherOrder/PureEndpoint.lean",
+        "kind": "lemma",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "prop:quantitative-local",
+    "paperNumber": "D.1",
+    "paperPages": [
+      "88"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.quantitative_cusp_local",
+        "path": "WPFormalization/Statements/QuantitativeCuspLocal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:local-comparison",
+    "paperNumber": "D.2",
+    "paperPages": [
+      "90"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.local_comparison",
+        "path": "WPFormalization/HigherOrder/LocalComparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:large-indices",
+    "paperNumber": "D.3",
+    "paperPages": [
+      "90"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.extraction_large_indices",
+        "path": "WPFormalization/HigherOrder/ExtractionIndexRanges.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:small-indices",
+    "paperNumber": "D.4",
+    "paperPages": [
+      "91"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.extraction_small_indices",
+        "path": "WPFormalization/HigherOrder/ExtractionIndexRanges.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:phase-change",
+    "paperNumber": "D.5",
+    "paperPages": [
+      "92"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.analytic_phase_change",
+        "path": "WPFormalization/Statements/Poisson.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.phaseAmplitude",
+        "path": "WPFormalization/Statements/PhaseChangeDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.phaseQuotient",
+        "path": "WPFormalization/Statements/PhaseChangeDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:poisson-central",
+    "paperNumber": "D.6",
+    "paperPages": [
+      "93"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.poisson_central_expansion",
+        "path": "WPFormalization/Statements/Poisson.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.poissonOperator",
+        "path": "WPFormalization/Statements/PoissonDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.poissonCorrection",
+        "path": "WPFormalization/Statements/PoissonDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.centralCoefficient",
+        "path": "WPFormalization/Statements/PoissonDefinitions.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "eq:CG12",
+    "paperNumber": "D.24",
+    "paperPages": [
+      "97"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.first_extracted_correction",
+        "path": "WPFormalization/HigherOrder/FirstExtractedCorrection.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "eq:CG13",
+    "paperNumber": "D.25",
+    "paperPages": [
+      "48"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.HigherOrder.first_extracted_correction_critical",
+        "path": "WPFormalization/HigherOrder/FirstExtractedCritical.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "thm:quantitative-coefficient",
+    "paperNumber": "E.1",
+    "paperPages": [
+      "97"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.quantitative_adjacent",
+        "path": "WPFormalization/Statements/QuantitativeAdjacent.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:uniform-saddle",
+    "paperNumber": "E.2",
+    "paperPages": [
+      "98"
+    ],
+    "status": "STATEMENT_FORMALIZED",
+    "declarations": [
+      {
+        "name": "WP.uniform_saddle",
+        "path": "WPFormalization/Statements/UniformSaddle.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.unscaledCoeff",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.unscaledMean",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.saddleZeta",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": true,
+    "geometricRealizationPending": false,
+    "reason": ""
+  },
+  {
+    "label": "lem:log-comparison",
+    "paperNumber": "E.3",
+    "paperPages": [
+      "98"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.logarithmic_comparison",
+        "path": "WPFormalization/Statements/LogarithmicComparison.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.logComparisonG",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      },
+      {
+        "name": "WP.logDegreeProfile",
+        "path": "WPFormalization/Statements/Coefficients.lean",
+        "kind": "def",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:tight-gf",
+    "paperNumber": "F.1",
+    "paperPages": [
+      "100"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.tightGeneratingFunction_identity",
+        "path": "WPFormalization/Tight/GeometricGeneratingFunctions.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightGeneratingFunction_allStable_bounds",
+        "path": "WPFormalization/Tight/AllStableGeneratingFunctions.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightGeneratingFunction_allStable_uniform_relative_error",
+        "path": "WPFormalization/Tight/AllStableGeneratingFunctions.lean",
+        "kind": "lemma",
+        "directSorry": false
+      },
+      {
+        "name": "WP.tightGeneratingFunction_allStable_positive_factor",
+        "path": "WPFormalization/Tight/AllStableGeneratingFunctions.lean",
+        "kind": "lemma",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:tight-connected",
+    "paperNumber": "F.2",
+    "paperPages": [
+      "101"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.TightConnected.tight_connected_original_saddle",
+        "path": "WPFormalization/Tight/ConnectedOriginal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.TightConnected.tight_connected_original_scale",
+        "path": "WPFormalization/Tight/ConnectedOriginal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.TightConnected.tight_connected_original_bounded",
+        "path": "WPFormalization/Tight/ConnectedOriginal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.TightConnected.tight_connected_original_bounded_scale",
+        "path": "WPFormalization/Tight/ConnectedOriginal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.TightConnected.tight_connected",
+        "path": "WPFormalization/Tight/ConnectedOriginal.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:tight-separating",
+    "paperNumber": "F.3",
+    "paperPages": [
+      "101"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.TightSeparating.actual_tight_separating_expectation_uniform",
+        "path": "WPFormalization/Tight/SeparatingActualExpectation.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.TightSeparating.actual_tight_separating_lintegral_uniform",
+        "path": "WPFormalization/Tight/SeparatingActualExpectation.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:critical-cuts",
+    "paperNumber": "G.1",
+    "paperPages": [
+      "104"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.critical_cut_estimate",
+        "path": "WPFormalization/Critical/CutActualEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_cut_marked_estimate",
+        "path": "WPFormalization/Critical/CutActualEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_cut_estimate_regime",
+        "path": "WPFormalization/Critical/CutCriticalRegime.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_cut_marked_estimate_regime",
+        "path": "WPFormalization/Critical/CutCriticalRegime.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_unordered_cut_estimate",
+        "path": "WPFormalization/Critical/CutUnorderedEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_unordered_cut_marked_estimate",
+        "path": "WPFormalization/Critical/CutUnorderedEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_unordered_cut_estimate_regime",
+        "path": "WPFormalization/Critical/CutUnorderedEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_unordered_cut_marked_estimate_regime",
+        "path": "WPFormalization/Critical/CutUnorderedEstimate.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_cut_expectation_regime",
+        "path": "WPFormalization/Critical/CutExpectationRegime.lean",
+        "kind": "theorem",
+        "directSorry": false
+      },
+      {
+        "name": "WP.Critical.critical_cut_marked_expectation_regime",
+        "path": "WPFormalization/Critical/CutExpectationRegime.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:primitive-count",
+    "paperNumber": "G.2",
+    "paperPages": [
+      "105"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.PrimitivePacking.bounded_primitive_count",
+        "path": "WPFormalization/Critical/PrimitiveCount.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:critical-complex",
+    "paperNumber": "G.3",
+    "paperPages": [
+      "105"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.complex_short_configurations",
+        "path": "WPFormalization/Critical/ComplexShortConfigurations.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  },
+  {
+    "label": "lem:critical-skeleton",
+    "paperNumber": "G.4",
+    "paperPages": [
+      "106"
+    ],
+    "status": "INTERFACE_STATEMENT",
+    "declarations": [
+      {
+        "name": "WP.Critical.joint_nonseparating_pants_poisson_limit",
+        "path": "WPFormalization/Critical/JointPoissonLimitProducer.lean",
+        "kind": "theorem",
+        "directSorry": false
+      }
+    ],
+    "associated": true,
+    "associationMechanism": "blueprintAttr",
+    "statementComplete": false,
+    "geometricRealizationPending": true,
+    "reason": "An explicit classical interface; no actual geometric instance has been constructed. See Geometry/Bridge.lean for the conditional bridge from geometry to the numerical model."
+  }
+]

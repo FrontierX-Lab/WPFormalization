@@ -1,0 +1,1067 @@
+[
+  {
+    "id": "INT-PSI",
+    "domain": "classical intersection theory",
+    "lean": [
+      "WP.PsiTheory"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "DGZZ, SIGMA 16 (2020),086, §1 Eqs.(1),(2), dilaton p.3; bases and uniqueness pp.2–3",
+    "url": "https://sigma-journal.com/2020/086/sigma20-086.pdf",
+    "hypotheses": "Stable g,n; signed descendant degrees; negative/unstable/wrong-dimensional terms vanish; string/dilaton stable children; DVV nonnegative tail and complexity≥2.",
+    "use": "Finite transforms, comparison recursion, endpoint string, marked and volume statements",
+    "phase2": "Construct the geometric psi correlators and prove they satisfy exactly the listed fields."
+  },
+  {
+    "id": "INT-COH",
+    "domain": "tautological cohomology",
+    "lean": [
+      "WP.External.DMClasses"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Wolpert (1985), WP class relation; Liu–Xu arXiv:1103.5136v2 §1 Eq.(1),p.1",
+    "url": "https://arxiv.org/pdf/1103.5136",
+    "hypotheses": "Even tautological real cohomology, fundamental pairing; only top complex degree 3g−3+n integrates nontrivially; [ωWP]=2π²κ1.",
+    "use": "Normalized mixed intersections and physical WP volume polynomial",
+    "phase2": "Construct the DM orbifold/stack and even cohomology, psi/log-kappa classes, integration and Wolpert identity."
+  },
+  {
+    "id": "INT-KMZ",
+    "domain": "mixed intersections",
+    "lean": [
+      "WP.External.IntersectionRealization"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Kaufmann–Manin–Zagier, alg-geom/9604001; exact normalized transform in Liu–Xu arXiv:1103.5136v2 Eq.(24),p.6",
+    "url": "https://arxiv.org/pdf/1103.5136",
+    "hypotheses": "Stable g,n; nonnegative degrees with D≤3g−3+n; m=N−D. The finite partition sum has coefficients ((−1)^(i+2)/(i+1)!)^l/l!.",
+    "use": "Geometry.geometricBracket_eq_model, then cusp and boundary volume bridges",
+    "phase2": "Prove the pure identification and KMZ mixed transform for the actual geometric family."
+  },
+  {
+    "id": "WP-POLY",
+    "domain": "WP geometry",
+    "lean": [
+      "WP.External.WeilPeterssonGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Mirzakhani,JAMS20(2007),1–23,volume/intersection theorem; normalization: Liu–Xu arXiv:1103.5136v2 §1 Eq.(1) and following boundary formula,p.1",
+    "url": "https://arxiv.org/pdf/1103.5136",
+    "hypotheses": "Stable g,n; all physical lengths L_i≥0. Finite orbifold symplectic measure ωWP^N/N! and exact polynomial in L_i^(2d_i)/(4^d_i(2d_i+1)!).",
+    "use": "Geometry.wpVolume_eq_boundaryVolumeModel and cuspVolume_eq_volumeModel; explicit G in Theorem1.1",
+    "phase2": "Construct labeled geodesic-boundary hyperbolic moduli, its measurable orbifold symplectic measure, finiteness, and classical polynomial law."
+  },
+  {
+    "id": "INT-ONE",
+    "domain": "classical psi estimate",
+    "lean": [
+      "WP.one_point"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "DGZZ SIGMA16(2020),086 §1 Eq.(4); Liu–Xu arXiv:1103.5136v2 p.3; transfer to arbitrary PsiTheory additionally uses classical DVV uniqueness (DGZZ pp.2–3)",
+    "url": "https://sigma-journal.com/2020/086/sigma20-086.pdf",
+    "hypotheses": "P:PsiTheory; g≥1; pure P g [3g−2]=1/(24^g g!).",
+    "use": "Finite-genus primitive bounds and later comparison anchors",
+    "phase2": "Prove from the classical recursion or transfer a geometric one-point formula using uniqueness. This transfer is part of the deferred external proof, not a verified Lean implication."
+  },
+  {
+    "id": "INT-TWO",
+    "domain": "classical psi estimate",
+    "lean": [
+      "WP.two_point"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "DGZZ SIGMA16(2020),086 §1 Eq.(6); normalized C differs by a positive (g,n)-only factor; transfer via DVV uniqueness pp.2–3",
+    "url": "https://sigma-journal.com/2020/086/sigma20-086.pdf",
+    "hypotheses": "P:PsiTheory; g≥1; d1+d2=3g−1; pureC(d1,d2)≤pureC(0,3g−1).",
+    "use": "Primitive estimates and comparison anchors",
+    "phase2": "Prove uniqueness/normalization transfer and the published two-point inequality, then eliminate this external sorry."
+  },
+  {
+    "id": "PI-IZ",
+    "domain": "classical psi/Painleve identity",
+    "lean": [
+      "WP.External.itzykson_zuber"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Itzykson–Zuber hep-th/9201001 p.39 Eqs.(6.7)–(6.10); GIKM arXiv:1002.3634v3 Eq.(1.3)",
+    "url": "https://arxiv.org/pdf/hep-th/9201001",
+    "hypotheses": "P:PsiTheory, integer g≥2; pure tau2^(3g−3)=2^g(3g−3)!phi_g/((5g−5)(5g−3)); phi_g=−2^g u_g for the fixed rational zero-instanton recurrence. Classical DVV and formal-coefficient uniqueness transfer included in the deferred proof.",
+    "use": "Actual pure-psi endpoint normalization; no new all-order uniform remainder is assumed.",
+    "phase2": "Prove the classical IZ identity from KW theory and the uniqueness/normalization transfers."
+  },
+  {
+    "id": "PI-LEADING",
+    "domain": "classical Painleve large-order asymptotic",
+    "lean": [
+      "WP.External.painleve_leading_error",
+      "WP.External.painleve_leading",
+      "WP.External.painleve_first_correction_error"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "GIKM arXiv:1002.3634v3 p.2 Eqs.(1.1)–(1.5), Section2.3 Eqs.(2.35)–(2.37) and Eq.(2.39) (PDF p.12); fixed first correction: Section2.3 Eqs.(2.41)–(2.45),PDF p.13, and (1.7) at n=1",
+    "url": "https://arxiv.org/pdf/1002.3634v3",
+    "hypotheses": "The actual rational zero-instanton recurrence, A=8sqrt(3)/5 and S1=−i3^(1/4)/(2sqrt(pi)); normalizedZeroInstanton tends to1 as integer genus tends to∞. The same classical source Eq.(2.39) supplies |normalizedZeroInstanton g−1|≤C/g for all sufficiently large integer g; no order-dependent constants. Also, for the same canonical sequence and fixed first order only: |normalizedZeroInstanton g−(1−1/[8(2g−3/2)])|≤C/g² for all sufficiently large integer g. Constants do not involve WP parameters or growing truncation orders.",
+    "use": "Leading endpoint/prefactor anchor only. Does not supply the target paper’s growing-order or compact-parameter uniformity. Actual endpoint first correction for Theorem8.1; the new WP normalization and uniform matching remain local proofs.",
+    "phase2": "Implement normalized tritronquee theory or transplant its classical large-order proof, with exact Stokes convention."
+  },
+  {
+    "id": "SF-GAMMA-RATIO",
+    "domain": "classical fixed-shift special functions",
+    "lean": [
+      "WP.External.gamma_ratio_error",
+      "WP.External.gamma_ratio_first_correction_error"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "NIST DLMF5.11.13 and G0=1 in5.11.15; fixed real shifts, positive real x→∞; fixed first correction G1=(a−b)(a+b−1)/2 in5.11.15",
+    "url": "https://dlmf.nist.gov/5.11.E13",
+    "hypotheses": "For each fixed alpha,beta∈R, there exist C>0,x0>0 such that x≥x0 implies |Gamma(x+alpha)/(Gamma(x+beta)x^(alpha−beta))−1|≤C/x. No uniformity in the shifts or expansion order is assumed. First correction additionally has error C/x² after subtracting 1+(alpha−beta)(alpha+beta−1)/(2x), with constants depending on the fixed shifts only.",
+    "use": "Finite fixed-marking endpoint prefactor conversions; not the paper’s growing-order estimates. Actual endpoint first correction, with no growing-order re-expansion admitted.",
+    "phase2": "Derive from a full real-Gamma Stirling/Binet theorem; Mathlib currently supplies factorial Stirling and exact Gamma algebra."
+  },
+  {
+    "id": "SF-GAMMA-STIRLING",
+    "domain": "classical real Gamma Stirling bound",
+    "lean": [
+      "WP.External.gamma_stirling_error"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "NIST DLMF5.11.3–5.11.4, g0=1 and ordinary Poincare error after the leading term",
+    "url": "https://dlmf.nist.gov/5.11.E3",
+    "hypotheses": "There exist fixed C,x0>0 such that all real x≥x0 satisfy |Gamma(x)/(sqrt(2pi)x^(x−1/2)exp(−x))−1|≤C/x. No growing truncation or shifts are quantified.",
+    "use": "Leading pure-psi endpoint normalization from classical Painleve input; scale3g/2g/5g Gamma products.",
+    "phase2": "Extend/reuse factorial Stirling to real Gamma via Binet or Euler–Maclaurin with a first-order remainder."
+  },
+  {
+    "id": "SF-BINET",
+    "domain": "classical positive-real Binet remainder and exact shifted log-Gamma Laplace representation",
+    "lean": [
+      "WP.External.log_gamma_stirling_remainder",
+      "WP.External.log_gamma_ratio_laplace"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "NIST DLMF5.11(ii), paragraph before5.11.10: positive-real logarithmic Stirling remainder bounded by first omitted term; exact shift representation is a classical integrated consequence of DLMF5.9.12 + Frullani + FTC/Fubini, not a verbatim formula",
+    "url": "https://dlmf.nist.gov/5.11#ii",
+    "hypotheses": "All real x>0 and integers K≥1; after summing k=1,…,K−1 the absolute log-Gamma remainder is bounded by |B_2K|/(2K(2K−1)x^(2K−1)). Exact Bernoulli factor retained; no WP quantities or truncated-order matching assumed. Also, for all real h>0,a>0: the kernel (a-(1-exp(-a*t))/(1-exp(-t)))/t is absolutely integrable after multiplication by exp(-h*t) on t>0, and its integral equals log Gamma(h+a)-log Gamma(h)-a log h. The raw value at t=0 is not claimed to be the removable value. No Taylor coefficients or growing-order estimate is admitted.",
+    "use": "Legitimate classical order-dependent Gamma input to endpoint estimates; paper re-expansion bounds remain new obligations. Supplies only an exact classical Gamma Laplace representation for the new local germ/Watson/Gevrey matching proof.",
+    "phase2": "Prove the Binet integral remainder or Euler–Maclaurin formula, replacing only this mature external gap. Prove the exact digamma/Frullani integrated representation with joint absolute integrability, or derive it from a native Binet theorem."
+  },
+  {
+    "id": "BESSEL-J0",
+    "domain": "classical J0 zero distribution",
+    "lean": [
+      "WP.External.besselJ0_zeros_real",
+      "WP.External.besselJ0_positive_zero",
+      "WP.External.besselJ0_zero_simple"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "NIST DLMF10.21(i), first paragraphs: nonzero cylinder-function zeros are simple; J0 positive zero existence and all zeros real",
+    "url": "https://dlmf.nist.gov/10.21#i",
+    "hypotheses": "Standard explicitly defined J0 series: complex zero reality and simplicity of nonzero zeros are the remaining deferred generic facts. Positive-real zero existence is now PROVED from the actual a(3/2)<0 alternating bound and IVT in Analysis/BesselDictionary; its declaration has no sorry.",
+    "use": "Only J0 complex-zero reality is currently needed by the kernel positivity proof. The first-zero existence/simplicity and critical scaling limits have actual series/IVT proofs; the generic simplicity interface remains available but is not required by these core proofs.",
+    "phase2": "Formalize classical Bessel J0 spectral/energy theory or reuse a compatible Bessel library; the kernel deformation proof remains a separate paper obligation."
+  },
+  {
+    "id": "GEN-ANALYTIC-IFT",
+    "domain": "classical analytic implicit function theorem, formal branch convergence",
+    "lean": [
+      "WP.External.convergent_formal_implicit_solution"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Guillemin–Campbell MIT18.117 (2005), PDF pp.15–16 holomorphic inverse/implicit function theorem, pp.5–6 convergent multivariate Taylor series. The stated formal-branch convergence is a classical consequence, not a verbatim theorem.",
+    "url": "https://ocw.mit.edu/courses/18-117-topics-in-several-complex-variables-spring-2005/3e8b0c3499d6226959485ace042cdaab_18117notes.pdf",
+    "hypotheses": "Arbitrary signed real multivariate convergent Phi:Fin m→R[[t,v]], Phi(0)=0, det(I−D_v Phi(0)) nonzero; already given U with zero constant and the actual finite substitution fixed-point equations. Conclusion only: positive radius of absolute coefficient convergence of U. No triangularity, positivity, coefficient bound, formal construction/uniqueness or ENNReal subsolution domination is supplied.",
+    "use": "Only the analytic-convergence step of Lemma C.2; all paper-specific triangular construction, unique/nonnegative coefficients, geometric bound and extended-valued comparison are proved separately.",
+    "phase2": "Formalize the convergent MvPowerSeries-to-analytic-germ/Taylor-composition bridge, generic invertible-Jacobian formal uniqueness, and the classical holomorphic IFT implication using Mathlib inverse APIs."
+  },
+  {
+    "id": "INT-KDV",
+    "domain": "classical integrated first KdV relation for pure psi descendants",
+    "lean": [
+      "WP.External.integrated_first_kdv",
+      "WP.External.first_kdv_descendants"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Liu–Mulase–Xu, Recursions and asymptotics of intersection numbers, PDF p.3 Eq.(6); Itzykson–Zuber hep-th/9201001 Theorem2 Eq.(4.12) for classical Virasoro/DVV uniqueness transfer",
+    "url": "https://www.math.ucdavis.edu/~mulase/texfiles/RecursionAsymp.pdf",
+    "hypotheses": "P:PsiTheory; integer g≥1; arbitrary finite signed descendant list L with all entries nonnegative. (2g+len(L)−1) psi_g(0::L) equals psi_(g−1)(0^4++L)/12 plus one half of the ordered genus/subset product sum of two 0^2-marked descendants. Unstable/wrong-dimensional terms use the original zero convention. The tau1,tau0 version is proved from P.dilaton, not separately admitted.",
+    "use": "Only the classical pure-psi first KdV identity; the paper’s shifted normalized Eq.6.6 is proved separately by finite background splitting, exponential convolution and exact normalization. No Y, r, X, kernel, uniform estimate or new marked conclusion is admitted.",
+    "phase2": "Derive the integrated classical KdV identity from the genuine Witten–Kontsevich tau function, including coefficient extraction and DVV uniqueness transfer to arbitrary P; no unproved integration-constant removal is inferred from the differential equation alone."
+  },
+  {
+    "id": "GEN-PRINGSHEIM",
+    "domain": "classical nonnegative power-series singularity theorem",
+    "lean": [
+      "WP.External.zero_free_disk_of_nonnegative_inverseCoefficients"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Flajolet–Sedgewick Analytic Combinatorics, Theorem IV.6, printed p.240; authors’ 2006 draft printed p.227. Generic reciprocal zero-free-disk corollary, not a verbatim theorem.",
+    "url": "https://algo.inria.fr/flajolet/Publications/book.pdf",
+    "hypotheses": "Arbitrary entire f:C→C, real R≥0; all inverse Taylor coefficients real and nonnegative; f(x) nonzero for all x∈[0,R]. Conclusion only f(z) nonzero for norm(z)≤R. The reciprocal pole/nearest-zero radius and Taylor-germ bridge belong to the deferred classical proof.",
+    "use": "Pringsheim step in proving the actual H-kernel zero-free disk. Real H positivity, coefficient hypotheses, parameter compactness, common radius and uniform bounds are proved separately; no kernel-specific estimate is admitted.",
+    "phase2": "Formalize Pringsheim’s positive real singularity theorem and the generic meromorphic reciprocal radius/nearest-zero corollary, reusing Mathlib analytic/power-series APIs."
+  },
+  {
+    "id": "GEN-ROUCHE",
+    "domain": "classical complex zero count with multiplicity",
+    "lean": [
+      "WP.External.rouche_exhausts_prescribed_zeros"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "MIT18.112 Fall2008 Lecture14, Corollary1 (Rouche), PDF pp.5–6 / printed pp.4–5; prescribed-zero simplicity/exhaustion is an immediate finite-count corollary, not a verbatim statement.",
+    "url": "https://ocw.mit.edu/courses/18-112-functions-of-a-complex-variable-fall-2008/59e058767d6256ca57d8e757bb257715_lecture14.pdf",
+    "hypotheses": "Arbitrary entire complex f,g; positive disk radius R; strict boundary difference norm(f−g)<norm(g); an arbitrary finite index type; an injective reference catalog exhausting exactly the simple g zeros inside; an equally indexed injective catalog of actual f zeros inside. Conclusion only: the target catalog exhausts all f zeros inside and they are simple. No kernel, parameter family or sign/root construction is supplied.",
+    "use": "Classical counting step for Lemma2.1. Actual characteristic identity, boundary comparison, sine reference catalog and positive real target zeros are separately proved locally.",
+    "phase2": "Formalize the argument principle/Rouche multiplicity count and its finite prescribed-zero corollary with Mathlib analytic order APIs."
+  },
+  {
+    "id": "GEN-HADAMARD",
+    "domain": "classical finite-order entire-function factorization",
+    "lean": [
+      "WP.External.hadamard_genus_zero_of_sqrt_growth"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "C.McMullen, Advanced Complex Analysis, Harvard Math213a notes (2017 version), Thm3.7 printed p.43/PDF p.44; zero convergence Thm3.11 printed p.44; full proof through printed p.47. This is the order≤1/2 normalized simple-zero specialization.",
+    "url": "https://people.math.harvard.edu/~ctm/home/text/class/harvard/213a/10/html/home/course/course.pdf",
+    "hypotheses": "Arbitrary entire complex f with f(0) nonzero; fixed A,B>0 and actual global bound norm(f z)≤A exp(B sqrt(norm z)); an injective sequence of all and only its zeros, all simple. Conclusion only the unconditional genus0 product HasProd(1−z/root_n)=f(z)/f(0). The growth forces order≤1/2 and absolute reciprocal-zero convergence; no positivity, kernel family, root construction or uniform estimate is supplied.",
+    "use": "Only the final canonical-product step of Lemma2.1, after actual K growth and the full real/simple ordered zero classification have been proved locally.",
+    "phase2": "Formalize finite-order Hadamard factorization and the genus0 specialization, including absolute/unconditional product convergence and normalization at zero."
+  },
+  {
+    "id": "WP-MZ-FIXED",
+    "domain": "classical fixed-cusp Weil-Petersson asymptotics",
+    "lean": [
+      "WP.External.fixed_cusps_universal_leading",
+      "WP.External.fixed_zero_cusps_first_correction"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Mirzakhani–Zograf, GAFA25(2015), Theorem1.2 and Remark1.3, arXiv1112.1151 PDFpp1–2; kappa1/WP convention PDFp4",
+    "url": "https://arxiv.org/pdf/1112.1151",
+    "hypotheses": "P:PsiTheory. There exists a single unknown c>0 before quantifying n. For each fixed integer n>=0 there exist C_n>0 and a genus threshold G_n such that all integer g>=G_n satisfy |volumeModel(P,g,n)/[(2g+n-3)!(4pi^2)^(2g+n-3)/sqrt(pi*g)]-c|<=C_n/g. c=sqrt(pi)*C_MZ is not assumed equal to1. No uniformity in n or expansion order is included. The geometric-to-numerical DVV uniqueness and KMZ/Wolpert transfer is deferred, not a verified Lean consequence. The separate n=0 first-correction limit retains an unknown positive normalization c, coefficient 7/12−17/(6*pi^2); its normalization is not assumed to equal one.",
+    "use": "Corollary1.2 only after the paper absolute-prefactor proof independently identifies the unknown constant from n=1. It does not supply the paper uniform all-cusp asymptotics or its canonical coefficients.; classical n=0 first correction only for Theorem11.1 sharp lower bound, not new uniform/all-order expansion",
+    "phase2": "Formalize the classical geometric fixed-cusp theorem or its leading consequence, construct/identify the canonical intersection numbers, and prove the DVV uniqueness plus KMZ/Wolpert normalization transfer. Remove this external root without assuming the new Zograf constant value. Formalize its fixed-n=0 first correction with the same unknown universal normalization, and the exact coefficient stated in Remark1.3."
+  },
+  {
+    "id": "PI-CONTOUR",
+    "domain": "classical analytic Painleve I family, exact contour and fixed-order jumps",
+    "lean": [
+      "WP.External.PainleveAnalytic.GIKMData",
+      "WP.External.PainleveAnalytic.exists_gikm_data"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "GIKM arXiv:1002.3634v3 printed pp.2,7-13 Eqs.(1.3),(1.7),(2.3)-(2.9),(2.14),(2.25),(2.29)-(2.33),(2.40)-(2.45)",
+    "url": "https://arxiv.org/pdf/1002.3634v3",
+    "hypotheses": "Normalized actual u_k with period/rotation and PI ODE at analytic points; source rational zero coefficients constrained by the complete recurrence; real one-instanton b_n constrained by original Eq1.7. Sector constants depend on angular margins and fixed N. Positive-ray jump has every fixed-m expansion with constants/threshold depending on m. The exact coefficient contour at any chosen rho>=R0 has one C_rho before all g>=1 and absolutely integrable t^(5g-2)(u1(t²)-u0(t²)); exponent follows defining Eq2.14 despite printed2.26 typo. No control of m, no actual rescaled-v identity or uniform remainder is admitted.",
+    "use": "Construct actual native PI remainder, force selected parameter zero, identify jump coefficients by local rescaling/recurrence uniqueness, then derive the new growing-order endpoint remainder.",
+    "phase2": "Construct the normalized tritronquee meromorphic functions and prove the classical sector/fixed-order/contour statements, including their exact source normalizations."
+  },
+  {
+    "id": "PI-BOREL",
+    "domain": "classical canonical PI Borel data and exact native lateral representation",
+    "lean": [
+      "WP.External.PainleveAnalytic.CCHData",
+      "WP.External.PainleveAnalytic.exists_cch_data"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Costin-Costin-Huang arXiv:1310.5330v2 Theorem2, Proposition3(i),(ii), Lemma17(c),(f), printed pp.3,4,12; slit branch and fixed-ray positive-real continuation are standard monodromy/identity-principle consequences",
+    "url": "https://arxiv.org/pdf/1310.5330v2",
+    "hypotheses": "One H0 analytic on the plane cut along real |s|>=1, symbolic S and local H0=S/sqrt(1-s)*alpha+beta with alpha(1)=1 on a fixed small disk. Fixed non-Stokes rays only 0<|phi|<pi/2 have their own exponential-weight L1 bound. Native PI solutions have analyticity with angular margins, the native ODE and proper-right-sector decay; their selected anti-Stokes parameter limit exists, and parameter zero gives the exact fixed off-ray Laplace sum for all sufficiently large positive xi. No numerical Stokes value, actual GIKM adapter, uniform jump/Gevrey estimate or WP object is included.",
+    "use": "Raw H finite deformation, dominated bank limits and outer exponent bounds are proved locally; apply them to actual native functions only after proving the coordinate/zero-parameter/leading adapters.",
+    "phase2": "Formalize classical PI Borel continuation, local singularity and generalized transseries resummation, including ordinary fixed-ray continuation and parameter limits."
+  },
+  {
+    "id": "INT-NEF",
+    "domain": "classical nef projective intersection theory and moduli realization",
+    "lean": [
+      "WP.External.classical_onepoint_nef_realization"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Arbarello–Cornalba alg-geom/9406008 Section1 Eq.(1.5)–(1.7), PDFpp4–6; Keel math/9901149 Theorem0.4, PDFp3; Boucksom–Favre–Jonsson math/0608260v2 Theorem2.15, PDFp15. Classical DVV uniqueness and KMZ/Wolpert transfer as in INT-PSI/INT-KMZ.",
+    "url": "https://arxiv.org/pdf/math/0608260",
+    "supportingUrls": [
+      "https://arxiv.org/pdf/alg-geom/9406008",
+      "https://arxiv.org/pdf/math/9901149",
+      "https://sigma-journal.com/2020/086/sigma20-086.pdf",
+      "https://arxiv.org/pdf/1103.5136"
+    ],
+    "hypotheses": "P:PsiTheory; integer g>=2. Nonempty OnePointNefRealization P g: a classical IntersectionRealization of P, a generic nef-class intersection calculus on its genus-g one-point classes (Teissier for every pair of nef divisor classes and every interior degree), and nefness of the actual psi_1 and logarithmic kappa_1 classes. The existence proof includes DVV uniqueness/KMZ/Wolpert identification and the finite level cover/resolution, nef pullback, orbifold-to-projective common positive degree transfer. It does not assert a constructed Lean geometric instance, characteristic-zero semiampleness, a mixedJ inequality as a field, or any coefficient/ratio/asymptotic estimate.",
+    "use": "The locally proved exact mixedJ-to-mixedIntegral normalization and generic Teissier client give the unchanged original C7 for all g>=1; g=1 has no interior degree and g>=2 uses this classical datum.",
+    "phase2": "Construct the canonical geometric realization and DVV uniqueness transfer, realize log-kappa/psi Cartier classes on compact projective covers, formalize their ample/nef theorems and generic Teissier, prove cover/resolution/orbifold projection factors, then replace this sole external existence root without importing the paper C7 conclusion."
+  },
+  {
+    "id": "WP-MZ-FIXED-GENUS",
+    "domain": "classical fixed-genus large-cusp volume asymptotics",
+    "lean": [
+      "WP.External.fixed_genus_normalized_volume_logarithm"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Manin–Zograf, Ann. Inst. Fourier 50 (2000), Section6 Theorem6.1 Eq.(17)–(20), printed pp528–529/PDFpp11–12. Parent independently checked source PDF and the raw/physical normalization.",
+    "url": "https://www.numdam.org/item/10.5802/aif.1764.pdf",
+    "hypotheses": "P:PsiTheory and fixed g including0/1. There exist C>0 and N depending on g; all stable n>=N satisfy |log(normalizedVolume P g n)+n log(2*xCritical)|<=C log(n+1). No genus-uniform estimate, chainProfile, diagonal path, or concrete instance. Classical DVV uniqueness/KMZ/Wolpert identification transfers raw kappa integrals to P; rawV/(n!dim!) has exponential base xCritical^(-n), physical=(2pi^2)^dim rawV/dim!, normalization leaves base(2*xCritical)^(-n) and only polynomial n factors.",
+    "use": "Fixed bounded-genus branch of original Theorem1.5; growing-genus comparison and uniform gluing are paper proof obligations.",
+    "phase2": "Formalize fixed-genus classical asymptotic, the Bessel singularity normalization, DVV uniqueness/KMZ/Wolpert transfer and the elementary logarithmic corollary."
+  },
+  {
+    "id": "HYP-CURVES",
+    "domain": "finite-area hyperbolic curve objects and measurable length counts",
+    "lean": [
+      "WP.External.HyperbolicCurveGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Classical primitive length spectrum of finite-type finite-area cusped hyperbolic surfaces; continuous geodesic length functions on Teichmuller space and countable free homotopy classes give Borel moduli counts. Precise construction/deduction and source scope are recorded in docs/CLASSICAL_RESULTS.md#mirzakhani. Shen–Wu2203.15681v4 Sections2.1/4.2 use these exact counts.",
+    "url": "https://arxiv.org/pdf/2203.15681v4",
+    "supportingUrls": [
+      "https://research-information.bris.ac.uk/files/194628295/Ksystoles2016_11_03.pdf"
+    ],
+    "hypotheses": "Same explicit G:WeilPeterssonGeometry P, its cusp Moduli and WP measure. All unoriented primitive geodesics including nonsimple; positive physical lengths; simplicity; positive-genus unique planar-side cusp labels; a finite complete catalog of every primitive length<=L; Borel cardinality counts. No supplied concrete realization, orbit integral, moment, or asymptotic. wpProbability is actual total-measure normalization with probability law proved only from finite nonzero mass.",
+    "use": "Faithful objects for the actual pants, primitive and spectral applications.",
+    "phase2": "Construct geodesic/free-homotopy classes on actual moduli, local finiteness with cusps, continuous length and moduli descent; identify planar topology and prove count measurability."
+  },
+  {
+    "id": "HYP-SPECTRAL",
+    "domain": "classical positive discrete spectrum and localized pants variational estimates",
+    "lean": [
+      "WP.External.SpectralGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hide–Thomas arXiv2209.15568v3 Lemma5.3 PDFp26/proofp27 (all Mg,n deterministic statement); Shen–Wu arXiv2203.15681v4 Theorems7/11 and proofTheorem1 PDFpp35–36 (single-pant Cheeger cut+Buser/minmax). Parent independently verified both primary sources.",
+    "url": "https://arxiv.org/pdf/2209.15568v3",
+    "supportingUrls": [
+      "https://arxiv.org/pdf/2203.15681v4"
+    ],
+    "hypotheses": "Same G/H. Positive discrete Laplace eigenvalues counted with multiplicity, one-based j>=1, constant0 excluded; missing value represented by none; positive/ordered and measurable events. For stable(g,n), epsilon in(0,1/4), j+1 distinct two-cusp pants waists<=epsilon/6 imply jth positive eigenvalue exists<=epsilon. Single-pant field: one universal c>0, g>=2, 0<L<=1,cL<1/4, pantsCount>=1 imply lambda1 exists<=cL. No probability-one, volume ratio, or cusp-density limit.",
+    "use": "Original1.6 vanishing spectral gap and14.3 many-small-eigenvalues deduction once actual pants/volume inputs are proved.",
+    "phase2": "Construct Laplacian spectrum with multiplicity and measurable eigenvalue events on G, cusp essential threshold1/4, localized pants trial functions, minmax and Cheeger/Buser bounds."
+  },
+  {
+    "id": "WP-SHEN-WU-PANTS",
+    "domain": "published geometric short-pants second-moment lower bound",
+    "lean": [
+      "WP.External.ShenWuPantsBound"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Shen–Wu arXiv2203.15681v4 Proposition35 PDFp34, proofpp34–35. Parent independently verified exact inequality and hypotheses, which do not require n=o(g).",
+    "url": "https://arxiv.org/pdf/2203.15681v4",
+    "hypotheses": "Same actual G/H and normalized WP measure. Every cusp sequence with n/sqrt(g)->infinity: liminf of V(g,n−1)^2/[V(g,n)V(g,n−2)] <= liminf probability[pantsCount at L=sqrt(sqrt(g)/n)>=1]. No assumption or supplied proof that the ratio tends1, no new paper Poisson, and no eigenvalue conclusion. Finitely many unstable small-g values are immaterial to atTop.",
+    "use": "Published vanishing-gap mechanism; this paper must supply original1.3 uniform D-rate and pass to spectral events locally.",
+    "phase2": "Formalize published exact integration and first/second moment lower bound for actual short-pants count, including finite volume and limits; construct actual G/H instance."
+  },
+  {
+    "id": "HYP-MULTICURVE-INTEGRATION",
+    "domain": "classical labeled ordered multicurve topology and exact Mirzakhani integration",
+    "lean": [
+      "WP.External.MulticurveTopology",
+      "WP.External.MirzakhaniIntegration"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Shen–Wu arXiv2203.15681v4 Section2.2 Theorem6 and Remark, PDFp7; classical change-of-coordinates classification and gluing of labeled surfaces. Hide–Thomas arXiv2209.15568v3 Remark3.2 and following cut classification illustrate the genus-zero case. Exact full interface review: docs/CLASSICAL_RESULTS.md#mirzakhani. Parent independently checked the integration coefficient and strengthened graph binding.",
+    "url": "https://arxiv.org/pdf/2203.15681v4",
+    "supportingUrls": [
+      "https://arxiv.org/pdf/2209.15568v3"
+    ],
+    "hypotheses": "Same explicit P/G/H. Every injective simple pairwise-disjoint ordered tuple belongs to exactly one finite orbit family. Actual cut genera/cusp labels/edge-side incidences are stable, connected, satisfy Euler characteristic, classify and realize the orbits, and their planar sides agree with H.planarSide in positive genus. One-handle count M is computed from cut-side topology; orientation index is computed from realizable edge flips. Outside (g,n)=(1,1),(2,0), each measurable nonnegative orbit test has WP integral coefficient (2^M*index)^(-1) times actual G cut-volume product and product x_j dx_j. No pants label count, moment, asymptotic, or concrete geometric instance supplied.",
+    "use": "Locally prove actual pants star-cut classification, label enumeration and factorial-moment formulas, then concentration/Poisson; generic cut data can also support primitive-count applications.",
+    "phase2": "Construct mapping-class orbits and actual cut surfaces for G/H, prove change-of-coordinates classification/realization and planar-side binding, derive the exact orientation coefficient and Mirzakhani integration via Fenchel–Nielsen coordinates with orbifold stabilizers."
+  },
+  {
+    "id": "WP-SW-CRITICAL-VOLUME",
+    "domain": "classical universal upper and sqrt-genus cusp-window lower Weil–Petersson volume bounds",
+    "lean": [
+      "WP.External.shenWu_volume_upper",
+      "WP.External.shenWu_volume_critical_lower"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Shen–Wu arXiv2203.15681v4 Lemmas18/19, printedpp12–13. Parent independently verified the source statements and uniform fixed-A consequence of Lemma19 finite-product proof. Lemma18 h>=2 extends to the two stable h=1 types by finite enlargement.",
+    "url": "https://arxiv.org/pdf/2203.15681v4",
+    "hypotheses": "P:PsiTheory. Upper: one C>0 for every stable(a,b), V<=C*(4pi^2)^(h-1)*Gamma(h)/sqrt(h), h=2a-2+b. Lower: for each fixed A>0, one c_A>0 and G_A, all g>=G_A and all n<=A sqrt(g), c_A*(4pi^2)^(h-1)*Gamma(h)/sqrt(h)<=V(g,n). Classical DVV uniqueness/KMZ/Wolpert transfer to arbitrary P is deferred. No graph, cut count, allocation, new error rate or growing-A statement.",
+    "use": "Only classical volume envelopes in AppendixG; actual Gamma convolution, cusp mass, allocation and geometric cut counts remain local paper proofs.",
+    "phase2": "Prove published volume estimates and fixed-A uniformity, handle h=1 finite types, formalize DVV uniqueness/KMZ/Wolpert transfer and construct the actual geometric instance."
+  },
+  {
+    "id": "HYP-COLLAR",
+    "domain": "classical collar consequences for primitive geodesics on finite-area cusped surfaces",
+    "lean": [
+      "WP.External.CollarGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Buser, Geometry and Spectra of Compact Riemann Surfaces, Theorems4.4.6 (short primitive is simple) and4.1.6 (short distinct simple curves disjoint). Hide–Thomas arXiv2209.15568v3 printedpp1/8 explicitly use these two facts for finite-area cusped surfaces. Parent independently checked both passages and distinct theorem numbers.",
+    "url": "https://arxiv.org/pdf/2209.15568v3",
+    "hypotheses": "Same G/H/T actual primitive family and disjointness relation. Primitive length strictly<2arsinh(1) implies simple. Two distinct simple primitives both strictly below this threshold are T.disjoint. No pants topology, factorial moment, concentration, Poisson or systole limit.",
+    "use": "Pass short actual primitive tuples to generic ordered-disjoint-simple integration; paper topology and moment work is proved separately.",
+    "phase2": "Construct the actual collars and prove their disjointness, the short primitive simplicity theorem including finite-area cusps, and identify the same H/T geometric objects."
+  },
+  {
+    "id": "TIGHT-BZ",
+    "domain": "classical protected tight geometry and universal moment transform",
+    "lean": [
+      "WP.External.ProtectedCycleGeometry",
+      "WP.External.TightRegions",
+      "WP.External.BuddZonneveldTransform"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Budd–Zonneveld arXiv2307.04708 (11July2023), Section1.2 Eq.(7)–(8), root Eq.(21), moments Eq.(23), Proposition12 Eq.(69)–(70), descendant series Eq.(65) and times Eq.(68), followed by classical dilaton resummation. Full review docs/CLASSICAL_RESULTS.md#tight-transform.",
+    "url": "https://arxiv.org/pdf/2307.04708",
+    "hypotheses": "Same actual G.Moduli/wpMeasure. Unoriented unparametrized simple geometric cycles include distinct protected boundary cycles with their exact physical lengths and the zero-length cusp boundary convention. Capping fills precisely unprotected boundaries; tightLocus is DEFINED by each protected boundary being the unique simple cycle in its capped free-homotopy class of length<=that boundary length. Regions supply its measurability. Transform: every stable protected(g,p), nonnegative physical L, finite nonnegative weight mu supported in[0,B], every analytic root germ R(0)=0 satisfying Zmu(R(t),t)=0 near0; the weighted actual restricted-volume coefficient is the Taylor coefficient of the generic finite complex moment polynomial. Zmu=X(2pi²r)/(2pi²)-t integral I0(L sqrt(2r))dmu; Mj=partial_r^(j+1)Zmu at R(t). Only coefficientwise equality, no global real convergence, paper Y-specialization, shifted amplitude identity, uniform error or spectrum conclusion supplied.",
+    "use": "Prove cusp-weight specialization, full analytic generating-series convergence, exact normalization in paperF1, and F2/F3 locally, then tight spectrum applications.",
+    "phase2": "Construct actual simple cycles, capping and protected-tight locus on G, prove measurability and the generic classical BZ formal transform with dilaton resummation, including all geometric/psi normalization transfers. No concrete instance currently constructed."
+  },
+  {
+    "id": "INT-HIGHER-KAPPA",
+    "domain": "generic higher logarithmic kappa intersection theory",
+    "lean": [
+      "WP.External.HigherKappaRealization"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Manin–Zograf, Ann.Inst.Fourier50(2000) Thm4.1 printed525 (arbitrary-times Schur transform); Arbarello–Cornalba alg-geom/9406008 eq(1.6) printed5 (kappa1 ample); Keel Ann.Math149(1999) Thm0.4 printed255 (universal log-dualizing nef in char0); Lazarsfeld Positivity I Ex1.4.16 pp57–58 (mixed nef intersections). Mixed higher-kappa nonnegativity is the explicit classical fiber-power/projection-formula corollary, independently checked, not a direct statement attributed to KMZ.",
+    "url": "https://www.numdam.org/item/AIF_2000__50_2_519_0.pdf",
+    "hypotheses": "Same explicit PsiTheory P and IntersectionRealization R; higher logarithmic kappa_j=pi_*(c1(omega_pi(sum sections))^(j+1)), kappa1 exactly R.classes.kappa1. All stable (g,n), all finite nonnegative multiplicities of weighted top degree: mixed integral >=0; kappa1 top integral >0. For every g>=2 and every complex times s_j, the finite descendant polynomial at p_j=[z^j](1-exp(-sum_{i>=1}s_i z^i)) equals the finite higher-kappa polynomial with standard multiplicity factorials. p0=0; no analytic/growing-parameter premise or tight/Y field.",
+    "use": "Local proof of unmarked (p=0) positive tight factor through actual ordinary moment kernel, inverse/log jets and specialization; general classical input only.",
+    "phase2": "Construct actual DM stack/family/log-kappa classes and same-P realization; prove generic Schur transform via KMZ/MZ, ample kappa1 positivity, and mixed nonnegativity on Cartesian powers of the original proper flat universal curve using base change/projection/nef pullback. Formalize finite projective positive-degree cover and orbifold/stack transfer; do not replace the Cartesian fiber power by distinct-marked moduli. No concrete instance currently exists."
+  },
+  {
+    "id": "HYP-TIGHT-CURVES",
+    "domain": "classical all-closed-geodesic capped homotopy objects",
+    "lean": [
+      "WP.External.TightGeodesicGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Budd–Lions arXiv2506.02611v3 §§1/3, Proposition3.1 pp12–13. All unoriented closed geodesics, primitive/simple predicates, filled homotopy classes, finite short spectrum and identification with the same cusped H family. Parent independently reviewed source and exact object boundary.",
+    "url": "https://arxiv.org/pdf/2506.02611v3",
+    "hypotheses": "Same G/T/H. Primitive and simple are separate, positive geometric length, complete finite short catalog. cap lands in existing T.cycles.CappedClass. IsTight is DEFINED as non-null capped class plus unique length minimizer among all closed geodesics. cuspPrimitiveEquiv preserves length/simple and identifies the actual H.Primitive; no simplicity condition is inserted into full tight counts.",
+    "use": "Actual primitive tight spectrum and local F4 tuple/count proofs, not a probability or asymptotic input.",
+    "phase2": "Construct all closed geodesic objects and capped classes on actual hyperbolic moduli, simpleCycle and same-H identifications. No concrete realization has been constructed."
+  },
+  {
+    "id": "TIGHT-CUT-TOPOLOGY",
+    "domain": "classical finite ordered tight multicurve orbit classification",
+    "lean": [
+      "WP.External.TightMulticurveTopology"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Budd–Lions arXiv2506.02611v3 §3 pp12–17; ordinary classification of labeled oriented-surface multicurves with ordered edges. Stable filled base restriction retained. Generic cut_realizes additionally uses the same oriented-surface cut classification underlying Prop3.2 and its one-component orbit example; parent checked exact Stable/connected/Euler typed proposal.",
+    "url": "https://arxiv.org/pdf/2506.02611v3",
+    "hypotheses": "Same G/T/H/Q capped homotopy and good tuple definition. Finite ordered MCG orbit types on the filled base (g,p); free boundaries are absent from cut graph and later explicitly assigned. For Stable(g,p), every proper primitive simple pairwise disjoint tight tuple occupies exactly one orbit. Actual MulticurveCutData preserves labeled protected boundaries/ordered edges, stable components, Euler relation, connected incidence and cut-isomorphism classification. For Stable(g,p), every exact labeled cut datum with stable components, connected incidence and Euler genus budget is realized by an existing A.Orbit up to full cut isomorphism, preserving protected labels, ordered edges, loops and edge-side flips. This generic cut_realizes supplies no free-cusp allocations or estimate.",
+    "use": "Exact tight integration and locally proved connected/separating configuration sums.",
+    "phase2": "Construct actual mapping class action, orbit partition and classification, cut surfaces, edge incidences and labels. This supplies no genus/cusp-uniform estimate and no geometric instance yet."
+  },
+  {
+    "id": "BL-TIGHT-INTEGRATION",
+    "domain": "classical exact restricted WP orbit integration for tight multicurves",
+    "lean": [
+      "WP.External.BuddLionsTightIntegration"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Budd–Lions arXiv2506.02611v3 Proposition3.2 pp13–17. Parent checked exact formula, all labeled free-boundary assignments, coefficient<=1 and connected coefficient2^(-r).",
+    "url": "https://arxiv.org/pdf/2506.02611v3",
+    "hypotheses": "Same actual G.wpMeasure, T.region and T.tightVolume; stable filled(g,p), nonnegative protected/free physical lengths. Every ordered orbit and measurable nonnegative test: restricted orbit integral equals its positive coefficient times physical orthant length integral of the actual finite sum over all assignments of labeled free boundaries to cut vertices, product tightVolumes, and product edge lengths. Connected complement coefficient exactly2^-r; all coefficients<=1. Includes classical measurability; no F2/F3, coefficient extraction or spectrum estimate.",
+    "use": "Locally proved AppendixF separating/connected moment formulas and Theorem14.4.",
+    "phase2": "Formalize original cut/twist symplectic integration, actual source orbifold normalization including genus1, assignment partition and measurability. No concrete instance yet."
+  },
+  {
+    "id": "BL-TIGHT-GEOMETRY",
+    "domain": "classical pointwise tight geodesic tuple extension and generic no-ties",
+    "lean": [
+      "WP.External.BuddLionsTightGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Budd–Lions arXiv2506.02611v3 Proposition3.1/Lemma3.3 pp12–16 and deterministic constructions in proofs of Propositions5.2–5.3 pp37–41, especially eqs60–61; shortest tight curve simple as used on p40. Parent checked primary source. Near-critical Boltzmann probability conclusions are excluded.",
+    "url": "https://arxiv.org/pdf/2506.02611v3",
+    "hypotheses": "Same actual all-geodesic Q and tight orbit A, cusp surface X, g>=2 where specified. NoSimpleLengthTies required pointwise and separately WP-a.e. Short primitive tight<=b implies some simple primitive tight<=b. No-short extension at scale s>0,epsilon>0,B>0 requires 2B(r+2)/epsilon+2<g; a short nonsimple or intersecting primitive tight pair extends a good ordered r-tuple to separating r+m with m<=2B(r+2)/epsilon and each length<=sB(r+2). Short-systole branch requires0<epsilon<a<=B and original lengths in[sa,sB]; appends a new short curve or <=3 separator curves of lengths<=s(2B+epsilon). Both retain original tuple as exact ordered prefix. No probability estimate, limiting moment, or prescribed-cusp asymptotic field.",
+    "use": "Local deterministic count injections, negligible bad-event moment bounds and genuine full tight primitive process in14.4.",
+    "phase2": "Construct/prove pointwise ribbon-subsurface tightening, unique minimizers away from no-ties exception, shortest-tight simplicity and classical WP-null equal-length locus. No concrete instance yet."
+  },
+  {
+    "id": "PROB-POINT-BOREL",
+    "domain": "generic measurable space of Radon point measures",
+    "lean": [
+      "WP.External.pointMeasure_count_measurable",
+      "WP.External.pointMeasure_nnreal_aemeasurable_of_prefix_counts",
+      "WP.External.pointMeasure_aemeasurable_of_basis_counts"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Kallenberg Foundations of Modern Probability2ed(2002) A2.3(iv),p564, vague-Borel integral/count generators. Prefix and countable-window AEMeasurable forms are explicitly derived classical corollaries, not literal source statements. Independently reviewed docs/CLASSICAL_RESULTS.md#point-process.",
+    "url": "https://doi.org/10.1007/978-1-4757-4015-8_16",
+    "hypotheses": "E locally compact second countable Hausdorff Borel. Actual PointMeasure is locally finite Regular measure, integer on relatively compact Borel sets; actual vague topology is induced by all C_c real integrals, with its Borel sigma algebra. Count evaluation for any relatively compact Borel window is Measurable. On NNReal all actual prefix[0,b] counts AEMeasurable imply actual process AEMeasurable, including0. General basis is countable relatively compact Borel semiring with local finite-union approximation K subset interior(W) subset W subset U, and intensity-continuity; all basis counts AEMeasurable imply process AEMeasurable for an arbitrary source measure.",
+    "use": "Only measurable encoding of locally constructed actual geometric Dirac sums, full tight counts and marked spectra.",
+    "phase2": "Formalize actual vague topology, Radon counting-measure Polish/Borel structure and count generators; extract countable representatives for AEMeasurable source maps. No WP instance or paper limit is imported."
+  },
+  {
+    "id": "PROB-FACTORIAL-POS",
+    "domain": "generic multivariate factorial-moment Poisson criterion",
+    "lean": [
+      "WP.External.factorial_moments_poisson_positive"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Hide–Thomas arXiv2209.15568v3 Proposition3.1,p7, checked primary text independently. Eventual probability/AEMeasurable formulation is the cofinal-shift and measurable-representative corollary.",
+    "url": "https://arxiv.org/pdf/2209.15568v3",
+    "hypotheses": "Every finite dimension, varying measurable probability spaces (eventually probability) and eventually AEMeasurable Nat-valued count vectors. Strictly positive finite NNReal rates. Every mixed multiindex factorial moment, includingzero, is an actual ENNReal lintegral tending to the finite product rate powers. Conclusion: actual vector laws converge against all bounded continuous tests to the explicit product of Mathlib poissonMeasure rates.",
+    "use": "Poisson identification only after local actual mixed factorial moments have been proved; no geometric moment/tail assumption is supplied.",
+    "phase2": "Prove the classical full factorial-moment criterion, moment determination and varying-space/cofinal/a.e. versions. Reuse Mathlib Poisson measures and law convergence."
+  },
+  {
+    "id": "PROB-FACTORIAL-ZERO",
+    "domain": "generic zero-rate extension of the factorial-moment criterion",
+    "lean": [
+      "WP.External.factorial_moments_poisson_nonneg"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Explicit derived classical corollary of Hide–Thomas Proposition3.1 plus ordinary Markov inequality and finite union bound: discard zero-rate coordinates via first factorial moments, apply positive-rate theorem, reinsert deterministiczero. Not attributed as literal positive-rate proposition.",
+    "url": "https://arxiv.org/pdf/2209.15568v3",
+    "hypotheses": "Same varying/eventually probability, eventually AEMeasurable Nat vectors and all ENNReal mixed factorial moments; rates may be zero, empty finite vector allowed. Target is exact productPoissonMeasure, including deterministiczero coordinates.",
+    "use": "Generic Poisson count identification on zero-width/zero-intensity windows, after local moment proof.",
+    "phase2": "Prove finite zero-coordinate Markov convergence, positive-subvector extraction and continuous reinsertion into full vector. This is a generic probability corollary, no paper-specific result."
+  },
+  {
+    "id": "PROB-PPP-EXISTS",
+    "domain": "generic existence of Poisson random Radon counting measure",
+    "lean": [
+      "WP.External.poisson_point_process_exists"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Last–Penrose Lectures on the Poisson Process, author manuscript21Aug2017, Theorem3.6,p21 and proof/Cor3.7. lcscH locally finite Radon encoding uses countable compact exhaustion and modification on one null set. Independently downloaded complete primary author PDF and checked theorem/proof.",
+    "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+    "hypotheses": "E lcsc Hausdorff Borel; intensity nu locally finite Regular, hence finite on compacts and sigma-finite. Exists actual ProbabilityMeasure on genuine PointMeasure E with exact joint count law equal to independent Poisson on every finite pairwise disjoint relatively compact Borel family. Intensity may have atoms, multiplicities allowed. No target convergence is asserted.",
+    "use": "Target laws for all locally constructed geometric processes; intensity formulas must be proved locally.",
+    "phase2": "Formalize general Poisson construction and same underlying genuine vague-Borel pointmeasure law; prove locally finite event simultaneously on compact exhaustion and null-set modification. No geometric instance is supplied."
+  },
+  {
+    "id": "PROB-VAGUE-COUNTS",
+    "domain": "generic point-process convergence from continuity-window count laws",
+    "lean": [
+      "WP.External.pointMeasure_vague_of_count_vectors",
+      "WP.External.pointMeasure_vague_of_semiring_mixed_factorials",
+      "WP.External.pointMeasure_vague_of_semiring_count_laws"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Kallenberg2ed(2002) Theorem16.16(iii)=> (i),pp316–317, with Lemma16.15 and A2.3. Semiring+mixed factorial version is an explicitly derived generic corollary of local first-moment tightness, finite disjointification and C_c approximation plus the factorial criterion; independently reviewed, not a literal theorem attribution. New count-law semiring version: Kallenberg2ed Ch16 Exercise11 printed327 extends 16.16(iii) to separating classes; finite semiring disjointification and finite unions give the explicitly derived count-law corollary, without moment assumptions.",
+    "url": "https://doi.org/10.1007/978-1-4757-4015-8_16",
+    "hypotheses": "E lcscH Borel, actual pointmeasure random variables eventually AEMeasurable under eventually probability measures; target actual pointmeasure probability law. Full-count version quantifies every finite relatively compact Borel family and requires each target boundary mass a.s.zero before joint count-law convergence. Semiring version: locally finite Regular intensity, countable continuity semiring with finite-union approximation leaving internal margin K subset interior(W) subset W subset U; all finite disjoint basis windows and all mixed factorial orders tend to actual intensity powers; target exactPPP law. Conclusion is genuine vague bounded-continuous law convergence. No simplicity/diffuse or geometric/tail field. Count-law semiring version replaces all mixed factorial moment premises by actual joint count-law convergence for every finite disjoint basis-window family to the corresponding product Poisson law. ContinuityWindowBasis includes empty set, finite disjoint differences and compact/open finite-union approximation with interior margin. Includes d=0 and zero rates; no first-moment, diffuse or simple-process premise.",
+    "use": "Generic topology transfer after all local geometric counts, moments, compact mass control and marked-tail work are supplied.",
+    "phase2": "Prove standard Radon pointmeasure tightness/count criterion, semiring extension and C_c test approximations. Nonproper mark projection, paper planar tail, systole and physical scaling remain local obligations. The independently asserted count-law semiring theorem is a distinct real sorry root, not a local proof of the existing moment theorem; prove its separating-class extension independently."
+  },
+  {
+    "id": "MC-COUNT-BOREL",
+    "domain": "classical Borel measurability of actual unordered multicurve observables",
+    "lean": [
+      "WP.External.MulticurveCountingMeasurability"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Classical marked-curve countability, Fenchel–Nielsen continuity and MCG-quotient measurable descent in Mirzakhani Simple geodesics and WP volumes, Invent.Math167(2007). Checked primary12July2005 author version §2 pp8–12 (FN chart/cut/symmetry) and §8 pp36–43 (moduli covering/unfolding); published version integration section is §7. This generic measurability statement is an explicit elementary corollary of that setup, not a newly attributed counting estimate. Different-version volume conventions are irrelevant to this measurable-only corollary.",
+    "url": "https://www.math.stonybrook.edu/~mlyubich/Archive/Geometry/Teichmuller%20Space/Mirz3.pdf",
+    "hypotheses": "Same actual G/H/T. Arbitrary finite family of ordered MCG multicurve orbits s, arbitrary relatively compact Borel edge-length vector window B. The genuine unordered count is DEFINED as ENNReal tsum1 over finite subsets of actual H.Primitive admitting an ordering gamma with orbit in s and length vector in B. It is Measurable on actual G.Moduli. No graph selection, genus/cusp asymptotic, uniform constant, upper bound or paper limit is a field; infinity is retained rather than Nat.card infinite=0.",
+    "use": "Actual unordered cut-count measurability and genuine expectation interpretation of G1, after locally proved subtype equivalence and unordered-to-ordered injection.",
+    "phase2": "Construct countable marked curve labels, continuous lengths, proper MCG action/local orbifold charts and Borel descent for the actual simultaneous G/H/T. Prove the generic unordered observable measurable, including finite permutation existential quantification. No actual instance currently constructed."
+  },
+  {
+    "id": "HYP-TIGHT-BOREL",
+    "domain": "classical countable marked geodesic labels and Borel moduli quotient",
+    "lean": [
+      "WP.External.TightGeodesicBorelModel"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Wolpert Behavior of geodesic-length functions, arXivmath0701556v4 §2.3 printed14 (all nonperipheral free-homotopy/holonomy length), §4.1 pp35–36 (real analytic FN charts); Budd–Lions arXiv2506.02611v3 §3 pp14–16 marked/moduli quotient and fixed capped homotopy. Borel descent is the classical countable proper MCG/orbifold quotient corollary, not a paper tight-count theorem. Parent reviewed exact type and primary sources.",
+    "url": "https://arxiv.org/pdf/math/0701556v4",
+    "hypotheses": "Fixed g>=2,n and same actual G/T/H/Q. A marked measurable surface space forgets surjectively and measurably to the actual cusped TightSurface; measurable subsets descend from their pullback. A fixed countable label set is pointwise equivalent to all Q.Geodesic, including nonsimple classes and powers. Primitive/simple/capped-null/capped-class equality/disjoint predicates are fixed topological label relations tied to actual Q by iff. Each actual Q.length label function is Borel. No tight-minimizer predicate, full count, bad event measurability or asymptotic is a field.",
+    "use": "Local proofs of actual IsTight predicates, primitive tight window counts and bad-intersection event measurability for14.4.",
+    "phase2": "Construct marked hyperbolic Teichmuller spaces, countable free-homotopy labels, actual geodesic equivalences/capping relations and Borel lengths; prove proper MCG quotient/orbifold measurable descent for simultaneous G/T/H/Q. No instance currently constructed."
+  },
+  {
+    "id": "HYP-SURFACE-QUOTIENT",
+    "domain": "classical finite-area hyperbolic quotient and primitive geodesic semantics",
+    "lean": [
+      "WP.External.HyperbolicPacking.QuotientSurface",
+      "WP.External.HyperbolicPacking.PrimitiveAxis",
+      "WP.External.HyperbolicPacking.PrimitiveGeometry",
+      "WP.External.HyperbolicPacking.BorderedGeometry",
+      "WP.External.HyperbolicPacking.AmbientRealization"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Hyperbolic geometry, surfaces and 3-manifolds (18Dec2013), Ch3 Thm1.13/Cor1.14 p52 convex universal lifts, Ch4 Prop1.1 p69 injectivity radius and Prop1.14 p72 geodesic/axis classes; Ch5 Thm1.3 p84 compact Gauss-Bonnet. Finite-area cusp Gauss-Bonnet is explicitly derived by horocycle truncation using Ch4 Prop1.7 p71 (omitted cusp area equals horocycle length), not attributed as literal compact theorem. Primary full PDF independently checked; per-field ledger docs/CLASSICAL_RESULTS.md#hyperbolic-packing.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Actual Mathlib upper-half-plane metric and invariant area, free proper orientation-preserving deck group, closed convex lift with complete geodesic boundary, actual quotient metric/fibers/local area. Primitive classes are complete axial conjugacy-or-inverse classes with actual period and trace. Finite catalog below every fixed length has no uniform cardinal bound. Intrinsic compact geodesic boundary circles and finite-area cusp ends; area=2pi*(-chi). AmbientRealization identifies the same actual H primitive lengths/topology; no instance is constructed.",
+    "use": "G2 locally proved net/loop packing and bounded primitive count; later actual intrinsic filled-piece and ambient inclusion bridges remain separate obligations.",
+    "phase2": "Construct actual deck quotients, primitive axes/conjugacy classes, finite length catalog, area/topology and cusped Gauss-Bonnet; instantiate same G/H ambient model. No cardinal estimate or G3 recording is an input."
+  },
+  {
+    "id": "HYP-LOCAL-PACKING",
+    "domain": "classical local hyperbolic disk and thin collar geometry",
+    "lean": [
+      "WP.External.HyperbolicPacking.PackingClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch2 Prop4.1 p45 polar metric and Ch4 Prop1.1 p69; Parlier Interrogating surface length spectra, author7Nov2016 pp4-6 Lemmas2.1-2.4 (closed case); Hide arXiv2107.14555v4 Lemma4.7 proof Section4.4 p19 explicitly adapts the local collar/thin argument to cusps via Buser4.4.6. Collar area is derived by integrating the standard cosh(t) collar metric; no final asymptotic bound from Hide is admitted. Quantitative epsilon=1/4 cutoff supplement: Calegari scl authorPDF printedp52 Thm3.1/Rem3.2, 2D torsion-free displacement bound>=arsinh(1)>1/2. See independent source/type review.",
+    "url": "https://arxiv.org/pdf/2107.14555v4",
+    "hypotheses": "Complete boundaryless finite-area actual quotient, epsilon=1/4. Exact plane disk area2pi(cosh r-1), embedded disks at epsilon-thick points, every primitive outside the short-core catalog meets thick part, Borel pairwise disjoint standard collars of cores with length<2epsilon, exact collar area2ell/sinh(ell/2). No net size, loop count, short primitive cardinal bound or dependence on growing genus/cusps is a field.",
+    "use": "G2 net existence/area-packing/based-loop encoding/cardinality all proved locally from these local classical facts.",
+    "phase2": "Formalize disk area, injectivity radius, Margulis/collar classification including cusps, embedded collars and their exact areas on the same actual quotient. Do not replace the locally proved net or loop bound by an equivalent axiom."
+  },
+  {
+    "id": "HYP-DOUBLING",
+    "domain": "classical geodesic-boundary double and primitive inclusion",
+    "lean": [
+      "WP.External.HyperbolicPacking.DoublingClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch3 Prop1.15 p53 hyperbolic gluing and Ch4 Prop2.20 p81 proof of doubling compact geodesic boundary while retaining finite-volume cusps. Root-closed primitive inclusion is the explicit unique-axis corollary: a root has the same geodesic image and already closes in the embedded intrinsic piece. Empty-boundary identity avoids using a disconnected double as a connected quotient.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Finite-area intrinsic hyperbolic surface with compact geodesic boundary circles and cusp ends. A complete boundaryless quotient with local PackingClassics, actual injective local isometric point inclusion and injective primitive inclusion preserving length and trace, complete area<=2 intrinsic area. No uniform primitive count or filled-piece classification is assumed.",
+    "use": "G2 transfers the locally proved complete-surface count to intrinsic bordered surfaces uniformly before all metrics.",
+    "phase2": "Construct and verify actual double (or identity for empty boundary), compatible point/deck primitive inclusions, local isometry and area factor. Later embedded filled-piece inclusion into ambient surface remains a separately audited geometric bridge."
+  },
+  {
+    "id": "MC-CUT-RESTRICTION",
+    "domain": "classical functoriality of actual multicurve cuts",
+    "lean": [
+      "WP.External.MulticurveRestrictionGeometry"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Mirzakhani Simple geodesics and Weil-Petersson volumes, primary12July2005 author version Section2 printed11-12 (remove disjoint annular neighborhoods, preserve original cusp labels and both new sides), Section8 printed36-38 ordered MCG multicurve covers. Restriction/reordering is the naturality of that literal surface-cut construction. The fiber Euler identity is an explicitly derived orientable-surface gluing corollary, not attributed as a verbatim finite-graph formula in the source.",
+    "url": "https://www.math.stonybrook.edu/~mlyubich/Archive/Geometry/Teichmuller%20Space/Mirz3.pdf",
+    "hypotheses": "Same actual G/H/T, any injection Fin q into Fin r, actual orbit restriction preserves membership of the selected ordered primitive tuple. Gluing all deleted edges gives a surjection of vertices, preserves cusp labels/retained edge sides up to flips, joins precisely connected deleted-edge fibers, and genus satisfies Euler gluing including loops. Empty restriction and full reordering retained. No primitive nonseparating/pants classification, expectation, uniform bound, G3 recording or G4 limit is a field.",
+    "use": "Local proof relating one-curve cuts to full ordered multicurve cut graphs for actual mixed nonseparating/pants counts; reindexing coherence.",
+    "phase2": "Construct actual surface cut and gluing maps for the same mapping class orbits, prove restriction membership and component/genus naturality from oriented-surface classification. No actual instance exists."
+  },
+  {
+    "id": "HYP-ARC-ENDPOINT",
+    "domain": "classical local geodesic-arc endpoint comparison",
+    "lean": [
+      "WP.External.ShortFillingGeometry.SegmentClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Mirzakhani–Petri Lengths of closed geodesics on random surfaces of large genus, author RandSurf.pdf, printedp15 Lemma4.4 (Basmajian Lemma2.2) and local portion of Prop4.5 proof pp15-16. The proof explicitly treats simple geodesics as well. Only the universal-cover local endpoint inequality is licensed; applicability to cusps is a local corollary, not the published closed-surface expectation theorem.",
+    "url": "https://webusers.imj-prg.fr/~bram.petri/RandSurf.pdf",
+    "hypotheses": "Actual quotient/primitive axes B; distinct simple closed geodesics, positive upper length L for both, distinct parameter points in each one-period interval representing the same two endpoints. Their arc lengths satisfy 2log(coth(L/4))<=|delta s|+|delta t|. No intersection cardinality, total graph size, network recording or expectation field.",
+    "use": "G3 actual finite intersection set and finite parameter-grid injection are proved locally from this local comparison.",
+    "phase2": "Formalize the local hyperbolic arc/Margulis endpoint inequality on the actual quotient, with transversality from distinct simple geodesic uniqueness and monotonicity of coth. No global G3 estimate is deferred."
+  },
+  {
+    "id": "HYP-INTRINSIC-PIECES",
+    "domain": "classical intrinsic completion and actual primitive semantics of open geodesic subsurfaces",
+    "lean": [
+      "WP.External.ShortFillingGeometry.BoundaryRealization",
+      "WP.External.ShortFillingGeometry.IntrinsicPiece",
+      "WP.External.ShortFillingGeometry.AmbientCurveCompatibility",
+      "WP.External.ShortIntrinsicRegionGeometry.IntrinsicRegionData",
+      "WP.External.ShortIntrinsicBoundaryGeometry.IntrinsicBoundaryData"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli18Dec2013 Ch3 Def1.12/Thm1.13/Cor1.14 pp52–53 actual convex/geodesic-boundary completion and half-disk charts, Riemannian volume-form definition p11; Ch4 Prop2.20 pp80–81 actual cusp compactification. Hide arXiv2107.14555v4 Def4.10/4.12 pp22–23 retains duplicate intrinsic boundary sides. Farb–Margalit Cor1.9 p34 straightening/minimal position. Additional frontier/area/disjoint companions are explicitly derived ordinary actual-subsurface semantics, not verbatim theorem records.",
+    "url": "https://arxiv.org/pdf/2107.14555",
+    "hypotheses": "Intrinsic finite-area geodesic-boundary completion and actual quotient, exact intrinsic frontier boundary circles, local isometric ambient map injective only on open interior, actual primitive projection preserving length and axis at every parameter, closed ambient interior geodesics lift intrinsically. Formal boundary classes may have the same ambient image; no all-primitive projection injectivity. Actual cusped H ambient has complete lift domain; H.simple and T.disjoint equal actual trace meanings. Independent IntrinsicRegionData for the SAME actual P says frontier(actual interior image)=union projected actual formal boundary traces and ambient area(image)=intrinsic area(univ). IntrinsicBoundaryData only says distinct projected formal boundary primitives have disjoint ambient traces; duplicate projected sides are allowed. Actual S/cut creators carry companions; no instance is asserted for arbitrary partial IntrinsicPiece.",
+    "use": "G3 chooses intrinsic lifts of original ambient curves, derives the finite-choice injection from G2 locally; canonical filling, cut recording and graph classification remain new obligations.",
+    "phase2": "Construct the actual intrinsic completion/convex covering and root-closed primitive projection/lifting, preserve two intrinsic boundary circles when ambient traces coincide, instantiate simultaneous same-H/T semantic model. No actual instance yet. Also prove true completion frontier/area semantics (local volume form, interior embedding, geodesic boundary area0, proper cusp ends) and same-or-disjoint projected actual boundaries. No selected cut component, Euler inequality, filled recording or multiplicity estimate is supplied by companions."
+  },
+  {
+    "id": "HYP-SINGLE-FILLING",
+    "domain": "classical individual nonsimple geodesic actual filling piece and precise local filling consequence",
+    "lean": [
+      "WP.External.ShortFillingGeometry.SingleCurvePieceData",
+      "WP.External.ShortFillingGeometry.SingleCurvePieceClassics",
+      "WP.External.ShortSingleCurveFillingGeometry.SingleCurveFillingClassics",
+      "WP.External.ShortBorderedSingleCurveGeometry.BorderedSingleCurveBoundaryClassics",
+      "WP.External.ShortSingleCurveMinimalityGeometry.SingleCurveMinimalityClassics",
+      "WP.External.ShortActualCutRealizationGeometry.SingleCurveCutCompanionData",
+      "WP.External.ShortFullFillingGeometry.FullSingleCurveFillingClassics",
+      "WP.External.ShortFullFillingGeometry.FullSingleCurveFillingClassics.fills"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hide arXiv:2107.14555v4 (2022), printed21 Definition4.9 disk/peripheral-cylinder complement, printed22 Definition4.10 and Lemma4.11(1–3), printed23 Definition4.12. actual construction keeps duplicate intrinsic boundary sides. Boundary<=2ell/area<=4ell and the exact interior simple-loop filling consequence below are classical; no G3 recording or classification is supplied. Generic bordered boundary-budget extension: Hide2107.14555v4 Def4.10/Lem4.11(2) printed21–22 (complete ambient), NWX2009.07538v3 Prop59 pp57–58 and §3 pp11–13 (closed ambient), with Martelli closed-convex geodesic-boundary lift and axial length minimization. Explicit derived extension, not HideDef4.9 as proof. Same-creator minimal supporting open-image semantics: Hide Def4.10 printed22, compared with BIPP §3.2 printed13–14 regular-neighborhood/fill/straighten and convex-hull support, Remark3.11 printed15 minimum supporting surface. this is a derived classical construction comparison, not a theorem about arbitrary containing pieces. full complement clause is exactly Hide printed21 Def4.9 and printed22 Lem4.11(1) for the SAME genuine Def4.10 creator. The coordinate presentation uses open disk homeomorphic to C, actual boundary cylinder S1 x [0,infinity) with zero circle the actual boundary trace, and open cusp cylinder S1 x R containing an actual ambient-closed embedded cusp-end region. These are ordinary coordinate forms of the cited disks/peripheral cylinders, not a new filling/count theorem.",
+    "url": "https://arxiv.org/pdf/2107.14555",
+    "hypotheses": "Actual Stable(g,n), X:G.Moduli g n 0, genuinely nonsimple ambient H primitive, same A. Existing S.piece provides actual intrinsic containing piece and two numeric bounds. Refined SingleCurveFillingClassics A hcomplete S explicitly requires every actual ambient domain=univ, refers to SAME S choice, and gives an actual intrinsic primitive beta projecting gamma with trace in actual interior, such that every actual simple positive-homotopy-length interior loop disjoint from beta is UFH one actual formal boundary. This InteriorFilling is a precise local consequence, not an asserted definition equivalent to the full complementary-region topology. No claim for arbitrary S instance; phase2 must choose the actual Hide construction. Same actual finite-area geodesic-boundary B with actual boundary realization R; nonsimple primitive whose actual trace is in actual intrinsicInterior. RN/perimeter/fill-and-straighten within its actual closed convex lift gives genuine IntrinsicPiece with contains/inside/exact actualfrontier and boundaryLength≤2ell. Duplicate formal sides retained. No positiveboundary, pants, waist, kernel support or probability field; those local consequences are proved separately. SingleCurveMinimalityClassics A hcomplete S: SAME actual Hide S creator on actual complete ambient, genuine nonsimple primitive gamma; for any genuine IntrinsicPiece Q with actual IntrinsicRegionData and IntrinsicBoundaryData whose open image contains gamma trace, the actual open image of S.piece gamma is contained in Q open image. No instance for arbitrary S, no paper recording, pants, area/length/Euler or probability conclusion. data-only coherent Pi/Sigma factory: WP.External.ShortActualCutRealizationGeometry.SingleCurveCutCompanionData merely packages existing SAME actual creator companions. All cut instances share the selected genuine C; completion sources are its own cut pieces or the SAME canonical Hide S.piece. No arbitrary partial records are instantiated and no paper conclusion is a field. FullSingleCurveFillingClassics A hcomplete S adds only the SAME stable nonsimple gamma intrinsic primitive beta with exact projection, interior trace, and literal FullFilling of its own piece. FullFilling quantifies every actual complement component in the original B.Point: disk, actual boundary cylinder, or actual cusp cylinder. CuspEndBoundedBy is closed-embedded in original B.Point (not merely in the complement), preventing an artificial end approaching the removed curve. This full clause is distinct from weak InteriorFilling. No instance for arbitrary S and no paper estimate/classification/record field.",
+    "use": "Nonsimple G3 local topology/recording and eventual two-cusp pants identification still require local proofs; the refinement prevents redoing the already-published full individual filling theorem. No tuple or graph recording, selected-piece Euler budget, finitefiber, expectation, pants classification or Ks support bound occurs in the interface. The original literal not-filling-two-cusp-pants count is locally bounded by the already proved stronger nonpants chosen-support count, using this exact old full-filling clause and no new geometric estimate.",
+    "phase2": "Construct actual Hide X(gamma) with intrinsic boundary copies retained; prove containment, boundary/area bounds and same-choice intrinsic beta plus actual simple-loop filling consequence from disk/peripheral-cylinder complementary regions. Build S and its refinement together for actual ambient models. No actual instance is yet constructed. Implement generic bordered RN surgery inside the actual closed convex quotient, with surviving formal boundary semantics and perimeter bound; actual positiveboundary and canonical waist support remain local paper proofs. Construct the same canonical S with this minimum supporting-image companion; prove the comparison using the old RN/convex-hull construction, rather than inferring it from the weak InteriorFilling corollary or numeric budgets. Construct the coherent all-actual-cut family and SAME Hide-to-cut companions from the classical geometric creators; no additional mathematical theorem is asserted by the data packaging. Construct full disk/boundary-cylinder/cusp-cylinder complement coordinates for the same actual Hide piece and its intrinsic lifted curve. Retain ambient proper-end embedding, instead of identifying the weak simple-loop consequence with full filling."
+  },
+  {
+    "id": "MC-CUT-COMPONENTS",
+    "domain": "classical geometric realization of actual multicurve cut components",
+    "lean": [
+      "WP.External.ShortFillingGeometry.CutComponentRealization",
+      "WP.External.ShortCutPantsGeometry.TwoCuspCutRealization",
+      "WP.External.ShortIntrinsicCompletionGeometry.CutCompletionRealization",
+      "WP.External.ShortCutPantsTypeRecognitionGeometry.CutPantsTypeRecognition",
+      "WP.External.ShortActualCutRealizationGeometry.ActualCutRealizationData"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Mirzakhani primary12July2005 author version Section2 printed11-12 defines the actual surface cut by disjoint annular neighborhoods with all original labels and two edge sides, and Section8 printed36-38 identifies actual ordered multicurve pieces. The connected-component image and labeling fields are exact semantics of that cut construction, not a short-curve recording theorem. The additional same-cut topology companion is the old finite-type classification: Martelli Ch5 Thm1.1/Def1.2 p83 and pp84–85 twice-punctured disk, with actual cusp compactifications from Ch4 Prop2.20 p81; boundary-preserving placement of punctures is an explicitly derived standard-model specialization. Same actual open-piece metric completion uniqueness: Martelli printed52–54 (explicit uniqueness paragraph p54) and complete cusps pp80–81; a derived same-interior completion isometry with commuting ambient maps and exact formal boundary iff. Reverse finite-type recognition for SAME actual cut creator: Martelli Ch5 Thm1.1/Def1.2 printed83, actual cusp compactification pp80–81, Mirzakhani2005 actual cut definition pp11–13. derived ordinary classification semantics, not a G3 curve-recording theorem.",
+    "url": "https://www.math.stonybrook.edu/~mlyubich/Archive/Geometry/Teichmuller%20Space/Mirz3.pdf",
+    "hypotheses": "Same actual A/H/T, existing actual ordered orbit o and actual tuple kappa with proved T.orbitMem o X kappa. Intrinsic pieces correspond exactly to connected components of the complement of the actual cut traces. Their genera equal T.cut.genus, cusp fibers are original named cusps, boundary fibers are the two actual cut half-sides, and projected boundary primitive equals the corresponding actual kappa edge. No claim that an arbitrary filled piece is a cut component. TwoCuspCutRealization hcomplete R concerns this SAME existing actual cut R, actual complete ambient, D.genus=0 and actual original-cusp fiber.card=2 and actual half-side fiber.card=1. It gives actual model.Point homeomorphic to closed unit disk minus±1/2 with actual intrinsicBoundary iff norm1. It is actual creator realization data, not an existence theorem for arbitrary partial R or arbitrary numeric B labels. Scoped companion of the SAME genuine intrinsic Q and actual cut creator R with region/boundary data and explicit complete ambient. Only AFTER a local literal equality of their open images does completion give actual point isometry, ambient commutation and intrinsic boundary iff. It chooses no component and returns no topology/budget/count. No instance for arbitrary partial records. CutPantsTypeRecognition hcomplete R requires the SAME actual complete ambient/cut creator; actual HasPantsTopology(R.piece c) forces its cut genus=0, original cusp-fiber card=2 and retained halfside-fiber card=1. No instance for arbitrary partial R or numerical BorderedGeometry. No waist, original-curve support, recording, Euler/length budget, finite multiplicity or probability conclusion. data-only coherent Pi/Sigma factory: WP.External.ShortActualCutRealizationGeometry.ActualCutRealizationData merely packages existing SAME actual creator companions. All cut instances share the selected genuine C; completion sources are its own cut pieces or the SAME canonical Hide S.piece. No arbitrary partial records are instantiated and no paper conclusion is a field.",
+    "use": "Local connected-filled-interior-to-cut-component theorem and later G3 actual record construction. Connected-set containment is proved with Mathlib, not supplied as a field.",
+    "phase2": "Construct actual cut pieces/complement component equivalence and exact genus/cusp/half-side identifications for simultaneous A/H/T. No actual instances; no G3 network bound, collapse procedure, marked classification or expectation is deferred. Construct this same actual cut-type topological homeomorphism and exact boundary identification; filled-network selection/classification/graph estimates remain local. Prove actual models complete the same intrinsic path-metric open surface; uniqueness extends the interior identity, finite-distance added boundary points are precisely intrinsic boundaries, and complete cusps add none. Prove the inverse finite-type label recognition for the genuine cut object from topological invariance of genus, compact boundary components and punctured ends; construct the companion alongside the SAME actual R. Construct the coherent all-actual-cut family and SAME Hide-to-cut companions from the classical geometric creators; no additional mathematical theorem is asserted by the data packaging."
+  },
+  {
+    "id": "WP-GENUS0-BOUNDARY",
+    "domain": "classical genus-zero WP boundary volume comparison",
+    "lean": [
+      "WP.External.wpVolume_genus_zero_boundary_upper"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Mirzakhani JDG94(2013), printed279 Lemma3.2(2), Eq3.7; independently checked Shen-Wu arXiv2203.15681v4 PDFp11 Lemma14(1), all stable g,n. Arbitrary normalized PsiTheory/WeilPeterssonGeometry transfer uses classical DVV uniqueness and WP polynomial normalization; this transfer remains part of the deferred proof, not a local Lean implication.",
+    "url": "https://archive.ymsc.tsinghua.edu.cn/pacm_download/21/977-4.3760.pdf",
+    "hypotheses": "P:PsiTheory; G:WeilPeterssonGeometry P; exactly genus zero; n>=3; all physical boundary lengths L_i>=0. wpVolume G 0 n L <= exp((sum_i L_i)/2)*cuspVolume G 0 n, with V0,3=1. No constants depending on n or boundary dimension. No claim for unstable types.",
+    "use": "Missing stable genus-zero leaf upper bound in local proof of original14.7 and the uniform-all-k planar marked-tail truncation for14.1. Genus>=1 stronger estimates remain proved locally.",
+    "phase2": "Prove the published generic volume coefficient comparison from classical Mirzakhani recursion or instantiate/transfer normalized actual WP intersection theory using DVV uniqueness, then eliminate this one exact root. No new planar count, moment, tail or asymptotic is a deferred assumption."
+  },
+  {
+    "id": "TOP-REGULAR-NEIGHBORHOOD",
+    "domain": "classical regular neighborhoods of finite embedded surface graphs",
+    "lean": [
+      "WP.External.ShortRegularNeighborhoodGeometry.NeighborhoodData",
+      "WP.External.ShortRegularNeighborhoodGeometry.RegularNeighborhoodClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Lazarus–de Mesmay, Surfaces and embedded graphs (author5Oct2017), printed2 embedded graphs and8–9 Fig9 vertex-disks/edge-bands. The compact region/frontier/dart quotient/strong deformation and parametrized retract in a cusped ambient surface are the explicitly derived local finite-chart disk-and-band corollary around compact graph support, not a literal noncompact theorem.",
+    "url": "https://pagesperso.g-scop.grenoble-inp.fr/~lazarusf/Enseignement/compuTopo3.pdf",
+    "hypotheses": "B is the same actual orientation-preserving finite-area hyperbolic quotient with domain=univ. N is an actual finite EmbeddedNetwork, loops and multiple edges allowed, all vertices covered by endpoints, exact compact support. Returns actual compact regular-closed neighborhood containing support in its interior, actual frontier homeomorphism from rho*reverse dart-interval quotient, continuous retract and strong deformation fixed on support, and exact boundary retraction onto parametrized graph walk. Edge universe independent of primitive-class universe. No filling, Euler bound, graph budget, cut, multiplicity or paper G3 conclusion.",
+    "use": "Local G3 construction of actual short-curve filling from the already proved finite embedded network; all recording/classification and expectation arguments remain local.",
+    "phase2": "Construct local surface charts, oriented rotation, disks/bands, actual frontier homeomorphism and parametrized strong deformation retraction. No actual instance yet. Exact field review docs/CLASSICAL_RESULTS.md#regular-neighborhood."
+  },
+  {
+    "id": "TOP-SURFACE-EULER",
+    "domain": "classical finite CW Euler characteristic of hyperbolic surfaces",
+    "lean": [
+      "WP.External.ShortSurfaceEulerGeometry.FiniteSurfaceCWModel",
+      "WP.External.ShortSurfaceEulerGeometry.SurfaceCellularEulerClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hatcher Algebraic Topology author text Theorem2.44 printed146–147: finite CW Euler equals alternating homology ranks and is homotopy invariant; combine Martelli Ch4 cusp-core/truncation p71 and geodesic double p81, Ch5 Gauss–Bonnet p84. This is the explicitly derived combination, not a claim Hatcher alone identifies hyperbolic metadata.",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+    "hypotheses": "Any actual finite 2D Mathlib CW complex with an actual HomotopyEquiv to the SAME B.surface.Point. Counts are Nat.card of the actual Mathlib cell types. Integer card0-card1+card2= -B.negativeEuler, which is already fixed by actual area/(2pi). No existence of a network-specific cell model and no prescribed edge count.",
+    "use": "Locally proved negativeEuler_le_one_cells, followed by actual network CW and filling surgery construction for G3. No G3 complexity bound is an input.",
+    "phase2": "Prove finite CW Euler/homotopy invariance, compact cusp-core homotopy model and Gauss–Bonnet identification for actual B. No actual instance. Exact field review docs/CLASSICAL_RESULTS.md#surface-euler."
+  },
+  {
+    "id": "HYP-PANTS-FAMILY",
+    "domain": "classical marked hyperbolic pants family with two cusps",
+    "lean": [
+      "WP.External.PantsCluster.Family"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli, Hyperbolic geometry, surfaces, and 3-manifolds, author18Dec2013 Ch5 Proposition1.6 printed84–87, construction/classification of hyperbolic pants including cusp cuffs of length0; standard Fenchel–Nielsen marking and boundary double.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Every positive waist s has an actual convex hyperbolic quotient model, actual homeomorphism to the closed complex unit disk minus ±1/2 with intrinsic boundary exactly the unit circle, genus0/cusps2/boundaries1, actual boundary realization of length s, double, and primitive/deck markings compatible with actual conjugacy/inversion and waist. Numeric genus/cusp labels alone are explicitly insufficient. No cluster measure, support, finite-catalog bound, continuity or stochastic conclusion is a field.",
+    "use": "Locally defined actual full primitive cluster K_s, Radon/integer point measure, finite catalog and complete geometric spectrum; paper G/14.6 conclusions remain local.",
+    "phase2": "Construct actual marked pants via ideal/right-angled hexagons, convex covering, topological realization, primitive/deck marking, boundary realization and double. No actual instance exists yet."
+  },
+  {
+    "id": "HYP-PANTS-DEFORMATION",
+    "domain": "classical quasiconformal metric comparison of marked pants",
+    "lean": [
+      "WP.External.PantsCluster.DeformationClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Bishop, Quasiconformal mappings of Y-pieces, RevMatIberoam18(2002), Theorem1.1 printed628 and Lemma6.2 printed651, explicitly permits unchanged two cuffs to be punctures; Bers ActaMath141(1978) Lemma1 printed81–82 (Wolpert annular-cover length comparison for every closed geodesic). Apply reflected quasiconformal double.",
+    "url": "https://ems.press/content/serial-article-files/38027",
+    "hypotheses": "For the same marked Family F, every B>0 admits C>0 such that positive s,t≤B with |log(s/t)|≤2 and every actual marked primitive class gamma satisfy length_s(gamma)≤(1+C|log(s/t)|)length_t(gamma). Includes nonsimple classes; class marking is the same genuine deck marking. No K_s count, continuity, support or process assumption.",
+    "use": "Local marked-length continuity, common compact-waist finite catalogs and genuine K_s vague continuity.",
+    "phase2": "Construct Bishop maps in the same marking including two punctures, reflect across geodesic boundary, prove the all-geodesic Wolpert length inequality and apply to exact primitive catalog. No actual instance yet."
+  },
+  {
+    "id": "HYP-PANTS-UNIQUENESS",
+    "domain": "classical metric uniqueness of actual two-cusp pants",
+    "lean": [
+      "WP.External.PantsCluster.UniquenessClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch5 Proposition1.6 printed84–87, uniqueness of actual geodesic-boundary pants for cuff lengths including zero cusp cuffs; primitive length/trace transport is induced by the actual isometry.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Actual B has explicit HasPantsTopology (homeomorphism to twice-punctured closed disk identifying intrinsic boundary), actual BoundaryRealization and one boundary. Returns an actual point IsometryEquiv to F.model at its positive actual waist length, plus induced full primitive equivalence preserving length and actual trace, mapping waist to waist. No assertion arbitrary intrinsic filling has pants topology.",
+    "use": "Local equality of the complete intrinsic primitive counting measure and K_s; canonical filling, support s≤2ell and cluster decomposition remain separate new obligations.",
+    "phase2": "Prove actual geometric pants uniqueness and induced geodesic-class transport with boundary compatibility; instantiate for constructed models. No actual instance yet."
+  },
+  {
+    "id": "PROB-VAGUE-TOPOLOGY",
+    "domain": "classical vague point-measure topology and positive dilation action",
+    "lean": [
+      "WP.External.pointMeasure_nnreal_vague_metrizable_secondCountable",
+      "WP.External.pointMeasure_nnreal_dilation_joint_continuous"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Kallenberg, Foundations of Modern Probability 2ed(2002), TheoremA2.3(i) printed564, Radon vague space Polish; hereditary metrizable/second-countable restriction to genuine integer-valued measure subspace. Joint dilation continuity is an explicitly derived compact-test/common-support/cutoff-mass corollary, not a literal separately named theorem.",
+    "url": "https://doi.org/10.1007/978-1-4757-4015-8",
+    "hypotheses": "Existing genuine PointMeasure NNReal with topology induced by actual C_c real integrals: MetrizableSpace and SecondCountableTopology. Actual PositiveScale={a:NNReal|0<a} with subtype topology; joint continuity of locally defined actual measure.map(x↦a*x). Strict positivity is required; no claim of subspace completeness. No probability convergence, WP geometry, genus, count weights or random-scale conclusion.",
+    "use": "Local varying-space metric Slutsky and continuous-mapping proof for physical scale replacement in original14.5.",
+    "phase2": "Formalize countable metrization of actual Radon vague topology, hereditary subspace properties, and joint dilation compact-test proof: a_j bounded away from0 gives common compact support, cutoff bounds masses, uniform test convergence controls varying integrals. Actual dilation itself is already proved locally."
+  },
+  {
+    "id": "TOP-LOOP-STRAIGHTENING",
+    "domain": "classical geodesic straightening of actual closed-loop classes",
+    "lean": [
+      "WP.External.ShortLoopStraighteningGeometry.LoopStraighteningClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Farb–Margalit, A primer on mapping class groups, author Version5.0 January2011, printed22 puncture classes, Proposition1.3 pp25–26, Proposition1.4 pp27–28, Proposition1.6 pp28–29, Corollary1.9 p34 and multicurves p35. Length-minimization is the explicitly derived lift/axis endpoint-distance corollary, including infinite-variation loops, not a literal separately numbered inequality.",
+    "url": "https://pagine.dm.unipi.it/~a019210/Farb%20Magalit_Primer%20on%20Teichmuller%20theory.pdf",
+    "hypotheses": "Same actual complete-domain finite-area orientation-preserving hyperbolic quotient B. ClosedLoop is actual continuous [0,1] map with equal endpoints; Simple injective on [0,1); actual Mathlib free homotopy with closed endpoints; actual total variation length. PositiveHomotopyLength literally bounds lengths of every freely homotopic loop away from0. Exact5fields: simple positive class primitive representative, actual primitive free homotopy iff class equality, minimum actual length, simple geodesic representative, and same-or-disjoint geodesics from actual disjoint simple representatives. No filling or G3 classification.",
+    "use": "Local actual RN boundary straightening; positive homotopy length, boundary length, duplicate class handling and G3 recording remain local obligations.",
+    "phase2": "Construct loop lifts, primitive axis, free-homotopy conjugacy dictionary, total-variation length comparison, simple/minimal-position results for actual quotient. No actual instance. Full ledger docs/CLASSICAL_RESULTS.md#straightening."
+  },
+  {
+    "id": "TOP-SIMPLE-ANNULUS",
+    "domain": "classical compact annulus between disjoint homotopic essential circles",
+    "lean": [
+      "WP.External.ShortLoopStraighteningGeometry.SimpleAnnulusClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Farb–Margalit Version5.0 January2011 Proposition1.10 proof printed35–36, actual lift-strip quotient annulus; surface convention printed18 includes punctures and boundary. This uses the punctured-surface statement, not a closed-only annulus theorem.",
+    "url": "https://pagine.dm.unipi.it/~a019210/Farb%20Magalit_Primer%20on%20Teichmuller%20theory.pdf",
+    "hypotheses": "Same complete actual B; actual simple closedloops f,g, f positive homotopy length, unoriented free homotopy and disjoint actual traces. Returns actual compact annulus embedding LoopCircle×[0,1] into SAME surface, exact two boundary maps up to homeomorphism reparametrization. No claim original network avoids annulus, no component/cusp allocation, no graph collapse or filled record.",
+    "use": "Local proof of empty-annulus collapse and retention of cusp-containing cylinders in G3; these are not interface fields.",
+    "phase2": "Construct universal-cover strip, cyclic quotient embedded compact annulus, boundary parametrization and reparametrization. No actual instance."
+  },
+  {
+    "id": "TOP-SIMPLE-COMPLEMENT",
+    "domain": "classical disk/cusp-end trichotomy of actual simple loops",
+    "lean": [
+      "WP.External.ShortComplementaryRegionGeometry.SimpleComplementClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Farb–Margalit authorVersion5 January2011 printed22 deck/cusp classification and Prop1.3 pp25–26 axis-length comparison; Marden–Richards–Rodin, On the regions bounded by homotopic curves, PacificJMath16(2)(1966) printed337–339, assertions(i)/(ii) null simple disk and disjoint homotopic nontrivial annulus, explicitly compact or noncompact orientable surfaces; Martelli author18Dec2013 Ch4 actual finite-area cusp ends. Trichotomy is the explicitly derived combination, not a literal single theorem.",
+    "url": "https://msp.org/pjm/1966/16-2/pjm-v16-n2-p13-s.pdf",
+    "hypotheses": "Same actual complete-domain finite-area orientation-preserving hyperbolic B and arbitrary actual Simple ClosedLoop f. Returns PositiveHomotopyLength OR actual closed complex unit disk embedding with full boundary f, open interior and actual frontier f.trace OR actual closed embedding of LoopCircle×[0,infinity) with exact boundary, open interior and frontier f.trace. No chosen cusp label/function, tuple/network avoidance, simultaneous fillings or cut data.",
+    "use": "Local construction of admissible actual complementary disk/cusp surgeries for G3. Selecting the side avoiding the graph, simultaneous disjoint filling, retained annuli, CW budget and actual record/classification remain local new proofs.",
+    "phase2": "Prove actual deck-class trichotomy, Jordan–Schoenflies disk embedding, annulus-to-far-cusp gluing and proper half-cylinder embedding with actual frontier semantics. No actual instance. Source/type ledger docs/CLASSICAL_RESULTS.md#complement."
+  },
+  {
+    "id": "PROB-POISSON-LAPLACE",
+    "domain": "classical Laplace functional of a Poisson random measure",
+    "lean": [
+      "WP.External.poisson_laplace_functional"
+    ],
+    "status": "EXTERNAL_SORRY",
+    "source": "Kallenberg Foundations of Modern Probability2ed(2002), Chapter12 Lemma12.2(i) printed227 and random-integral measurability printed225; independently Last–Penrose Lectures on the Poisson Process author21Aug2017 Theorem3.9 printed23–24. Exact bounded nonnegative compactly supported Borel specialization, no geometric or convergence result.",
+    "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+    "hypotheses": "E lcsc Hausdorff Borel, actual locally finite Regular intensity ν, genuine existing pointmeasure probability law QL with independent Poisson counts on finite disjoint windows. Every nonnegative globally bounded Borel h with support contained in a compact K: actual exponential of -Bochner integral ξh is Borel and expectation equals exp(- integral (1-exp(-h)) dν). Local finiteness/compact support/boundedness ensure finite actual integrals. Zero intensity and multiplicities allowed. No paper family or rate premise.",
+    "use": "Local independent-product Laplace identities and actual pants test-pairing wrappers; canonical proper waist support, cluster local finiteness and original WP spectrum approximation/convergence remain paper-new obligations.",
+    "phase2": "Prove random-integral Borel measurability via simple functions and existing count-evaluation sigma-field, finite-window independent Poisson Laplace identity, bounded/monotone approximation and dominated convergence. Eliminate this sole exact root. No actual WP or cluster convergence is supplied."
+  },
+  {
+    "id": "TOP-CYCLIC-INTERVAL",
+    "domain": "finite adjunction topology",
+    "lean": [
+      "WP.External.FiniteCyclicIntervalGeometry.Classics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hatcher Algebraic Topology Ch0 finite adjunction-space framework; explicit inverse F([j,s])=[(j+s)/m] and compact-Hausdorff proof recorded separately. Derived elementary corollary, including m=1.",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+    "hypotheses": "Every natural m>0, including1, finite quotient of m actual unit intervals by cyclic right-to-next-left endpoints. Actual AddCircle1 homeomorphism with h([(j+s)/m])=[j,s]. No graph, surface, length or recording data.",
+    "use": "Actual boundary cycle parametrizations; subsequent metric variation, Euler, recording and filled-component classification remain local.",
+    "phase2": "Construct the explicit inverse [j,s]↦[(j+s)/m], prove endpoint compatibility, continuity and bijectivity with compact-Hausdorff descent using Mathlib quotient APIs. Eliminate this explicit generic parameter; no paper estimates are supplied."
+  },
+  {
+    "id": "HYP-BORDERED-LOOP",
+    "domain": "generic convex bordered hyperbolic loop straightening",
+    "lean": [
+      "WP.External.ShortBorderedLoopGeometry.BorderedLoopStraighteningClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch3 Thm1.13/Cor1.14 pp52–53, Ch4 Prop1.14/Cor1.16 pp72–73; Farb–Margalit pp25–34. Explicit derived convex-lift axis extension.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Same actual BorderedGeometry B with actual BoundaryRealization R; no false domain=univ assumption. Exact5fields: simple positive actual homotopy class primitive representative, primitive UFH iff equality, actual variation length minimum, simple representative, same-or-disjoint geodesics from disjoint simple representatives. Derived axis proof in invariant convex cover.",
+    "use": "Intrinsic piece curve transport and actual canonical pants topology applications. No simple-pants classification, whole filling or waist support bound is assumed.",
+    "phase2": "Prove five generic axis/convex-domain facts, including actual continuous loop variation bounds and primitive/conjugacy/inversion identifications for actual models."
+  },
+  {
+    "id": "HYP-PRIMITIVE-BOUNDARY",
+    "domain": "actual intrinsic primitive trace and boundary uniqueness",
+    "lean": [
+      "WP.External.ShortBorderedLoopGeometry.PrimitiveBoundaryClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch4 Ex1.11 p72 only trace/orientation/multiplicity framework; generic geodesic initial-tangent uniqueness supplies actual derived facts.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Same actual B and BoundaryRealization R. Only injectivity of actual primitive unoriented trace and every actual primitive trace lies entirely in actual intrinsicInterior OR equals one actual R.curve j. Tangent uniqueness and actual convex geodesic boundary are essential; numeric boundary metadata alone insufficient.",
+    "use": "Local proof of primitive projection injectivity on actual one-boundary intrinsic cut pants and ambient cluster measure identification, with actual topology and boundary supplied separately.",
+    "phase2": "Prove trace determines primitive unoriented class and boundary tangency uniqueness in genuine geodesic-boundary quotient. Exercise1.11 is framework, not a claimed proved exact API."
+  },
+  {
+    "id": "HYP-PERIPHERAL-AXIAL",
+    "domain": "axial geodesics in actual cusp ends and compact annuli",
+    "lean": [
+      "WP.External.ShortPeripheralAxialGeometry.PeripheralAxialClassics",
+      "WP.External.ShortBorderedPeripheralGeometry.BorderedPeripheralClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Martelli Ch4 Cor2.19/Prop2.20 pp80–81; Farb–Margalit p22 and Props1.3–1.4; Hatcher Thm1.7 p29 and Prop1.5 p28. Explicit derived cusp/annulus cyclic-parabolic/axial combination. The same two facts on actual convex geodesic-boundary B with actual BoundaryRealization R are the derived convex-cover/cusp-double extension using Martelli Ch3 Thm1.13/Cor1.14 pp52–53 and Ch4 Prop2.20 pp80–81.",
+    "url": "https://web.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+    "hypotheses": "Same complete actual finite-area hyperbolic B, domain=univ. Every actual proper cusp end contains no entire actual primitive geodesic trace; every actual primitive trace contained in an actual compact annulus has UFH class of actual simple positive-homotopy-length boundary f. Actual region embeddings/frontiers retained. No network avoidance, filling, cusp allocation or budget. The bordered version retains actual R and the same two low-level cusp/annulus axial fields, without asserting domain=univ. No pants/filling/support or instance for an arbitrary realization is supplied.",
+    "use": "Local network frontier disk/cusp/annulus operations and cut avoidance. Actual disk contraction is already locally proved; no disk field added.",
+    "phase2": "Construct actual cusp-tail parabolic classification and cyclic annulus fundamental group. Primitive axial class in annulus forces exponent±1; cusp parabolic subgroup has no axial element. Discharge explicit two-field parameter."
+  },
+  {
+    "id": "TOP-PLANAR-JORDAN",
+    "domain": "planar Jordan–Schoenflies extension",
+    "lean": [
+      "WP.External.PlanarJordanGeometry.PlanarJordanClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Thomassen The Jordan–Schoenflies theorem and classification of surfaces (1992), Thm3.1 printed123, proof123–125; primary source.",
+    "url": "https://people.math.wisc.edu/~dymarz/751/thomass.pdf",
+    "hypotheses": "Every actual continuous injective map from complex unit circle into complex plane extends to a homeomorphism of the entire plane. Compact source gives image homeomorphism, exact Theorem3.1 specialization. No hyperbolic, pants, puncture, geodesic, whole filling or count assertion.",
+    "use": "Local canonical-pants planar disk and puncture partition proofs; the actual Jordan disk/norm bound are locally constructed and proved, not fields.",
+    "phase2": "Formalize the planar Jordan–Schoenflies extension theorem or reuse a compatible formalization; supply exact extension on the circle. Keep later finite-puncture and paper-specific classification separate."
+  },
+  {
+    "id": "TOP-PLANAR-REGIONS",
+    "domain": "classical planar annulus and punctured-disk coordinates",
+    "lean": [
+      "WP.External.PlanarRegionGeometry.PlanarRegionClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Viro–Ivanov–Kharlamov–Netsvetaev Elementary Topology PartIII §54.Cx printed363: arbitrary two disjoint simple closed curves onS2 bound an annulus, explicitly no triangulability assumption. Precise nested planar range/boundary parametrizations are derived specializations. Punctured actual Jordan disk coordinates are the Jordan–Schoenflies + disk automorphism moving the puncture + polar-coordinate corollary, with exact boundary and interior formula, not verbatim theorem API.",
+    "url": "https://www.pdmi.ras.ru/~olegviro/topoman/e-part3.pdf",
+    "hypotheses": "Only arbitrary actual DiskBoundedBy f in complex plane and p in literal interior: LoopCircle×Ici0 homeomorphism to actual closed disk image minus p, boundary maps f.circleMap exactly and positive second coordinate iff actual interior. Also arbitrary actual D/E with rangeD subset interior rangeE admit actual compact AnnulusBetween f g with exact range rangeE minus interior(rangeD). No hyperbolic, pants, curve classification, waist, filling, length or probability hypothesis/result.",
+    "use": "Local canonical pants zero/one/two-puncture classification, actual end and annulus transport. Those paper-related applications are locally proved, not fields.",
+    "phase2": "Prove general planar annulus theorem plus relative boundary parametrization using Jordan–Schoenflies; prove exact punctured-disk polar homeomorphism. Supply the generic parameter without importing Critical paper modules."
+  },
+  {
+    "id": "PROB-VAGUE-PAIRING",
+    "domain": "generic compact Borel pairing and vague topology",
+    "lean": [
+      "WP.External.CompactBorelVaguePairing"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Kallenberg Foundations of Modern Probability (2002), A2.3(iii),(iv), printed pp564–565. Bounded compact Borel integral measurability and continuity at a measure assigning zero mass to discontinuities are derived portmanteau/monotone-class corollaries, not a literal theorem API.",
+    "url": "https://doi.org/10.1007/978-1-4757-4015-8",
+    "hypotheses": "Genuine PointMeasure NNReal with actual vague topology. Arbitrary signed Borel h, globally norm bounded and with support in a compact set; integral is Borel. For continuity at actual xi, h must be xi-a.e. continuous. No geometry, cluster properness or paper process premise.",
+    "use": "Local finite-waist canonical cluster continuity through actual signed compact test pairings. Actual cluster maps and endpoint nullity are separately proved locally.",
+    "phase2": "Prove bounded compact Borel pairing measurability by simple approximation and vague portmanteau continuity with a common compact cutoff. Replace this explicit Prop; construct no paper estimate or geometry conclusion."
+  },
+  {
+    "id": "PROB-AE-CMT",
+    "domain": "generic almost surely continuous mapping for convergence in law",
+    "lean": [
+      "WP.External.AlmostSureContinuousMapping"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Kallenberg Foundations of Modern Probability (2002), Theorem4.27, printed pp76–77, fixed-map a.s.-continuity case. Changing source probability spaces is the pushforward-law/cofinal-tail formulation.",
+    "url": "https://link.springer.com/chapter/10.1007/978-1-4757-4015-8_4",
+    "hypotheses": "Arbitrary metrizable second-countable Borel source and target spaces, varying measurable probability spaces eventually in the sequence, eventual AE measurability of Xj, actual probability limiting space and AE measurable Z; fixed Borel f continuous at Z almost surely. Genuine LawConverges of Xj to Z. No WP, pants, support, or geometric assumption in the interface.",
+    "use": "Local finite-waist cluster mapping convergence once actual map Borel and limiting endpoint/discontinuity-nullity are proved; no actual WP spectrum approximation is supplied.",
+    "phase2": "Formalize the generic a.e.-continuous mapping theorem for actual weak convergence, reusing Mathlib probability laws/portmanteau. Handle eventually probabilistic sequences by restriction to a cofinal tail."
+  },
+  {
+    "id": "PROB-PPP-FIRST",
+    "domain": "generic marked Poisson first arrival",
+    "lean": [
+      "WP.External.MarkedPoissonFirstPointData"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Last–Penrose Lectures on the Poisson Process, author manuscript21Aug2017, §7.2 Theorem7.4(i) n=1, Corollary7.5, measurable enumeration(7.7)/Exercise7.4, printed61–63. Diffuse time and finite positive mark mass give the ordinary projection and a.s. unique finite first atom.",
+    "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+    "hypotheses": "Arbitrary locally finite regular diffuse Borel ν on NNReal with νuniv=∞, arbitrary finite positive η on Nat, genuine PPP law for ν.prodη. Returns actual AE first-state map into ENNReal×Nat, a.s. whole-mark prefix finiteness and unique finite first atom, exact first-arrival law and its probability normalization. No WP objects, q, systole, density limit or paper estimates.",
+    "use": "Actual systole and cusp-type joint law from already proved actual markedPPP, selector validity and noescape. Quadratic 2t wk exp(-W t²), mark wk/W and actual geometric selector conditions are proved locally.",
+    "phase2": "Formalize measurable marked-atom enumeration, diffuse-time simplicity, finite-prefix/proper-first facts and generic first-arrival law by PPP void/Mecke; supply the exact explicit interface without importing any WP conclusions."
+  },
+  {
+    "id": "PROB-FIRST-CMT",
+    "domain": "generic selected first-point convergence under vague law",
+    "lean": [
+      "WP.External.MarkedFirstPointConvergence"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Derived finite-window classical corollary of Kallenberg Foundations of Modern Probability2002 Theorems4.27–4.28 printed76–78 and A2.3 printed564–565. Not asserted to be a verbatim source theorem: finite-window atom matching + time/mark truncation + negligible invalid selection.",
+    "url": "https://link.springer.com/chapter/10.1007/978-1-4757-4015-8_4",
+    "hypotheses": "Arbitrary varying probability spaces eventually, actual marked PointMeasure(NNReal×Nat) variables and AE selected ENNReal×Nat states; actual vague convergence; a.s. whole-mark time-prefix finiteness, uniform bounded-time high-mark noescape; outer probability of invalid actual minimum selection tends0; limiting process has AE measurable, unique finite first atom and whole-mark prefix finiteness. Selector may depend on Ω and use arbitrary ties. No PPP intensity or paper geometric conclusion is a field.",
+    "use": "Apply to actual shortest primitive curve/tie-selected cusp type after all geometric validity/noescape/prefix and markedPPP conditions are locally proved. This supplies only the generic probability inference.",
+    "phase2": "Prove finite-window atom matching at unique first atoms, Borel cutoffs and finite-mark first-selector graph continuity; apply generic CMT and approximation, remove high marks via noescape and high time via finite limiting first state; control arbitrary invalid choices by their outer probability."
+  },
+  {
+    "id": "HYP-FINITE-SUPPORT",
+    "domain": "classical convex supporting subsurface of a finite geodesic carrier",
+    "lean": [
+      "WP.External.ShortSupportingPieceGeometry.SupportingPieceData",
+      "WP.External.ShortSupportingPieceGeometry.SupportingPieceClassics",
+      "WP.External.ShortSupportingConstructionGeometry.SupportingBoundaryRealization",
+      "WP.External.ShortSupportingConstructionGeometry.SupportingCarrierRealization",
+      "WP.External.ShortTupleRecordingGeometry.TupleRecordingCompanions",
+      "WP.External.ShortTupleRecordingGeometry.TupleRecordingCompanions.neighborhood",
+      "WP.External.ShortTupleRecordingGeometry.TupleRecordingCompanions.surface",
+      "WP.External.ShortTupleRecordingGeometry.TupleRecordingCompanions.carrier",
+      "WP.External.ShortTupleRecordingGeometry.TupleRecordingCompanions.boundary"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Burger–Iozzi–Parreau–Pozzetti A structure theorem for geodesic currents and length spectrum compactifications, author manuscript5Dec2017, §3.2 printed13–15. Finite connected carrier regular neighborhood/fill disks and once-cusps/straighten construction p14, convex limit-set hull description p14, minimality Def3.10/Remark3.11 p15. Literal actual lift hull/minimality API is a derived finite-carrier specialization, not verbatim. Same-creator construction companions: BIPP printed14 actual regular-neighborhood/fill/straighten surviving formal boundary sides and literal graph-subgroup image equals pi1 of supporting surface; convex inclusion is pi1-injective. These are explicit derived creator semantics, not numeric bounds.",
+    "url": "https://people.math.ethz.ch/~iozzi/submitted_PML.pdf",
+    "hypotheses": "Same genuine complete finite-area BorderedGeometry B with explicit domain=univ, nonempty finite set of actual primitive axial geodesics, preconnected actual carrier and exclusion of a single simple primitive carrier. Returns actual IntrinsicPiece with ordinary region/boundary data, contains every actual trace, actual connected lift component, exact projection of interior of its closed geodesic hull, minimal actual interior inclusion among genuine such pieces. No length/Euler/recording/count/rate or pants conclusion. Scoped DATA only for SAME genuine support Q and actual carrier/RN N,D: actual formal boundary sides inject into actual RN surviving cycles with literal unorientedfreehomotopy; actual continuous graphcarrier interiorlift commuting with ambient inclusion induces surjective actual FundamentalGroup.map. No existence for arbitrary unrelated partial Q/N/D, no card/length/Euler budget/recording/expectation supplied. TupleRecordingCompanions is only coherent dependent data packaging on actual H tuple gamma with injectivity/simple/length proofs and L>0: actualAmbientTuple=A.primitiveEquiv composed with gamma; neighborhood only for its exact tupleEmbeddedNetwork; surface/carrier/boundary only for SAME SP activeClusterSupport and actual activeSupportNetwork; boundary uses that exact neighborhood. No all-arbitrary-partial N/Q instances and no selection/Euler/length/card/record/count/rate conclusion. neighborhood reuses TOP-REGULAR-NEIGHBORHOOD, surface reuses TOP-SURFACE-PI1, and carrier/boundary reuses this group.",
+    "use": "Canonical ordinary supporting subsurface semantics for local G3 region identification and recording. Actual finite topology, boundary budget, selected components and critical O(g^-1/2) counting remain local obligations.",
+    "phase2": "Construct the actual graph subgroup/lift, regular neighborhood fill-and-tighten and convex-hull support; prove exact hull and minimality statements and genuine region/boundary semantics. No instance for arbitrary partial records is asserted. General construction only, not paper estimates. Construct these companions with the actualsupport/RN creators, including all formal duplicate sides and actualcarrier pi1 surjection. Assemble these four existing construction companions coherently on the same actual tuple network, RN and SP supports; no additional mathematical estimate or existence for arbitrary partial objects."
+  },
+  {
+    "id": "TOP-GRAPH-PI1",
+    "domain": "generic finite connected graph fundamental group",
+    "lean": [
+      "WP.External.ShortFundamentalGroupGeometry.FiniteGraphFundamentalGroupClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hatcher Algebraic Topology Props1A.1/1A.2 printed84–85, full maximal-tree/freebasis proof. Stated finite actual1cell generator bound is the immediate weaker cardinality corollary; basepoint change uses pathconnectedness of connectedCW graphs.",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+    "hypotheses": "Arbitrary actual T2 topological space X with finite one-dimensional Mathlib CWComplex on univ, actual cells in dimensions≥2 empty, PreconnectedSpace X and actual basepoint x. Actual FundamentalGroup X x has finite generating set with card≤Nat.card actual1cells. No embeddednetwork, carrier, surface, geometriccut, cutoff or expectation in this type.",
+    "use": "LOCAL composition of actualcarrier pi1-surjection with actual graph generators; local finite-image/card proofs give supporting-piece Euler≤actualN.Edge, not an external field.",
+    "phase2": "Formalize graph maximal trees, actual based-edge-loop free basis and finitecard upper bound using MathlibCW/FundamentalGroup APIs; actualNetworkCW and resulting paper budgets remain local."
+  },
+  {
+    "id": "TOP-SURFACE-PI1",
+    "domain": "generic finitearea orientable hyperbolic surface fundamental group",
+    "lean": [
+      "WP.External.ShortFundamentalGroupGeometry.SurfaceFundamentalGroupClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Hatcher Cor1.27 proof printed51 gives closed orientable genus-g abelianization Z^(2g); Ex1B.2 printed87 gives nonclosed surfaces retract to graphs; Prop1A.2 pp84–85, standard polygon presentation pp50–51. Martelli finite-type classification printed83 and actual cusp compactification pp80–81; combine with actualGaussBonnet. Derived generator inequality, not verbatim API.",
+    "url": "https://pi.math.cornell.edu/~hatcher/AT/AT.pdf",
+    "hypotheses": "Same genuine connected finitearea oriented hyperbolic geodesic-boundary B, actual quotient topological space and actual GaussBonnet negativeEuler. Every finite actualpi1 generating set at each actual basepoint has cardinality≥B.negativeEuler. Closed rank2g≥2g−2; nonclosed rank2g+c+b−1=negativeEuler+1. No instance for inconsistent arbitrary partial metadata; no graph/network/recording or paper budget in type.",
+    "use": "LOCAL lower bound combined with actualgraph carrier pi1 surjection and generic finitegraph basis to prove supporting Euler budget. No new uniform cut estimate is assumed.",
+    "phase2": "Construct actualfinite-type surface presentation/abelianization or graphretraction and correspondingrank lower bound; prove actualGaussBonnet Euler agrees with topological Euler and discharge genericparameter without paperrecording assumptions."
+  },
+  {
+    "id": "PROB-PPP-RESTRICTION",
+    "domain": "generic Poisson restrictions and independence",
+    "lean": [
+      "WP.External.TwoColorPoissonRestrictionIndependence"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Last–Penrose Lectures on the Poisson Process, author manuscript21Aug2017, Theorem5.2 restriction theorem and complete proof, printed39; Theorem5.1 mapping, printed38–39. ",
+    "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+    "hypotheses": "Arbitrary locally finite Borel measures nu,mu on NNReal; genuine PPP probability law Q on PointMeasure(NNReal sum NNReal) with sum-space intensity twoColorMeasure nu mu. The actual twoColorLeftProjection and twoColorRightProjection are independent random elements under Q. No geometry, kernel, convergence or paper estimate field; no actual instance supplied.",
+    "use": "Identify the two genuine restrictions of the G4 limiting sum-space PPP as independent parent processes for the canonical cluster limit. Marginal PPP laws, product-law identification, canonical kernels and double-exponential Laplace formula are locally proved.",
+    "phase2": "Formalize independence of restrictions of a general Poisson process to disjoint measurable sets and its preservation under the actual coordinate maps, then discharge this exact explicit Prop. No WP conclusions are part of this obligation."
+  },
+  {
+    "id": "PROB-PM-LAPLACE-CMT",
+    "domain": "generic random point-measure convergence from Laplace functionals",
+    "lean": [
+      "WP.External.PointMeasureLaplaceConvergence"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Kallenberg Foundations of Modern Probability (2002), Theorem16.16(i) iff(ii) and complete proof, printed316–317; Theorem5.3 Laplace-transform continuity and proof, printed86–87. Derived by applying transform continuity to every nonnegative scalar multiple t*f, then the genuine vague random-measure criterion. ",
+    "url": "https://doi.org/10.1007/978-1-4757-4015-8",
+    "hypotheses": "Actual PointMeasure NNReal with the genuine vague topology, arbitrary changing measurable source spaces, eventually probability source measures and eventually AEM observed point-measure maps, arbitrary probability target with AEM point-measure map. Convergence of actual expectations of exp(-integral f) for every nonnegative compactly supported continuous real f implies genuine LawConverges. No simplicity, Poisson law, WP geometry, canonical kernel or comparison event is assumed; no instance supplied.",
+    "use": "Transfer actual bounded-window spectrum equality off a vanishing outer-probability event to full vague law with the already constructed canonical cluster target. Prefix comparison, outer-event estimates, Laplace transfer and all WP convergence obligations are proved locally.",
+    "phase2": "Prove the generic Laplace transform criterion for random locally finite counting measures on NNReal, using transform continuity for all t*f and a genuine vague tightness/uniqueness theorem; discharge this precise explicit Prop without paper-specific hypotheses."
+  },
+  {
+    "id": "PPP-INTEGRAL-MOMENTS",
+    "domain": "classical probability",
+    "lean": [
+      "WP.External.PoissonIntegralMoments"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Last–Penrose, Lectures on the Poisson Process, author manuscript 21 August 2017, Proposition 2.7 (printed p.13), Eq.(4.26) (printed p.35); Chapter 1 Poisson exponential moments.",
+    "url": "https://stoch.math.kit.edu/img/Last/lastpenrose2017.pdf",
+    "hypotheses": "Locally finite intensity on NNReal, a probability law satisfying disjoint-window PPP counts, measurable real f bounded globally and supported in Iic R. The Poisson integral has MemLp for every natural exponent, mean integral f dμ, variance integral f² dμ. For these hypotheses every deterministic and random integral is finite. No instance asserted.",
+    "use": "Only generic scalar Poisson integrals; local ClusterWindowCounts/Moments proves the actual canonical cluster count identification, boundedness, support, finite moments and (14.22) via Mathlib product variance. Also rules out PPP laws from strict excess.",
+    "phase2": "Prove Campbell first and second moments from disjoint-window count laws via simple function approximation; use bounded-support Poisson count domination for every finite moment. Vague Borel and count-generated sigma-fields agree on the NNReal Radon space as in existing registered count measurability input."
+  },
+  {
+    "id": "HYP-PANTS-FIGURE-EIGHT",
+    "domain": "classical hyperbolic geometry",
+    "lean": [
+      "WP.External.PantsCluster.FigureEightClassics"
+    ],
+    "status": "EXPLICIT_INTERFACE",
+    "source": "Rivin, Advances in Mathematics 231 (2012), 2391–2412, Theorem 1.3; arXiv:0901.2543 preprint Theorem 2 Eq.(1), and its cusp equality in Corollary 3.",
+    "url": "https://arxiv.org/abs/0901.2543",
+    "hypotheses": "For each actual marked two-cusp pants with positive waist s, there exists a primitive unoriented class distinct from the waist, of length 2 arcosh(2+cosh(s/2)). The formula specializes the classical three-boundary trace identity at cusp lengths 0,0. Primitivity and boundary distinction use the reduced word a⁻¹b in the free pants group (or its one transverse double point); these are part of the deferred classical consequence, not claims separately machine-proved here.",
+    "use": "Local proofs show for L>2 arcosh3 both distinct classes lie below L for a small positive interval of s. They then prove positive μ_c mass, strict integrated excess and non-Poisson. No cluster probability or multiplicity estimate is an external field.",
+    "phase2": "Construct the two parabolic peripheral generators in the actual deck group; prove their product inverse word primitive and nonperipheral, and derive its length from the SL₂ trace identity. Transfer to the existing full primitive catalog."
+  }
+]

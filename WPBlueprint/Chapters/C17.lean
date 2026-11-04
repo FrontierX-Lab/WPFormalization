@@ -1,0 +1,135 @@
+import WPFormalization.Statements
+import WPBlueprint.Chapters.C16
+import Verso
+import VersoManual
+import VersoBlueprint
+
+open Verso.Genre Verso.Genre.Manual Informal
+
+#doc (Manual) "appB-primitive-bounds" =>
+
+# Uniform bounds for positive intersection numbers
+
+We give the coarse bounds used in Section 5. They are consequences of the stronger bounds in \[32\] Lemmas 2–6. The proof below uses their separating-term estimate, which we reproduce, and replaces the two-variable majorant by a scalar one. The only intersection estimates imported into the proof are the one-point formula and the two-point bound of Delecroix, Goujard, Zograf and Zorich \[19\] equation (6).
+
+:::lemma_ "lem:primitive-bounds" (parent := "paper_core") (tags := "paper-new") (priority := "high") (uses := "eq:H4")
+%%%
+source := { document := "paper-v3", spans := #[{ page := "69", anchor := "lem:primitive-bounds", citation := "Lemma B.1", pdf := some { path := "source/paper.pdf" } }] }
+%%%
+
+Lemma B.1 — lem:primitive-bounds.
+
+For $`g\ge1` and positive integers $`d_1,\ldots,d_n` with $`\sum d_i=3g-3+n`, the normalization in {bpref "eq:H4"}[4.3] satisfies 
+
+$$`\frac16\le C_g(d_1,\ldots,d_n)\le1.`
+
+
+
+Lean scope (stage one): these declarations use the explicit mathematical interfaces shown in their Lean types. Their proof status and registered external dependencies are recorded in the compiled phase-one audit. Concrete DM/WP and other classical instances remain unconstructed; no unconditional geometric verification is asserted.
+
+:::
+
+
+
+Write $`C(\mathbf d)=C_g(\mathbf d)` and $`h=2g-2+n` when the genus is determined by the degrees. The normalized string and dilaton identities are 
+
+$$`C(0,\mathbf d)=\sum_{d_j>0}\frac{2d_j+1}{3(Z-1)}
+                    C(\mathbf d-\mathbf e_j),\qquad
+ C(1,\mathbf d)=C(\mathbf d),`
+
+ where $`Z` is the complexity of $`(0,\mathbf d)`; the terminal value $`C_1(1)=1/6` is kept separately. For a pivot $`d_1\ge2`, DVV gives 
+
+$$`\begin{aligned}
+ C(\mathbf d)&=\sum_{j=2}^n\frac{2d_j+1}{3(h-1)}
+ C(d_2,\ldots,d_j+d_1-1,\ldots,d_n)\notag\\
+ &\quad+\frac{2}{3(h-1)}\sum_{a+b=d_1-2}
+ C_{g-1}(a,b,d_2,\ldots,d_n)\notag\\
+ &\quad+\sum_{\substack{a+b=d_1-2\\I\sqcup J=\{2,\ldots,n\}}}
+ \frac{\Gamma(h_1)\Gamma(h_2)}{6\Gamma(h)}
+ C(a,\mathbf d_I)C(b,\mathbf d_J).
+ \end{aligned}`
+
+ Here $`h_1,h_2` are the complexities of the two factors, and only stable, dimension-compatible terms are included. The weights in the first two lines sum to one.
+
+:::proof "lem:primitive-bounds" (uses := "ext:dvv, ext:two-point, ext:one-point, ext:stirling")
+The lower bound. We prove the same lower bound for positive-genus tuples with at most two zero entries, by induction on complexity. For a tuple with $`z\in\{1,2\}` zeros, the total string weight is $`(3h-z)/(3h-3)\ge1`. String lowers complexity without increasing the number of zeros. For a positive tuple, remove the ones by dilaton. Unless the tuple reduces to the genus-one base, its genus is at least two. Its merger children are positive and its handle children have positive genus and at most two zeros. Dropping the nonnegative separating terms in B.2 therefore proves the lower bound.
+
+The upper majorant and zero entries. Define the nondecreasing function 
+
+$$`F(h)=\begin{cases}1/3,&1\le h\le7,\\
+                   1-4/(h-1),&h\ge7.
+       \end{cases}`
+
+ We will prove $`C(\mathbf d)\le F(h)` for positive tuples. Its increment for $`h\ge8` is $`4/((h-1)(h-2))`. The corresponding bound for a tuple with one zero is $`C\le1`: remove all ones, and let $`Z` be the remaining complexity. String bounds the result by 
+
+$$`\left(1+\frac{2}{3(Z-1)}\right)F(Z-1).`
+
+ For $`Z\le8` this is at most $`5/9`; for $`Z\ge9`, substitution of $`F(Z-1)=1-4/(Z-2)` gives a bound below one. This observation uses only positive tuples of smaller complexity and so is available in the induction.
+
+The separating contribution. Suppose all $`d_i\ge2`. Both separating genera are positive by dimension. For a fixed subset $`I` of size $`m` and genus $`g_1`, the degree $`a` is determined. The total separating weight is thus at most 
+
+$$`\sum_{m=0}^{n-1}\binom{n-1}{m}
+ \sum_{\substack{g_1+g_2=g\\g_1,g_2\ge1}}
+ \frac{(2g_1+m-2)!(2g_2+n-m-3)!}{6(h-1)!}.`
+
+ As in \[32\] Lemma 3, the terms with at least one genus equal to one, allowing double counting, are bounded by 
+
+$$`\frac{1}{3(h-1)(h-2)}
+ \sum_{m=0}^{n-1}\prod_{j=1}^m\frac{n-j}{h-2-j}
+ \le\frac{3}{2(h-1)(h-2)}.`
+
+ Indeed $`n\le3h/5` and $`n\le h-2`. The first two factors are at most one, and each subsequent factor is at most $`3/5`, giving a sum at most $`2+\sum_{r\ge0}(3/5)^r=9/2`. For $`g_1,g_2\ge2`, the inequality $`\binom ab\binom cd\le\binom{a+c}{b+d}` gives the bound 
+
+$$`\frac{n(g-3)}{6(h-1)(h-2)\binom{2g-4}{2}}
+ \le\frac{3}{8(h-1)(h-2)}.`
+
+ This part vanishes for $`g\le3`; otherwise use $`n\le3g-3`. The total weight is therefore at most $`2/((h-1)(h-2))`. Each factor is positive or has one zero, so the same bound applies to the full separating contribution once the smaller-complexity bounds hold.
+
+Initial cases. Put $`a_g=C_g(3g-2)` and $`b_g=C_g(0,3g-1)`. The one-point formula and the published two-point bound give 
+
+$$`C_g(d_1,d_2)\le b_g=\frac{6g-1}{6g-3}a_g<\frac1\pi<\frac8{25}.`
+
+ For completeness, $`b_{g+1}/b_g=(6g+5)(6g+1)(6g-3)/
+(108g(g+1)(2g-1))>1`, and Stirling’s formula gives $`b_g\to1/\pi`. All positive genus-two tuples reduce by dilaton to $`(4)`, $`(2,3)` or $`(2,2,2)`. String gives 
+
+$$`C_1(0,2)=\frac5{18},\quad C_1(0,0,3)=\frac{35}{108},\quad
+ C_1(0,0,2,2)=\frac{25}{81}.`
+
+ Using these values in B.2 yields 
+
+$$`C_2(4)=\frac{35}{144},\quad C_2(2,3)=\frac{1015}{3888},\quad
+ C_2(2,2,2)=\frac{175}{648}<\frac3{11}.`
+
+ The other two values are also below $`3/11`. Hence a genus-two tuple with one zero is at most $`(11/9)(3/11)=1/3` after removing ones; its remaining complexity is at least four. The genus-one one-zero case reduces to $`(0,2)` and has the same bound.
+
+For $`h\le7`, the only additional positive cores with at least three markings are the genus-three tuples $`(2,2,5)`, $`(2,3,4)` and $`(3,3,3)`. For the first two, two string steps bound the handle term by $`(16/15)(11/9)(3/11)=16/45`. Each separating factor has genus one or two and is at most $`1/3`. Thus 
+
+$$`C\le\frac89\frac8{25}+\frac19\frac{16}{45}
+              +\frac19\frac2{30}=\frac{671}{2025}<\frac13.`
+
+ For $`(3,3,3)`, both handle terms reduce to $`(0,3,3)` in genus two, so 
+
+$$`C\le\frac79\frac8{25}+\frac29\frac13
+              +\frac19\frac2{30}=\frac{223}{675}<\frac13.`
+
+ Together with dilaton, the one- and two-point bounds and the genus-one base, this proves every initial case $`h\le7`.
+
+Induction step. Let $`h\ge8`. After removing ones, assume $`n\ge3` and choose a minimal degree $`d=d_1\ge2`. If $`d\ge3`, all handle children except the two endpoint terms have positive degrees. Each endpoint has one zero and at most one degree-one entry. Removing that entry if necessary and applying string bounds it by $`(1+2/(3(h-3)))F(h-1)`. The total endpoint weight is $`4/(3(h-1))`. Since $`F\le1`, the excess over $`F(h-1)` is at most 
+
+$$`\frac{8}{9(h-1)(h-3)}+\frac2{(h-1)(h-2)}
+ \le\frac{46}{15(h-1)(h-2)}<F(h)-F(h-1).`
+
+ If $`d=2`, the handle has two zeros. Two string steps, allowing an intervening dilaton step, give the factor 
+
+$$`R_h=\frac{(3h-5)(3h-10)}{(3h-6)(3h-12)}.`
+
+ The resulting positive tuples have complexity at most $`h-3`. The handle weight is $`2/(3(h-1))`, and 
+
+$$`\frac{2(R_h-1)}{3(h-1)}
+ =\frac{2(9h-22)}{27(h-4)(h-1)(h-2)}
+ \le\frac{25}{27(h-1)(h-2)}.`
+
+ Adding separation gives $`79/(27(h-1)(h-2))`, again below the increment of $`F`. This closes the induction and proves the upper bound.
+:::
+
+

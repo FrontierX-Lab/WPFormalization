@@ -1,0 +1,82 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{longtable}
+\usepackage{microtype,mathrsfs}
+\usepackage{xcolor}
+\usepackage{mdframed}
+\newmdenv[backgroundcolor=black!5,linecolor=black!65,linewidth=0.4pt,roundcorner=3pt,skipabove=8pt,skipbelow=8pt,innerleftmargin=6pt,innerrightmargin=6pt,innertopmargin=3pt,innerbottommargin=3pt]{mainresult}
+\definecolor{citationblue}{RGB}{0,0,255}
+\usepackage[colorlinks=true,linktoc=page,linkcolor=citationblue,citecolor=citationblue,urlcolor=black]{hyperref}
+\raggedbottom
+\numberwithin{equation}{section}
+% Use the AMS address metadata in a title-page footnote, as requested by
+% the journal, and suppress its default repetition at the end.
+\makeatletter
+\newcommand{\titlepageaddresses}{\@setaddresses\let\@addpunct\@gobble}
+\newcommand{\cleartitlepageaddresses}{\global\let\addresses\@empty}
+\makeatother
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\pdfsuppressptexinfo=15
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\setlength{\emergencystretch}{1em}
+\title[Uniform large-genus volume asymptotics]{Uniform large-genus asymptotics\\ of Weil--Petersson volumes}
+\author{Zhiyi Li}
+\address[Zhiyi Li]{Department of Modern Physics, University of Science and Technology of China, Hefei, Anhui 230026, China}
+\address[Zhiyi Li]{CAS Key Laboratory of Theoretical Physics, Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100190, China}
+\author{Qihang Wang}
+\thanks{Corresponding author: Qihang Wang. ORCID: \href{https://orcid.org/0009-0003-2504-8756}{0009-0003-2504-8756}.}
+\address[Qihang Wang]{School of Mathematical Sciences, Peking University, Beijing 100871, China}
+\email{\href{mailto:2501110049@stu.pku.edu.cn}{2501110049@stu.pku.edu.cn}}
+\thanks{\titlepageaddresses}
+\date{}
+\subjclass[2020]{Primary 32G15; Secondary 14H10, 14H81, 41A60, 58J50, 60F05}
+\keywords{Weil--Petersson volume, moduli space of curves, intersection number, large genus, local limit theorem}
+\hypersetup{pdftitle={Uniform large-genus asymptotics of Weil-Petersson volumes},pdfauthor={Zhiyi Li and Qihang Wang}}
+\begin{document}
+\begin{abstract}
+Let $V_{g,n}$ be the Weil--Petersson volume of the moduli space of hyperbolic surfaces of genus $g$ with $n$ cusps. The fixed-$n$ large-genus expansion of Mirzakhani and Zograf has correction terms polynomial in $n$ of degree $2i$ at order $g^{-i}$, and ceases to be uniform when $n$ is of order $\sqrt g$. We prove an asymptotic expansion in powers of $1/g$ that holds uniformly in all $n\ge0$, with coefficients analytic in a density parameter that ranges over a compact interval, including the limits $n/g\to0$ and $n/g\to\infty$. Its leading term is explicit, contains no undetermined constant and has relative error $O(1/g)$; truncation at an order proportional to $\sqrt g$ gives relative error $O(\mathrm{e}^{-a\sqrt g})$ for some $a>0$. For fixed $n$ this confirms Zograf's conjecture that the constant in the Mirzakhani--Zograf asymptotics is $1/\sqrt\pi$. We also determine, at every cusp density, the limits of the volume ratios $V_{g,n}/V_{g-1,n+2}$ and $V_{g,n+1}/(2gV_{g,n})$ and, in all degrees, the asymptotics of the ratios of adjacent coefficients of the one-boundary volume polynomial; this answers two questions of Mirzakhani. The proof deforms mixed $\kappa_1$--$\psi$ intersection numbers into pure $\psi$ intersection numbers along a family whose recursion has nonnegative coefficients, fixes the overall constant through Painlev\'e~I without assuming resurgence, and recovers individual volumes by a local limit theorem in the number of cusps. As an application, the spectral gap of a Weil--Petersson random surface with $n\gg\sqrt g$ cusps tends to zero in probability; this removes the restriction $n/g\to0$ from a theorem of Shen and Wu.
+\end{abstract}
+\maketitle
+\cleartitlepageaddresses
+\clearpage
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
+\input{01-introduction}
+\input{02-kernels-parameter}
+\input{04-amplitudes}
+\input{05-comparison}
+\input{06-marked-ratios}
+\input{07-leading-term}
+\input{08-higher-order}
+\input{09-extraction}
+\input{10-sharp-extraction}
+\input{11-absolute}
+\input{12-diagonal}
+\input{13-coefficients}
+\input{13b-instanton}
+\input{14-geometry}
+\input{15-conclusion}
+\appendix
+\input{appA-kernel-proofs}
+\input{appB-primitive-bounds}
+\input{appC-marked-expansion}
+\input{appD-extraction}
+\input{appE-adjacent-rate}
+\input{appF-tight-proofs}
+\input{appG-critical-proofs}
+\input{99-backmatter}
+\input{references}
+\end{document}

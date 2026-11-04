@@ -1,0 +1,68 @@
+\subsection{Cusp weights and the JT spectral edge}\label{subsec:jt-edge}
+
+Saad, Shenker and Stanford related the genus expansion of
+Jackiw--Teitelboim (JT) gravity to a matrix integral, with
+Weil--Petersson volumes as its geometric input~\cite{SSS}.
+The parameter $Y$ describes a spectral edge in its defect deformation,
+introduced by Maxfield--Turiaci and by Witten~\cite{MT,WittenDef}.
+We record the normalization to relate the
+uniform estimates to that model. A defect of opening angle $2\pi\alpha$
+is a cusp at $\alpha=0$~\cite[Section~2]{ET}.
+Let $\lambda_{\mathrm{def}}$ be its weight, distinct from the cusp
+density $\lambda=n/g$, and use the convention $2\gamma=1$ of
+Maxfield--Turiaci~\cite{MT}. Their string equation at $\alpha=0$
+and its branch connected to the undeformed edge are
+\[
+ \frac{\sqrt{E_0}}{2\pi}I_1(2\pi\sqrt{E_0})
+       +\lambda_{\mathrm{def}}=0,\qquad
+ E_0=-\frac{Y}{\pi^2},\qquad x=2\pi^2\lambda_{\mathrm{def}}.
+\]
+The Bessel expressions are interpreted by their entire power series.
+Substitution gives exactly $X(Y)=x$. Moreover, the definition
+\eqref{eq:H8} gives, for $g\ge2$,
+\[
+ \sum_{n\ge0}V_{g,n}\frac{\lambda_{\mathrm{def}}^n}{n!}
+       =(2\pi^2)^{3g-3}\Phi_g(x).
+\]
+Thus a fixed cusp count is a coefficient of the defect-weighted
+amplitude, whereas $Y$ parametrizes its spectral edge.
+
+The genus-zero density, with its overall topological factor removed,
+can be written using our kernel. Specializing the Abel integral in
+\cite[equation~(3.50)]{MT} to $\alpha=0$ gives
+\[
+ \rho_0(E)=\frac1{4\pi}\int_{E_0}^{E}
+        \frac{I_0(2\pi\sqrt u)}{\sqrt{E-u}}\,\mathrm du
+   =\frac{\sqrt q}{2\pi}K_Y(-2\pi^2q),\qquad q=E-E_0\ge0.
+\]
+For the second equality set $u=E_0+q(1-s^2)$ and use
+\eqref{eq:P1}. At $Y=0$ this is the JT density
+$\sinh(2\pi\sqrt E)/(4\pi^2)$. At $Y=y_0$, put
+$b=-X''(y_0)>0$. Since $a(y_0)=0$, expansion of $K_{y_0}$ gives
+\[
+ \rho_0(E_0+q)=\frac{\pi b}{3}q^{3/2}+O(q^{5/2}).
+\]
+The square-root edge has become a cubic critical edge, the local
+geometry associated with the $(2,3)$ critical point. This identifies
+the physical meaning of the same endpoint at which the normalized
+intersection recursion reduces to pure $\psi$ intersections.
+
+The exponent in the large-genus action agrees with this critical
+geometry. With $\delta=y_0-Y$, the endpoint
+expansions of Section~\ref{the-stationary-parameter} give
+\[
+ x_c-x=\frac b2\delta^2(1+O(\delta)),\qquad
+ \mathcal Z=\frac{2\sqrt3\,b}{5}\delta^{5/2}(1+O(\delta))
+       =\frac{2^{9/4}\sqrt3}{5b^{1/4}}
+          (x_c-x)^{5/4}\bigl(1+O(\sqrt{x_c-x})\bigr).
+\]
+The marked expansion in Theorem~\ref{thm:full-expansion} uses the
+full action $\mathcal Z(Y)$ and remains uniform as $Y$ approaches
+$y_0$. Replacing the action by its leading critical power would instead
+introduce a multiplicative factor $\exp(O(g\sqrt{x_c-x}))$ for fixed
+marking count. That replacement is not uniform in an arbitrary joint
+limit. In formal genus counting, the corresponding balance is between
+the string coupling $\hbar$ and $(x_c-x)^{5/4}$; the genus index $g$
+is not the inverse string coupling. A double-scaled sum over all genera
+requires a separate summation prescription and estimates beyond the
+large-genus coefficient asymptotics proved here.

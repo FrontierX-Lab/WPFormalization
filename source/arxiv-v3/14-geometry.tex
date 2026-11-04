@@ -1,0 +1,54 @@
+\section{Short curves and small eigenvalues}\label{sec:geometry}
+
+The analytic estimates enter geometry through ratios of volumes of cut
+surfaces, by Mirzakhani's integration formula~\cite{MirInv}. We first apply the
+adjacent-volume limit to Shen--Wu's vanishing-gap argument~\cite{SW}
+(Subsection~\ref{sec:spectral}). We then determine the short-curve process
+and the systole above the scale $\sqrt g$
+(Subsection~\ref{sec:pants-spectrum}) and deduce many small eigenvalues
+(Subsection~\ref{sec:pants-eigenvalues}). The last two subsections state
+the limit of the tight length spectrum at every cusp density and of the
+full primitive spectrum at the critical scale $n\asymp\sqrt g$; their
+proofs are given in Appendices~\ref{app:tight} and~\ref{app:critical}. The
+critical result uses volume bounds of Mirzakhani--Zograf and Shen--Wu
+and only the zero-density case of the volume-ratio limits, not the
+uniform expansion.
+
+\subsection{The first positive eigenvalue}\label{sec:spectral}
+
+The simplest spectral consequence uses only the discrete cusp ratio
+$D_{g,n-1}$. A short curve enclosing two cusps bounds a pair of pants
+of fixed area $2\pi$, joined to the rest of the surface through a short
+boundary. This gives a small Cheeger ratio and hence a small Rayleigh
+quotient. Shen--Wu's second-moment argument makes such a curve probable.
+Shen and Wu asked for the adjacent-volume limit needed to extend
+this argument beyond $n=o(g)$~\cite[Question~3]{SW}. Theorem~\ref{thm:volume}
+provides that limit along every sequence with $g\to\infty$.
+
+\begin{proof}[Proof of Corollary~\ref{cor:spectral}]
+Put $n=n(g)$ and
+\[
+ L_g=\left(\frac{\sqrt g}{n}\right)^{1/2}.
+\]
+Let $N_g(X)$ count the simple closed geodesics of length at most $L_g$ whose complement has components of topological types $(0,3)$ and $(g,n-1)$. Proposition~35 of~\cite{SW}, in the notation of its arXiv version~4, states under the sole assumption $n/\sqrt g\to\infty$ that
+\[
+ \liminf_{g\to\infty}\mathbb P^{\mathrm{WP}}_{g,n}\{N_g\ge1\}
+ \ge \liminf_{g\to\infty}
+ \frac{V_{g,n-1}^{2}}{V_{g,n}V_{g,n-2}}.
+\]
+The ratio on the right is $D_{g,n-1}$, which tends to one by Theorem~\ref{thm:volume}. Thus $\mathbb P^{\mathrm{WP}}_{g,n}\{N_g\ge1\}\to1$. The same conclusion also follows within this paper: $N_g$ is the count $N_{L_g}$ of Subsection~\ref{sec:pants-spectrum}, with $q_g$ as in \eqref{eq:PS1}, and since $L_g\to0$ and $q_gL_g^2\asymp n\sqrt g/(g+n)\to\infty$, Proposition~\ref{prop:pants-concentration} gives $N_g/(q_gL_g^2)\to1$ in probability. Its proof is the same second-moment argument, with $D_{g,n-1}\to1$ as the volume input.
+
+Write $\mathfrak h(X)$ for the Cheeger constant. On the event $N_g\ge1$, a counted geodesic bounds a hyperbolic pair of pants of area $2\pi$; the other component has area $2\pi(2g+n-3)\ge2\pi$ for all sufficiently large $g$. This separating curve is an admissible Cheeger cut, so
+\[
+ \mathfrak h(X)\le \frac{L_g}{2\pi}.
+\]
+Let $\mathcal R(X)$ be the infimum of the Rayleigh quotient over nonzero $H^1(X)$ functions orthogonal to constants. Buser's inequality~\cite[Theorem~7.1]{Buser}, in the form recorded in~\cite[Theorem~11]{SW} for complete noncompact hyperbolic surfaces, gives $\mathcal R(X)\le c\mathfrak h(X)$ with an absolute constant $c$. Since $L_g\to0$, this upper bound is eventually smaller than both $\varepsilon$ and $1/4$. The essential spectrum starts at $1/4$; the min--max principle, as recalled in~\cite[Theorem~7]{SW}, therefore yields a positive discrete eigenvalue $\lambda_1(X)=\mathcal R(X)<\varepsilon$ on $N_g\ge1$, for all sufficiently large $g$. This proves the asserted probability limit.
+\end{proof}
+
+The use of $D_{g,n-1}$ above is the only change to the final step of Shen--Wu's proof: under their condition $n=o(g)$ this limit follows from \cite[Lemma~5.1]{MZ}, as they note. The short-curve estimate, the Cheeger cut, and the passage to a discrete eigenvalue are their geometric and spectral inputs.
+
+\input{14a-short-curves}
+
+\input{14b-tight-spectrum}
+
+\input{14c-critical-spectrum}

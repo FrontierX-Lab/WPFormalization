@@ -1,0 +1,410 @@
+\subsection{Short-curve processes and the systole}
+\label{sec:pants-spectrum}
+
+We now determine the limiting process of short curves and the systole.
+The moment estimates proved here will also be used in
+Subsection~\ref{sec:pants-eigenvalues} to count many disjoint short pairs of pants.
+Throughout this and the next subsection,
+$g\to\infty$, $n/\sqrt g\to\infty$, and $X$ has law
+$\mathbb P^{\mathrm{WP}}_{g,n}$. Let $\mathcal P_2(X)$ be the set of
+unoriented simple closed geodesics bounding a pair of pants with two
+cusps. Define the deterministic intensity parameter
+\begin{equation}
+ q_g=\frac{n(n-1)}{8g\mathcal C(n/g)}.
+ \label{eq:PS1}
+\end{equation}
+The profile endpoints in Theorem~\ref{thm:volume} imply
+$q_g\asymp n^2/(g+n)\to\infty$. In particular
+$q_g\sim n^2/(32\pi^2g)$ when $n/g\to0$, and
+$q_g\sim x_cn/(8\pi^2)$ when $n/g\to\infty$.
+
+We write $\operatorname{PPP}(\nu)$ for a Poisson point process with intensity measure $\nu$.
+
+\begin{theorem}[Short-curve processes and the systole]\label{thm:pants-poisson}
+\emph{(i) Curves cutting off two cusps.} The random locally finite counting measures
+\begin{equation}
+ \sum_{\gamma\in\mathcal P_2(X)}
+       \delta_{\sqrt{q_g}\ell_\gamma}
+ \ \Longrightarrow\ \operatorname{PPP}(2t\,\mathrm{d}t)
+ \quad\hbox{on }[0,\infty)
+ \label{eq:PS2}
+\end{equation}
+converge in distribution for the vague topology. Thus counts in finitely
+many disjoint bounded intervals $[a_i,b_i]$ converge jointly to independent
+Poisson variables with means $b_i^2-a_i^2$. If $\ell_{\min}^{(2)}$ is the
+shortest length in $\mathcal P_2(X)$, with value infinity when this set is
+empty, then
+\[
+ \mathbb P^{\mathrm{WP}}_{g,n}
+ \{\sqrt{q_g}\ell_{\min}^{(2)}>t\}\longrightarrow \mathrm{e}^{-t^2}
+ \qquad(t\ge0).
+\]
+\smallskip
+\noindent\emph{(ii) All planar cusp types.} Let $\mathcal P_k(X)$ consist of simple geodesics whose
+genus-zero side contains exactly $k$ cusps. If $n/g\to\lambda\in[0,\infty]$,
+put $x_\lambda=X(Y_\lambda)$, where $\lambda(Y_\lambda)=\lambda$, with
+$x_0=0$ and $x_\infty=x_c$. Define
+\begin{equation}
+ w_k(x)=\frac{2V_{0,k+1}}{k!}
+             \left(\frac{x}{2\pi^2}\right)^{k-2},\qquad
+ W(x)=\sum_{k\ge2}w_k(x)=\frac{2\Phi_0'(x)}{x^2}.
+ \label{eq:PC1}
+\end{equation}
+Here $w_2(0)=W(0)=1$, $w_k(0)=0$ for $k>2$, and $W(x_c)<\infty$.
+Then
+\begin{equation}
+ \sum_{k\ge2}\ \sum_{\gamma\in\mathcal P_k(X)}
+       \delta_{(\sqrt{q_g}\ell_\gamma,k)}
+ \ \Longrightarrow\
+ \operatorname{PPP}\!\left(2t\,\mathrm{d}t\otimes
+                    \sum_{k\ge2}w_k(x_\lambda)\delta_k\right).
+ \label{eq:PC2}
+\end{equation}
+Convergence is for the vague topology on the product with the discrete
+type space. The projection to lengths also converges, to
+$\operatorname{PPP}(2W(x_\lambda)t\,\mathrm{d}t)$.
+
+\noindent\emph{(iii) Primitive geodesics and the systole.} This is also the limit of
+the process of all unoriented primitive closed geodesics, at the same
+rescaling. Writing $\operatorname{sys}(X)$ for the shortest closed
+geodesic length, we have
+\[
+ \mathbb P^{\mathrm{WP}}_{g,n}
+ \{\sqrt{q_g}\operatorname{sys}(X)>t\}
+ \longrightarrow \mathrm{e}^{-W(x_\lambda)t^2}\qquad(t\ge0).
+\]
+With probability tending to one every systolic curve is planar
+separating. Select one by any measurable tie rule, and let $K_g$ be
+its planar-side cusp count, with value zero if it is not planar. Then
+$\bigl(\sqrt{q_g}\operatorname{sys}(X),K_g\bigr)$ converges jointly
+to a pair $(Z,K)$ with
+\begin{equation}
+ \begin{aligned}
+ \mathbb P\{Z\in \mathrm{d}t,K=k\}
+ &=2t\,w_k(x_\lambda)\mathrm{e}^{-W(x_\lambda)t^2}\,\mathrm{d}t,\\
+ \mathbb P\{K=k\}&=\frac{w_k(x_\lambda)}{W(x_\lambda)}
+ \qquad(t>0,\ k\ge2).
+ \end{aligned}
+ \label{eq:FS1}
+\end{equation}
+\end{theorem}
+
+The method of factorial moments for curves separating off a prescribed
+number of cusps has a direct precedent in Hide--Thomas~\cite[Theorem~1.7]{HTSphere}
+for punctured spheres, which also treats summed types and nested
+configurations~\cite[Remark~1.9 and Proposition~3.6]{HTSphere}. Here the uniform volume ratios
+give the entire family of type intensities for diverging genus at every
+cusp density above the square-root scale. These planar curves
+become contractible after the cusps are filled; they are excluded from
+the tight spectrum of~\cite[Definition~2.1]{BL}. The all-primitive
+process of Mirzakhani--Petri~\cite[Theorem~4.1]{MP} concerns closed
+surfaces at fixed physical lengths. Here the full process is observed
+on a shrinking scale; a tight-spectrum limit at its longer natural
+scale is a separate question.
+
+\emph{Factorial moments.} For sufficiently small $L$, the collar lemma forces all curves counted by
+$N_L=\#\{\gamma\in\mathcal P_2(X):\ell_\gamma\le L\}$ to be disjoint.
+Their pants interiors are also disjoint. Otherwise one pants boundary
+would be an interior essential geodesic of the other pants, hence
+boundary-parallel, contradicting uniqueness of geodesic representatives.
+Thus their pairs of cusp labels are disjoint, and their complement has
+type $(g,n-r)$ for $r$ pants. We have $g\ge2$ eventually, so the
+exceptional double-pants decomposition of a four-punctured sphere does
+not arise.
+
+Mirzakhani's integration formula~\cite{MirInv,Mir}, with the same conventions as
+\cite[Lemma~29]{SW}, gives, for any fixed $r$ and short length windows
+$I_1,\ldots,I_r$, the ordered distinct-curve integral
+\begin{equation}
+ \mathbb E\!\sum_{\substack{\gamma_1,\ldots,\gamma_r\in\mathcal P_2(X)\\
+                            \text{distinct}}}
+       \prod_{j=1}^r\mathbf1_{\ell_{\gamma_j}\in I_j}
+ =\frac{(n)_{2r}}{2^r V_{g,n}}
+    \int_{I_1\times\cdots\times I_r}
+       V_{g,n-r}(x_1,\ldots,x_r,0^{n-2r})
+       \prod_{j=1}^r x_j\,\mathrm{d}x_j.
+ \label{eq:PS3}
+\end{equation}
+Here $(n)_{2r}=n(n-1)\cdots(n-2r+1)$. The factor $2^{-r}$ removes
+the order of the two labels within each pair. The tuple of curves is
+ordered, so there is no $r!$ divisor. Each pants volume is $V_{0,3}=1$.
+Mirzakhani's boundary estimate~\cite[Lemma~3.2]{Mir}, in the form
+of~\cite[Lemma~14]{SW},
+\begin{equation}
+ 1\le\frac{V_{g,m}(\mathbf x)}{V_{g,m}}
+       \le\exp\!\left(\frac12\sum_jx_j\right)
+ \label{eq:PS4}
+\end{equation}
+is uniform in the topological type. For fixed $r$, it replaces the
+boundary volume in \eqref{eq:PS3} by $V_{g,n-r}(1+O_r(L))$ when
+all $I_j\subset[0,L]$.
+
+Theorem~\ref{thm:volume} also implies, for every fixed $r$,
+\begin{equation}
+ \frac{V_{g,n-r}}{V_{g,n}}
+  =(2g\mathcal C(n/g))^{-r}(1+o(1)).
+ \label{eq:PS5}
+\end{equation}
+Indeed this is a product of $r$ adjacent cusp ratios. Replacing $(n-j)/g$
+by $n/g$ changes their profile by $1+O_r(n^{-1})$, because
+$\lambda\partial_\lambda\log\mathcal C(\lambda)$ is bounded: this follows
+from analyticity in the interior and the two endpoint expansions.
+
+\begin{proof}[Proof of Theorem~\ref{thm:pants-poisson}]
+We prove the planar process by bounding the tail over cusp types and
+computing the mixed factorial moments for any fixed collection of types.
+We then exclude the other topological types on the same length scale;
+this identifies the full primitive process and the systole. Write $P=2\pi^2$, $h=2g-1$, $m=n-1$, and $F_h=\Phi_g'$.
+Choose $x\in(0,x_c)$ by $h\Psi(x)=m$ and put $q_g^*=nx/(4P)$.
+The effective density is $2(n-1)/(2g-1)$. The boundedness of
+$\lambda\partial_\lambda\log X(Y_\lambda)$, including its endpoint limits, implies
+$q_g^*/q_g\to1$ and $q_g^*\to\infty$.
+
+\emph{Step 1: a uniform tail bound over cusp types.}
+We first show that curves cutting off a large number of cusps contribute
+negligibly, uniformly along the sequence. The input is the
+coefficient-ratio bound \eqref{eq:PC3}, which compares volumes whose cusp
+counts differ by $j$.
+By the positive convolution \eqref{eq:TL33} and
+Lemma~\ref{lem:point-mass}, every point mass is at most $C/\sigma$,
+where $\sigma^2=h\mathscr D\Psi(x)$. The local limit
+\eqref{eq:TL47} gives a lower bound $c/\sigma$ at $m$.
+Consequently, for all sufficiently large $h,m$,
+\begin{equation}
+ \frac{[z^{m-j}]F_h(z)}{[z^m]F_h(z)}
+ =x^j\frac{\mathbb P_x(N=m-j)}{\mathbb P_x(N=m)}
+ \le Cx^j\qquad(0\le j\le m).
+ \label{eq:PC3}
+\end{equation}
+Only the denominator uses the local limit; the numerator may be at any
+index, including zero.
+
+Let $N_{k,L}$ count curves of type $k$ with length at most $L$, and put
+$a_k=V_{0,k+1}/(k!P^{k-2})$. Mirzakhani integration gives
+\begin{equation}
+ \begin{aligned}
+ \mathbb E N_{k,L}=\frac{\binom nk}{V_{g,n}}
+ \int_0^L\ell\,V_{0,k+1}(\ell,0^k)
+                  V_{g,n-k+1}(\ell,0^{n-k})\,\mathrm{d}\ell,\\
+ \binom nk\frac{V_{0,k+1}V_{g,n-k+1}}{V_{g,n}}
+ =\frac nP a_k\frac{[z^{n-k}]F_h}{[z^{n-1}]F_h}.
+ \end{aligned}
+ \label{eq:PC4}
+\end{equation}
+The two sides have different genera, so there is no side-exchange
+factor. The coefficient identity follows from \eqref{eq:TL50}; it
+holds up to $k=n$. Bound \eqref{eq:PS4} changes the integrand's two
+volumes by a factor between one and $\mathrm{e}^L$, independently of $k$.
+Using \eqref{eq:PC3} with $j=k-1$ therefore gives, for each fixed $T$,
+\begin{equation}
+ \mathbb E\sum_{k\ge K}N_{k,T/\sqrt{q_g^*}}
+ \le CT^2\sum_{k\ge K}a_kx_c^{k-2}\longrightarrow0
+ \quad(K\to\infty),
+ \label{eq:PC5}
+\end{equation}
+uniformly along the sequence. To justify summability directly, the
+genus-zero string solution gives $\Phi_0'''(x)=1/a(Y(x))=Y'(x)$.
+Since $V_{0,3}=1$, its zero initial conditions give
+$\Phi_0''=Y$ and $\Phi_0'(x)=\int_0^xY(u)\,\mathrm{d}u$. This is finite at
+$x_c$; positivity gives convergence of the coefficient series there.
+Its initial term $x^2/2$ also gives $W(0)=1$.
+
+\emph{Step 2: fixed types and nested configurations.}
+Next we compute the mixed factorial moments for finitely many fixed cusp
+types. The main contribution comes from configurations whose planar
+sides are pairwise disjoint, which we call \emph{stars}; nested
+configurations are shown to be negligible.
+Fix $r$ ordered distinct curves of prescribed types $k_1,\ldots,k_r$,
+and write $K=\sum k_i$. The collar lemma makes their boundaries
+disjoint. For a star, the ordered
+cusp-label multiplicity is $(n)_K/\prod_i k_i!$, and the complement
+has type $(g,n-K+r)$. There is no $r!$ divisor. The boundary error is
+$1+O_r(L)$, as each cut occurs twice in \eqref{eq:PS4}.
+For fixed $d$, \eqref{eq:PS5} and $q_g^*/q_g\to1$ give
+$V_{g,n-d}/V_{g,n}=(x/(Pn))^d(1+o(1))$.
+Thus for windows $[a_i,b_i]/\sqrt{q_g^*}$ the star contribution tends to
+\begin{equation}
+ \prod_{i=1}^r
+       w_{k_i}(x_\lambda)(b_i^2-a_i^2).
+ \label{eq:PC6}
+\end{equation}
+The positive expression has a relative error before taking the limit,
+even when some limiting weights vanish.
+
+Filling cusps turns each planar side into a disk. Disjoint boundaries
+therefore have nested or disjoint disks; their cut graph is a tree with
+one genus-$g$ root and $r$ planar vertices. Let $d$ be the root degree,
+$a_v$ the number of cusps at a planar vertex and $d_v$ its degree;
+put $a=\sum_v a_v$. Prescribed types bound $a$ by $K$.
+There are finitely many such trees with ordered edges and cusp
+allocations, depending only on the fixed types. Classification of
+surfaces gives the corresponding mapping-class orbits with bounded
+symmetry factors; assigning cusp labels costs at most $Cn^a$.
+The root volume ratio is $O((x/(Pn))^{a-d})$, the planar volumes
+are fixed, and the $r$ length integrals cost $O((nx)^{-r})$.
+Each cut type contributes at most
+\begin{equation}
+ Cn^{d-r}x^{a-d-r}=O(n^{-1})\quad\hbox{if it is not a star}.
+ \label{eq:PC7}
+\end{equation}
+Indeed stability gives $a_v+d_v\ge3$ and
+$\sum_vd_v=2r-d$, hence $a\ge r+d$. The power of $x$ is
+nonnegative, so no loss occurs as $x\to0$. A nonstar has $d\le r-1$;
+if $d=r$, every planar vertex is a leaf and the configuration is a star.
+This accounts for every fixed-type mixed factorial moment.
+
+The limits \eqref{eq:PC6} are the mixed factorial moments of independent
+Poisson counts. Higher fixed moments give uniform integrability, and
+the product Poisson law is moment determinate. First moments give
+tightness on compact sets in the marked space. This proves
+\eqref{eq:PC2}. Its unmarked projection requires more than vague
+convergence: truncate the types, pass to the finite-type limit, then
+let the cutoff grow using \eqref{eq:PC5} and the convergent limiting
+series. This proves the stated unmarked process. Finally replace
+$q_g^*$ by $q_g$. The type-two restriction gives \eqref{eq:PS2}
+without assuming a limit for $n/g$, by subsequences and compactness of
+$[0,\infty]$. Its zero-count probabilities give the pants minimum law.
+
+\emph{Step 3: the remaining curves and the systole.}
+It remains to show that, on the scale $q_g^{-1/2}$, there are no short
+curves other than planar separating ones: nonseparating curves, and
+separating curves with positive genus on both sides, are rare.
+Nonseparating simple curves of length at most $L\le L_0$ have expected
+count at most $C\mathrm{e}^LL^2V_{g-1,n+2}/V_{g,n}\le CL^2$, by integration,
+\eqref{eq:PS4}, and the uniform lower bound for $B_{g,n}$.
+To sum every positive-genus separating cut, put
+$S_g(z)=\sum_{i=1}^{g-1}\Phi_i'(z)\Phi_{g-i}'(z)$. Exact positivity
+\eqref{eq:TL33} includes genus one, so the child powers add to $h-1$:
+\begin{equation}
+ S_g(z)=V(z)^{h-1}Q_g(z),\qquad Q_g\ge0
+ \ \hbox{coefficientwise},\qquad
+ \frac{S_g(x)}{F_h(x)}\le\frac{Ca(Y)r(Y)^2}{g^2}.
+ \label{eq:FS2}
+\end{equation}
+The last bound is \eqref{eq:TL26}: undoing \eqref{eq:TL9} leaves
+exactly $ar^2$, as the child complexities sum to $2g-2$ and their
+deficits to $3g-4$. In particular bounded child genera are retained.
+Lemma~\ref{lem:point-mass}, applied to the positive factor $V^{h-1}$,
+gives $\sup_j\mathbb P_x^{S}(N=j)\le C/\sigma$. Against the parent lower
+bound $\mathbb P_x^{F}(N=n-1)\ge c/\sigma$, the standard deviations
+cancel. The coefficient identity \eqref{eq:TL50} therefore yields
+\begin{equation}
+ \begin{aligned}
+ \mathcal A_{g,n}
+ &:=\sum_{i=1}^{g-1}\sum_{k=0}^n\binom nk
+       \frac{V_{i,k+1}V_{g-i,n-k+1}}{V_{g,n}}
+   =\frac1P\frac{[z^n]S_g(z)}{[z^n]\Phi_g(z)}\\
+ &=\frac{n}{Px}\frac{S_g(x)}{F_h(x)}
+       \frac{\mathbb P_x^S(N=n)}{\mathbb P_x^F(N=n-1)}
+   \le\frac{Cnar^2}{xg^2}\le\frac Cg.
+ \end{aligned}
+ \label{eq:FS3}
+\end{equation}
+Indeed $(n-1)/x=h/(Aar)$, while $A$ is bounded below and $r$ above.
+Thus no small-density factor is lost. Each separating orbit with two
+positive genera occurs in this ordered sum. Its integration symmetry
+and one-handle factors are at most one; applying \eqref{eq:PS4} to
+both components bounds its total expected count by
+$C\mathrm{e}^LL^2\mathcal A_{g,n}\le CL^2/g$. This includes all cusp partitions.
+
+For fixed $T$, take $L=T/\sqrt{q_g}$. Markov's inequality shows that
+with probability $1-O(T^2/q_g)$ every simple geodesic in this window
+is planar. Primitive geodesics shorter than $2\operatorname{arcsinh}1$
+are simple, by the standard collar theorem used in
+\cite[Section~1.1]{HTSphere}. Since $q_g\to\infty$, the full primitive
+process and planar process agree on each bounded rescaled window
+with probability tending to one. This transfers the process limit
+and its zero-count law to the systole.
+
+Finally restrict the first point to $[\eta,T]$ and finitely many cusp
+types. The first-point map is continuous when its first length is
+unique and avoids the endpoints, as happens almost surely in the
+limiting Poisson process. Let the type cutoff grow using
+\eqref{eq:PC5}, then $\eta\downarrow0$ and $T\to\infty$.
+The omitted length probabilities tend to zero by the zero-count law;
+$W\ge1$. Nonplanar competitors are excluded on each fixed window.
+This also makes any tie rule immaterial and proves planarity of every
+systolic curve with probability tending to one. The first-arrival
+density of the limiting marked process is \eqref{eq:FS1}.
+\end{proof}
+
+\subsection{Many small eigenvalues}\label{sec:pants-eigenvalues}
+
+\begin{proposition}[Many short pants]\label{prop:pants-concentration}
+If $L=L_g\to0$ and $q_gL_g^2\to\infty$, then
+\begin{equation}
+ \frac{N_{L_g}}{q_gL_g^2}\longrightarrow1
+ \quad\hbox{in probability}.
+ \label{eq:PS6}
+\end{equation}
+Consequently, for each fixed $\varepsilon\in(0,1)$, with probability
+tending to one there are at least
+$\lfloor(1-\varepsilon)q_gL_g^2\rfloor-1$ positive discrete eigenvalues
+in $(0,6L_g]$, counted with multiplicity.
+\end{proposition}
+\begin{proof}
+The first two cases of \eqref{eq:PS3} give
+\[
+ m_L:=\mathbb E N_L=\frac{(n)_2L^2}{4}
+       \frac{V_{g,n-1}}{V_{g,n}}(1+O(L))\sim q_gL^2,
+\]
+and
+\[
+ \frac{\mathbb E(N_L)_2}{m_L^2}
+ =\frac{(n-2)(n-3)}{n(n-1)}D_{g,n-1}^{-1}(1+O(L))\longrightarrow1.
+\]
+Since $m_L\to\infty$, the relative variance tends to zero, proving
+\eqref{eq:PS6}. This second-moment argument does not use the point-process
+limit at a window growing with $g$.
+
+Hide--Thomas~\cite[Lemma~5.3]{HTSphere} prove that $N$ such pants
+boundaries of length at most $L$ give $N-1$ positive eigenvalues below
+$6L$, provided $6L<1/4$. For the reader's convenience we recall the
+variational argument.
+Inside each pants choose a function equal to inward distance $\rho$ on
+the half-collar $0\le\rho\le1$, equal to one beyond it, and zero outside
+the pants. For all sufficiently small boundary lengths $\ell$, the
+collar lemma supplies this embedded half-collar. The function lies in
+$H^1(X)$, and
+\[
+ \int|\nabla f|^2=\ell\sinh1,\qquad
+ \int|f|^2\ge2\pi-\ell\sinh1.
+\]
+Different pants have disjoint supports up to their boundaries, so the
+span of these functions has dimension $N$ and Rayleigh quotient at most
+$6L$ for small $L$. Its intersection with the orthogonal complement of
+constants has dimension at least $N-1$. Since the essential spectrum
+starts at $1/4$, the form version of min--max gives the claimed positive
+discrete eigenvalues. Apply \eqref{eq:PS6} and let $g$ grow.
+\end{proof}
+
+\begin{corollary}[A growing number of small eigenvalues]\label{cor:many-spectrum}
+Suppose $g\to\infty$ and $n/\sqrt g\to\infty$. If $j=j(g)\to\infty$
+and $j=o(q_g)$, then
+\[
+ \mathbb P^{\mathrm{WP}}_{g,n}
+ \{\lambda_j(X)\text{ exists and }\lambda_j(X)\le12\sqrt{j/q_g}\}
+ \longrightarrow1,
+\]
+where positive discrete eigenvalues are ordered with multiplicity.
+\end{corollary}
+
+\begin{proof}[Proof of Corollary~\ref{cor:many-spectrum}]
+For $j\to\infty$ with $j=o(q_g)$, choose $L_g=2\sqrt{j/q_g}$.
+Then $L_g\to0$, $q_gL_g^2=4j$, and \eqref{eq:PS6} implies
+$N_{L_g}\ge j+1$ with probability tending to one. The preceding
+variational estimate gives $\lambda_j\le6L_g=12\sqrt{j/q_g}$.
+\end{proof}
+
+The spectral mechanism is established in the fixed-genus work of
+Hide--Thomas~\cite[Theorem~1.10 and Remark~5.5]{HTSphere}; their later
+bordered-volume asymptotics give linear counts below each fixed positive
+threshold at fixed genus~\cite[Theorem~1.1]{HTLargeN}.
+Their deterministic result~\cite[Theorem~1.3]{HTMany}, in the July 2026
+revision, gives a linear number below $1/4$ whenever $g<an$ for fixed
+$a>0$. Our threshold tends to zero and the genus grows. In the range
+$\sqrt g\ll n\ll g$, the corresponding second-moment volume inputs
+already follow from Shen--Wu~\cite{SW}. The extension supplied here is
+the density-dependent intensity and removal of the upper restriction on
+$n/g$. No sharp eigenvalue asymptotic, matching lower bound, or
+Poisson eigenvalue law is asserted.
