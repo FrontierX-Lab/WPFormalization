@@ -30,4 +30,4 @@ lake build
 
 Run `./scripts/ci-blueprint.sh` for the full checks; Python 3 and Node.js are also required. After source changes, run `lake exe vbp build` and `python3 scripts/export_blueprint.py` to regenerate the site.
 
-The paper remains copyrighted by its authors; the repository copy is provided for formalization and comparison. The project currently has no declared license.
+Licensed under the [MIT License](LICENSE).
