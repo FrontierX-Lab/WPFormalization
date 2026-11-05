@@ -1,5 +1,10 @@
+# Generated builds and the local Blueprint site
 .lake/
 _out/
+/blueprint/
+
+# Local caches and temporary artifacts
+.cache/
 __pycache__/
 *.pyc
 *.log

@@ -7,6 +7,7 @@ cd "$(dirname "$0")/.."
 mkdir -p _out/audit
 lake build
 lake exe vbp build
+python3 scripts/export_blueprint.py
 lake exe vbp query work-queue > _out/audit/work-queue.json
 lake exe vbp query metadata > _out/audit/metadata.json
 lake exe vbp check

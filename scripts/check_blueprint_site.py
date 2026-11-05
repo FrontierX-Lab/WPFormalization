@@ -30,7 +30,10 @@ def main():
     errors = []
     manifest_path = SITE / 'site-manifest.json'
     if not manifest_path.is_file():
-        print(json.dumps({'ok': False, 'errors': ['Missing blueprint/site-manifest.json']}))
+        print(json.dumps({'ok': False, 'errors': [
+            'Missing blueprint/site-manifest.json. Run lake exe vbp build and '
+            'python3 scripts/export_blueprint.py to generate the local site.'
+        ]}))
         return 1
     manifest = json.loads(manifest_path.read_text())
     expected_source = hashlib.sha256((ROOT / 'audit/sources.sha256').read_bytes()).hexdigest()
